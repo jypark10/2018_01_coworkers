@@ -1,0 +1,180 @@
+<? include '../../include/top_admin.php' ?> <!-- top -->
+</head>
+<body>
+	<div class="pageWrap sub adminMemberWrap"> <!-- pageWrap sub 뒤의 클래스명을 확인해주세요(폴더명관련) -->
+		<? include '../../include/header.php' ?> <!-- header -->
+		<div class="wrap">
+			<div class="contentwrap">
+				<? include '../../include/lnb_admin.php' ?> <!-- 관리자lnb -->
+				
+				<!-- content s-->
+				<div class="contentArea sendingHistoryListBox"><!-- contentArea 뒤의 클래스명을 확인해주세요(파일명관련) -->
+					<div class="contentHeader">
+						<div class="pageLocation">
+							<h2>회원 관리</h2>
+							<ul class="breadcrumb">
+								<li class="breadcrumb_home"><a href="#none" onclick="goHome('admin');">HOME</a><em>></em></li>
+								<li><span>회원관리</span><em>></em></li><li>발송내역관리</li>
+							</ul>
+						</div>
+						<div class="cateTitle"><h3>발송내역 관리</h3></div>
+					</div>
+					<div class="contentBody">
+						<h4 class="pageTitle">발송내역 관리</h4>
+						<table class="searchTable">
+							<tr>
+								<th>구분</th>
+								<td>
+									<input type="radio" name="rdShCate" id="rdShCate1"><label for="rdShCate1">전체</label>
+									<input type="radio" name="rdShCate" id="rdShCate2"><label for="rdShCate2">회원전체</label>
+									<input type="radio" name="rdShCate" id="rdShCate3"><label for="rdShCate3">개인</label>
+								</td>
+							</tr>
+							<tr>
+								<th>상태</th>
+								<td>
+									<input type="radio" name="rdShStts" id="rdShStts1"><label for="rdShStts1">SMS</label>
+									<input type="radio" name="rdShStts" id="rdShStts2"><label for="rdShStts2">Email</label>
+								</td>
+							</tr>
+							<tr>
+								<th>기간</th>
+								<td>
+									<div class="findByDate"><input class="miniCalendar" id="clcltDateInput1" type="text"></div>
+									<div class="dur">~</div>
+									<div class="findByDate"><input class="miniCalendar" id="clcltDateInput2" type="text"></div>
+									<script>setDatePick('clcltDateInput1');setDatePick('clcltDateInput2');</script>
+									<a href="#none" class="btn2 fR">검색</a>
+								</td>
+							</tr>
+						</table>
+						<div class="Btn2Box">
+							<div class="listInfoBox">Total <span>50,123</span></div>
+						</div>
+						<table class="listTable">
+							<colgroup><col width="50px"><col width="50px"><col><col width="50%"><col><col></colgroup>
+							<thead>
+								<tr>
+									<th>
+										<input type="checkbox" id="listCheck_all" class="checkbox chck_all" />
+										<label for="listCheck_all" class="listCheck"></label>
+									</th>
+									<th>NO</th>
+									<th>구분</th>
+									<th>제목</th>
+									<th>발송구분</th>
+									<th>발송일</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><input type="checkbox" id="listCheck_01" class="checkbox"><label for="listCheck_01" class="listCheck"></label></td>
+									<td>999</td>
+									<td>회원전체</td>
+									<td class="tdSubject"><a href="sending_history_view.html">12월 이벤트 일정</a></td>
+									<td>SMS</td>
+									<td>2018.01.09</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" id="listCheck_02" class="checkbox"><label for="listCheck_02" class="listCheck"></label></td>
+									<td>999</td>
+									<td>개인</td>
+									<td class="tdSubject"><a href="sending_history_view.html">12월 이벤트 일정</a></td>
+									<td>E-mail</td>
+									<td>2018.01.09</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" id="listCheck_03" class="checkbox"><label for="listCheck_03" class="listCheck"></label></td>
+									<td>999</td>
+									<td>회원전체</td>
+									<td class="tdSubject"><a href="sending_history_view.html">12월 이벤트 일정</a></td>
+									<td>SMS</td>
+									<td>2018.01.09</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" id="listCheck_04" class="checkbox"><label for="listCheck_04" class="listCheck"></label></td>
+									<td>999</td>
+									<td>개인</td>
+									<td class="tdSubject"><a href="sending_history_view.html">12월 이벤트 일정</a></td>
+									<td>E-mail</td>
+									<td>2018.01.09</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" id="listCheck_05" class="checkbox"><label for="listCheck_05" class="listCheck"></label></td>
+									<td>999</td>
+									<td>개인</td>
+									<td class="tdSubject"><a href="sending_history_view.html">12월 이벤트 일정</a></td>
+									<td>E-mail</td>
+									<td>2018.01.09</td>
+								</tr>
+<tr>
+									<td><input type="checkbox" id="listCheck_06" class="checkbox"><label for="listCheck_06" class="listCheck"></label></td>
+									<td>999</td>
+									<td>회원전체</td>
+									<td class="tdSubject"><a href="sending_history_view.html">12월 이벤트 일정</a></td>
+									<td>SMS</td>
+									<td>2018.01.09</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" id="listCheck_07" class="checkbox"><label for="listCheck_07" class="listCheck"></label></td>
+									<td>999</td>
+									<td>개인</td>
+									<td class="tdSubject"><a href="sending_history_view.html">12월 이벤트 일정</a></td>
+									<td>E-mail</td>
+									<td>2018.01.09</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" id="listCheck_08" class="checkbox"><label for="listCheck_08" class="listCheck"></label></td>
+									<td>999</td>
+									<td>회원전체</td>
+									<td class="tdSubject"><a href="sending_history_view.html">12월 이벤트 일정</a></td>
+									<td>SMS</td>
+									<td>2018.01.09</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" id="listCheck_09" class="checkbox"><label for="listCheck_09" class="listCheck"></label></td>
+									<td>999</td>
+									<td>개인</td>
+									<td class="tdSubject"><a href="sending_history_view.html">12월 이벤트 일정</a></td>
+									<td>E-mail</td>
+									<td>2018.01.09</td>
+								</tr>
+								<tr>
+									<td><input type="checkbox" id="listCheck_10" class="checkbox"><label for="listCheck_10" class="listCheck"></label></td>
+									<td>999</td>
+									<td>개인</td>
+									<td class="tdSubject"><a href="sending_history_view.html">12월 이벤트 일정</a></td>
+									<td>E-mail</td>
+									<td>2018.01.09</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="Btn2Box">
+							<a href="#none" class="btn2">전체목록</a>
+							<a href="#none" class="btn2">삭제</a>
+						</div>
+						<div class="pagination">
+							<a class="prev02" href="#none"><span class="tBlind">맨처음페이지</span></a>
+							<a class="prev" href="#none"><span class="tBlind">이전페이지</span></a>
+							<!-- 활성화 페이지의 경우 active 클래스 부여 -->
+							<a href="#none" class="active" >1</a>
+							<a href="#none">2</a>
+							<a href="#none">3</a>
+							<a href="#none">4</a>
+							<a href="#none">5</a>
+							<a href="#none" class="next"><span class="tBlind">다음페이지</span></a>
+							<a href="#none"class="next02"><span class="tBlind">맨끝페이지</span></a>
+						</div>
+					</div>
+				</div>
+				<!-- content e-->
+
+			</div>
+		</div>
+		<? include '../../include/footer.php' ?> <!-- footer -->
+	</div>
+	<script>
+		currentLnb(1,1); //현재페이지 lnb인식
+	</script>
+</body>
+</html>

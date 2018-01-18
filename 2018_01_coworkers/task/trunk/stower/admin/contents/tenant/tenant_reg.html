@@ -1,0 +1,267 @@
+<? include '../../include/top_admin.php' ?> <!-- top -->
+</head>
+<body>
+	<div class="pageWrap sub adminTenantWrap"> <!-- pageWrap sub 뒤의 클래스명을 확인해주세요(폴더명관련) -->
+		<? include '../../include/header.php' ?> <!-- header -->
+		<div class="wrap">
+			<div class="contentwrap">
+				<? include '../../include/lnb_admin.php' ?> <!-- 관리자lnb -->
+				
+				<!-- content s-->
+				<div class="contentArea tenantRegBox"><!-- contentArea 뒤의 클래스명을 확인해주세요(파일명관련) -->
+					<div class="contentHeader">
+						<div class="pageLocation">
+							<h2>입주사 관리</h2>
+							<ul class="breadcrumb">
+								<li class="breadcrumb_home"><a href="#none" onclick="goHome('admin');">HOME</a><em>></em></li>
+								<li><span>입주사관리</span><em>></em></li><li>입주사관리</li>
+							</ul>
+						</div>
+						<div class="cateTitle"><h3>입주사 관리</h3></div>
+					</div>
+					<div class="contentBody">
+						<h4 class="pageTitle">입주사 기본정보 등록</h4>
+						<div class="pageDesc"><span class="iStar">*</span>은 필수 입력 항목입니다.</div>
+						<table class="writeTable">
+							<tbody>
+								<tr>
+									<th>회사명<span class="iStar">*</span></th>
+									<td><input type="text"/></td>
+								</tr>
+								<tr>
+									<th>회사명(영문)</th>
+									<td><input type="text"/></td>
+								</tr>
+								<tr>
+									<th>서비스 종류</th>
+									<td><input type="text" class="shortInput"/></td>
+								</tr>
+								<tr>
+									<th>사업자 번호<span class="iStar">*</span></th>
+									<td>
+										<input type="text" class="shortInput"/>
+										<!-- <a href="#" class="txtbtnRight">사업자 정보확인</a> -->
+									</td>
+								</tr>
+								<tr>
+									<th>업종</th>
+									<td><input type="text" class="shortInput"/></td>
+								</tr>
+								<tr>
+									<th>호실<span class="iStar">*</span></th>
+									<td>
+										<input type="text" class="shortInput"/>
+										<a href="#none" class="btn2 popupBtn" popupTarget="popOpenOfficeChoice">호실선택</a>
+									</td>
+								</tr>
+								<tr>
+									<th>계약일자</th>
+									<td>
+										<div class="findByDate"><input class="miniCalendar" id="contractDateInput1" type="text"></div>
+										<script>setDatePick('contractDateInput1');</script>
+									</td>
+								</tr>
+								<tr>
+									<th>임대기간<span class="iStar">*</span></th>
+									<td>
+										<div class="findByDate"><input class="miniCalendar" id="rentDateInput1" type="text"></div>
+										<div class="dur">~</div>
+										<div class="findByDate"><input class="miniCalendar" id="rentDateInput2" type="text"></div>
+										<script>setDatePick('rentDateInput1');setDatePick('rentDateInput2');</script>
+									</td>
+								</tr>
+								<tr>
+									<th>대표자명<span class="iStar">*</span></th>
+									<td><input type="text" class="shortInput"/></td>
+								</tr>
+								<tr>
+									<th>서비스 이용시간<span class="iStar">*</span></th>
+									<td><input type="text" class="shortInput"/></td>
+								</tr>
+								<tr>
+									<th>입주사 담당자ID<span class="iStar">*</span></th>
+									<td>
+										<input type="text" class="shortInput"/>
+										<a href="#none" class="btn2">중복체크</a>
+									</td>
+								</tr>
+								<tr>
+									<th>입주사 담당자명<span class="iStar">*</span></th>
+									<td><input type="text" class="shortInput"/></td>
+								</tr>
+								<tr>
+									<th>직급<span class="iStar">*</span></th>
+									<td><input type="text" class="shortInput"/></td>
+								</tr>
+								<tr>
+									<th>휴대폰번호<span class="iStar">*</span></th>
+									<td><input type="text" class="shortInput"/></td>
+								</tr>
+								<tr>
+									<th>E-Mail<span class="iStar">*</span></th>
+									<td><input type="text" class="shortInput"/></td>
+								</tr>
+								<tr>
+									<th>입주사 담당자 주소</th>
+									<td><input type="text"/></td>
+								</tr>
+								<tr>
+									<th>결제분류<span class="iStar">*</span></th>
+									<td>
+										<input id="rdPay1" type="radio" name="rdPay"/><label for="rdPay1">세금계산서</label>
+										<input id="rdPay2" type="radio" name="rdPay"/><label for="rdPay2">카드결제</label>
+									</td>
+								</tr>
+								<tr>
+									<th>시설비</th>
+									<td><input type="text" class="shortInput"/></td>
+								</tr>
+								<tr>
+									<th>서비스 보증금</th>
+									<td><input type="text" class="shortInput"/></td>
+								</tr>
+								<tr>
+									<th>월임대료<span class="iStar">*</span></th>
+									<td><input type="text" class="shortInput"/></td>
+								</tr>
+								<tr>
+									<th>회원수(명)</th>
+									<td><input type="text" class="shortInput"/></td>
+								</tr>
+								<tr>
+									<th>사업장 면적(m<sup>2</sup>)</th>
+									<td><input type="text" class="shortInput"/></td>
+								</tr>
+								<tr>
+									<th>입주사 담당자 분류</th>
+									<td>
+										<input id="rdManager1" type="radio" name="rdManager"/><label for="rdManager1">서명권자</label>
+										<input id="rdManager2" type="radio" name="rdManager"/><label for="rdManager2">지급 담당자</label>
+										<input id="rdManager3" type="radio" name="rdManager"/><label for="rdManager3">기타</label>
+									</td>
+								</tr>
+								<tr>
+									<th>첨부파일(계약관련)</th>
+									<td>
+										<div class="attachFileWrap">
+											<div class="inputFilePreview">파일을 첨부하세요</div>
+											<label for="inputFileBtn" class="btn2">파일등록</label>
+											<input type="file" id="inputFileBtn" class="inputFileBox" multiple>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>비고</th>
+									<td><textarea name="" id="" rows="4"></textarea></td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="Btn2Box">
+							<a href="#" class="btn2">등록</a>
+						</div>
+					</div>
+				</div>
+				
+				<!-- popupContents s-->
+				
+				<!-- 호실선택팝업 -->
+				<div class="popupWrap popOpenOfficeChoice">
+					<div class="popupContainer">
+						<div class="popupBox">
+							<h1 class="popupHeader">호실 선택<span class="button popCloseBtn b-close"><span class="tBlind">닫기</span></span></h1>
+							<div class="popContentBox">
+								<div class="officeChoiceBox">
+									<h2>18층</h2>
+									<!--- Line01 / 18층호실팝업 --->
+									<ul>
+										<li class="choiced"><a href="#none">1801</a></li>
+										<li class="choiced"><a href="#none">1802</a></li>
+										<li class="soldout"><a href="#none">1803</a></li>
+										<li><a href="#none">1804</a></li>
+										<li><a href="#none">1805</a></li>
+										<li><a href="#none">1806</a></li>
+										<li><a href="#none">1807</a></li>
+										<li><a href="#none">1808</a></li>
+										<li><a href="#none">1809</a></li>
+										<li><a href="#none">1810</a></li>
+										<li><a href="#none">1811</a></li>
+										<li><a href="#none">1812</a></li>
+										<li><a href="#none">1813</a></li>
+										<li><a href="#none">1814</a></li>
+										<li><a href="#none">1815</a></li>
+										<li><a href="#none">1816</a></li>
+										<li><a href="#none">1817</a></li>
+										<li><a href="#none">1818</a></li>
+										<li><a href="#none">1819</a></li>
+										<li><a href="#none">1820</a></li>
+										<li><a href="#none">1821</a></li>
+										<li><a href="#none">1822</a></li>
+										<li class="soldout"><a href="#none">1823</a></li>
+										<li><a href="#none">1824</a></li>
+										<li><a href="#none">1825</a></li>
+										<li><a href="#none">1826</a></li>
+										<li class="soldout"><a href="#none">1827</a></li>
+										<li><a href="#none">1828</a></li>
+										<li><a href="#none">1829</a></li>
+										<li><a href="#none">1830</a></li>
+										<li><a href="#none">1831</a></li>
+										<li><a href="#none">1832</a></li>
+										<li><a href="#none">1833</a></li>
+										<li><a href="#none">1834</a></li>
+										<li><a href="#none">1835</a></li>
+									</ul>
+									<h2>19층</h2>
+									<ul>
+										<li><a href="#none">1901</a></li>
+										<li><a href="#none">1902</a></li>
+										<li><a href="#none">1903</a></li>
+										<li><a href="#none">1904</a></li>
+										<li><a href="#none">1905</a></li>
+										<li><a href="#none">1906</a></li>
+										<li><a href="#none">1907</a></li>
+										<li><a href="#none">1908</a></li>
+										<li><a href="#none">1909</a></li>
+										<li><a href="#none">1910</a></li>
+										<li class="soldout"><a href="#none">1911</a></li>
+										<li><a href="#none">1912</a></li>
+										<li><a href="#none">1913</a></li>
+										<li><a href="#none">1914</a></li>
+										<li><a href="#none">1915</a></li>
+										<li><a href="#none">1916</a></li>
+										<li><a href="#none">1917</a></li>
+										<li class="soldout"><a href="#none">1918</a></li>
+										<li><a href="#none">1919</a></li>
+										<li><a href="#none">1920</a></li>
+										<li class="soldout"><a href="#none">1921</a></li>
+										<li class="soldout"><a href="#none">1922</a></li>
+										<li><a href="#none">1923</a></li>
+										<li><a href="#none">1924</a></li>
+										<li><a href="#none">1925</a></li>
+										<li><a href="#none">1926</a></li>
+										<li><a href="#none">1927</a></li>
+										<li><a href="#none">1928</a></li>
+										<li><a href="#none">1929</a></li>
+										<li class="soldout"><a href="#none">1930</a></li>
+									</ul>
+									<script>officeChoice();</script>
+								</div>
+								<div class="Btn1Box">
+									<a href="#none" class="btn1">확인</a></span>
+									<a href="#none" class="btn1 b-close">취소</a></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!-- popupContents e-->
+				<!-- content e-->
+			</div>
+		</div>
+		<? include '../../include/footer.php' ?> <!-- footer -->
+	</div>
+	<script>
+		currentLnb(0,0); //현재페이지 lnb인식
+	</script>
+</body>
+</html>

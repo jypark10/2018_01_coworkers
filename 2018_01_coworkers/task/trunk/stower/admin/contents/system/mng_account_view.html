@@ -1,0 +1,96 @@
+<? include '../../include/top_admin.php' ?> <!-- top -->
+</head>
+<body>
+	<div class="pageWrap sub adminSystemWrap"> <!-- pageWrap sub 뒤의 클래스명을 확인해주세요(폴더명관련) -->
+		<? include '../../include/header.php' ?> <!-- header -->
+		<div class="wrap">
+			<div class="contentwrap">
+				<? include '../../include/lnb_admin.php' ?> <!-- 관리자lnb -->
+				
+				<!-- content s-->
+				<div class="contentArea mngAccountViewBox"><!-- contentArea 뒤의 클래스명을 확인해주세요(파일명관련) -->
+					<div class="contentHeader">
+						<div class="pageLocation">
+							<h2>시스템 관리</h2>
+							<ul class="breadcrumb">
+								<li class="breadcrumb_home"><a href="#none" onclick="goHome('admin');">HOME</a><em>></em></li>
+								<li><span>시스템관리</span><em>></em></li>
+								<li> 관리자 계정관리</li>
+							</ul>
+						</div>
+						<div class="cateTitle"><h3>계정정보 상세</h3></div>
+					</div>
+					<div class="contentBody">
+						<div>
+							<h4 class="pageTitle">기본정보</h4>
+						</div>
+						<table class="viewTable">
+							<tbody>
+								<tr>
+									<th>권한</th>
+									<td>관리자</td>
+								</tr>
+								<tr>
+									<th>사용자명</th>
+									<td>홍석천</td>
+								</tr>
+								<tr>
+									<th>ID</th>
+									<td>ABCDEF</td>
+								</tr>
+								<tr>
+									<th>PW</th>
+									<td>********</td>
+								</tr>
+								<tr>
+									<th>부서</th>
+									<td>관리팀</td>
+								</tr>
+								<tr>
+									<th>연락처</th>
+									<td>010-1234-5678</td>
+								</tr>
+								<tr>
+									<th>E-Mail</th>
+									<td>asdf@naver.com</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="Btn2Box">
+							<a href="mng_account_list.html" class="btn2">목록</a>
+							<a href="mng_account_edit.html" class="btn2">수정</a>
+							<a href="#none" class="btn2 popupBtn" popupTarget="popAccountDel">삭제</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- popupContents s-->
+
+				<!-- 삭제팝업 -->
+				<div class="popupWrap popAccountDel">
+					<div class="popupContainer">
+						<div class="popupBox">
+							<h1 class="popupHeader">삭제 확인<span class="button popCloseBtn b-close"><span class="tBlind">닫기</span></span></h1>
+							<div class="popContentBox">
+								<p class="mb0">삭제된 계정은 다시 복구할 수 없습니다. <br>삭제 하시겠습니까?</p>
+								<div class="Btn1Box">
+									<a href="#none" class="btn1">예</a>
+									<a href="#none" class="btn1 b-close">아니요</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- popupContents s-->
+				<!-- content e-->
+
+			</div>
+		</div>
+		<? include '../../include/footer.php' ?> <!-- footer -->
+	</div>
+	<script>
+		currentLnb(4,4); //현재페이지 lnb인식
+	</script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<? include '../../include/top_admin.php' ?> <!-- top -->
+</head>
+<body>
+	<div class="pageWrap sub adminCalculateWrap"> <!-- pageWrap sub 뒤의 클래스명을 확인해주세요(폴더명관련) -->
+		<? include '../../include/header.php' ?> <!-- header -->
+		<div class="wrap">
+			<div class="contentwrap">
+				<? include '../../include/lnb_admin.php' ?> <!-- 관리자lnb -->
+				
+				<!-- content s-->
+				<div class="contentArea facilityStatusCalendarBox"><!-- contentArea 뒤의 클래스명을 확인해주세요(파일명관련) -->
+					<div class="contentHeader">
+						<div class="pageLocation">
+							<h2>정산 관리</h2>
+							<ul class="breadcrumb">
+								<li class="breadcrumb_home"><a href="#none" onclick="goHome('admin');">HOME</a><em>></em></li>
+								<li><span>정산관리</span><em>></em></li><li>편의시설이용내역</li>
+							</ul>
+						</div>
+						<div class="cateTitle"><h3>편의시설 이용 내역</h3></div>
+					</div>
+					<div class="contentBody">
+						<h4 class="pageTitle">편의시설 이용 현황</h4>
+						<table class="searchTable">
+							<colgroup><col width="100px"><col><col width="100px"><col width="340px"></colgroup>
+							<tr>
+								<th>회사명</th>
+								<td><input type="text"></td>
+								<th>편의시설</th>
+								<td>
+									<div class="selectBox">
+										<label for="selectOpt">전체</label>
+										<select class="selectOpt"  id="selectOpt">
+											<option value="">Meeting Room 01</option>
+											<option value="">Meeting Room 02</option>
+										</select>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="4">
+									<div class="btn2Box taR">
+										<a href="#none" class="btn2">전체검색</a>
+										<a href="#none" class="btn2">검색</a>
+									</div>
+								</td>
+							</tr>
+						</table>
+						<ul class="tabCalendar">
+							<li><a href="#none" class="calendar active" title="달력보기"></a></li>
+							<li><a href="facility_status_list.html" class="list" title="리스트보기"></a></li>
+						</ul>
+						<!-- 캘린더영역 s-->
+						<div class="fullCalendarBox">
+							<!-- 이곳에 추가 부탁드립니다 -->
+						</div>
+						<!-- 캘린더영역 e-->
+						<!-- 범례 s-->
+						<ul>
+							<li class="colorTip colorFit">Fitness Center</li>
+							<li class="colorTip colorRel">Relax Room</li>
+						</ul>
+						<!-- 범례 e-->
+					</div>
+				</div>
+				<!-- content e-->
+
+			</div>
+		</div>
+		<? include '../../include/footer.php' ?> <!-- footer -->
+	</div>
+	<script>
+		currentLnb(5,3); //현재페이지 lnb인식
+	</script>
+</body>
+</html>

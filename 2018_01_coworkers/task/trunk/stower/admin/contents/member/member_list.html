@@ -1,0 +1,428 @@
+<? include '../../include/top_admin.php' ?> <!-- top -->
+</head>
+<body>
+	<div class="pageWrap sub adminMemberWrap"> <!-- pageWrap sub 뒤의 클래스명을 확인해주세요(폴더명관련) -->
+		<? include '../../include/header.php' ?> <!-- header -->
+		<div class="wrap">
+			<div class="contentwrap">
+				<? include '../../include/lnb_admin.php' ?> <!-- 관리자lnb -->
+				
+				<!-- content s-->
+				<div class="contentArea memberListBox"><!-- contentArea 뒤의 클래스명을 확인해주세요(파일명관련) -->
+					<div class="contentHeader">
+						<div class="pageLocation">
+							<h2>회원 관리</h2>
+							<ul class="breadcrumb">
+								<li class="breadcrumb_home"><a href="#none" onclick="goHome('admin');">HOME</a><em>></em></li>
+								<li><span>회원관리</span><em>></em></li><li>회원관리</li>
+							</ul>
+						</div>
+						<div class="cateTitle"><h3>회원 관리</h3></div>
+					</div>
+					<div class="contentBody">
+						<h4 class="pageTitle">회원 목록</h4>
+						<table class="searchTable">
+							<tr>
+								<th>구분</th>
+								<td>
+									<input type="radio" name="rdMbrCate" id="rdMbrCate1"><label for="rdMbrCate1">전체</label>
+									<input type="radio" name="rdMbrCate" id="rdMbrCate2"><label for="rdMbrCate2">오피스/지정데스크</label>
+									<input type="radio" name="rdMbrCate" id="rdMbrCate3"><label for="rdMbrCate3">스마트데스크</label>
+									<input type="radio" name="rdMbrCate" id="rdMbrCate4"><label for="rdMbrCate4">일반</label>
+								</td>
+							</tr>
+							<tr>
+								<th>상태</th>
+								<td>
+									<input type="radio" name="rdMbrAccp" id="rdMbrAccp1"><label for="rdMbrAccp1">승인대기</label>
+									<input type="radio" name="rdMbrAccp" id="rdMbrAccp2"><label for="rdMbrAccp2">승인완료</label>
+									<input type="radio" name="rdMbrAccp" id="rdMbrAccp3"><label for="rdMbrAccp3">승인취소</label>
+								</td>
+							</tr>
+							<tr>
+								<th>기간</th>
+								<td>
+									<div class="findByDate"><input class="miniCalendar" id="clcltDateInput1" type="text"></div>
+									<div class="dur">~</div>
+									<div class="findByDate"><input class="miniCalendar" id="clcltDateInput2" type="text"></div>
+									<script>setDatePick('clcltDateInput1');setDatePick('clcltDateInput2');</script>
+								</td>
+							</tr>
+							<tr>
+								<th>직접검색</th>
+								<td class="directSearchTd">
+									<div class="selectBox">
+										<label for="selectOpt">이름</label>
+										<select class="selectOpt"  id="selectOpt">
+											<option value="">이름</option>
+											<option value="">아이디</option>
+											<option value="">회사명</option>
+										</select>
+									</div>
+									<input type="text" class="dsInput" >
+									<a href="#none" class="btn2">검색</a>
+								</td>
+							</tr>
+						</table>
+						<div class="Btn2Box">
+							<div class="listInfoBox">Total <span>50,123</span></div>
+							<a href="#none" class="btn2 popupBtn" popupTarget="popSendSmsEmail">SMS/E-mail</a>
+							<a href="#none" class="btn2">Excel 다운로드</a>
+						</div>
+						<div class="tableScrollX">
+							<table class="listTable" style="width:1200px;">
+								<colgroup><col width="50px"><col width="50px"><col><col><col><col><col><col><col><col><col width="50px"><col width="90px"></colgroup>
+								<thead>
+									<tr>
+										<th>
+											<input type="checkbox" id="listCheck_all" class="checkbox chck_all" />
+											<label for="listCheck_all" class="listCheck"></label>
+										</th>
+										<th>NO</th>
+										<th>구분</th>
+										<th>ID</th>
+										<th>이름</th>
+										<th>회사명</th>
+										<th>휴대폰 번호</th>
+										<th>E-mail</th>
+										<th>가입일</th>
+										<th>상태</th>
+										<th>승인</th>
+										<th>QR코드조회</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><input type="checkbox" id="listCheck_01" class="checkbox"><label for="listCheck_01" class="listCheck"></label></td>
+										<td>999</td>
+										<td>오피스/지정데스크</td>
+										<td>hkd1234</td>
+										<td><a href="member_edit.html">홍길동</a></td>
+										<td>AA기업</td>
+										<td>010-1234-5678</td>
+										<td>hong1234@abcd.com</td>
+										<td>2018.01.09 15:00</td>
+										<td>입주원 승인대기</td>
+										<td><a href="#none" class="btn3">승인</a></td>
+										<td><a href="#none" class="btn3 btn3-1 popupBtn" popupTarget="popQRcode">조회</a></td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" id="listCheck_02" class="checkbox"><label for="listCheck_02" class="listCheck"></label></td>
+										<td>999</td>
+										<td>오피스/지정데스크</td>
+										<td>hkd1234</td>
+										<td><a href="#none">홍길동</a></td>
+										<td>AA기업</td>
+										<td>010-1234-5678</td>
+										<td>hong1234@abcd.com</td>
+										<td>2018.01.09 15:00</td>
+										<td>승인완료</td>
+										<td><a href="#none" class="btn3">승인</a></td>
+										<td><a href="#none" class="btn3 btn3-1 popupBtn" popupTarget="popQRcode">조회</a></td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" id="listCheck_03" class="checkbox"><label for="listCheck_03" class="listCheck"></label></td>
+										<td>999</td>
+										<td>오피스/지정데스크</td>
+										<td>hkd1234</td>
+										<td><a href="#none">홍길동</a></td>
+										<td>AA기업</td>
+										<td>010-1234-5678</td>
+										<td>hong1234@abcd.com</td>
+										<td>2018.01.09 15:00</td>
+										<td>승인완료</td>
+										<td><a href="#none" class="btn3 btn3-1">승인취소</a></td>
+										<td>미발급</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" id="listCheck_04" class="checkbox"><label for="listCheck_04" class="listCheck"></label></td>
+										<td>999</td>
+										<td>오피스/지정데스크</td>
+										<td>hkd1234</td>
+										<td><a href="#none">홍길동</a></td>
+										<td>AA기업</td>
+										<td>010-1234-5678</td>
+										<td>hong1234@abcd.com</td>
+										<td>2018.01.09 15:00</td>
+										<td>승인완료</td>
+										<td><a href="#none" class="btn3 btn3-1">승인취소</a></td>
+										<td>미발급</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" id="listCheck_05" class="checkbox"><label for="listCheck_05" class="listCheck"></label></td>
+										<td>999</td>
+										<td>오피스/지정데스크</td>
+										<td>hkd1234</td>
+										<td><a href="#none">홍길동</a></td>
+										<td>AA기업</td>
+										<td>010-1234-5678</td>
+										<td>hong1234@abcd.com</td>
+										<td>2018.01.09 15:00</td>
+										<td>승인완료</td>
+										<td><a href="#none" class="btn3 btn3-1">승인취소</a></td>
+										<td>미발급</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" id="listCheck_06" class="checkbox"><label for="listCheck_06" class="listCheck"></label></td>
+										<td>999</td>
+										<td>오피스/지정데스크</td>
+										<td>hkd1234</td>
+										<td><a href="#none">홍길동</a></td>
+										<td>AA기업</td>
+										<td>010-1234-5678</td>
+										<td>hong1234@abcd.com</td>
+										<td>2018.01.09 15:00</td>
+										<td>승인완료</td>
+										<td><a href="#none" class="btn3 btn3-1">승인취소</a></td>
+										<td>미발급</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" id="listCheck_07" class="checkbox"><label for="listCheck_07" class="listCheck"></label></td>        
+										<td>999</td>
+										<td>오피스/지정데스크</td>
+										<td>hkd1234</td>
+										<td><a href="#none">홍길동</a></td>
+										<td>AA기업</td>
+										<td>010-1234-5678</td>
+										<td>hong1234@abcd.com</td>
+										<td>2018.01.09 15:00</td>
+										<td>승인완료</td>
+										<td><a href="#none" class="btn3 btn3-1">승인취소</a></td>
+										<td>미발급</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" id="listCheck_08" class="checkbox"><label for="listCheck_08" class="listCheck"></label></td>
+										<td>999</td>
+										<td>오피스/지정데스크</td>
+										<td>hkd1234</td>
+										<td><a href="#none">홍길동</a></td>
+										<td>AA기업</td>
+										<td>010-1234-5678</td>
+										<td>hong1234@abcd.com</td>
+										<td>2018.01.09 15:00</td>
+										<td>승인완료</td>
+										<td><a href="#none" class="btn3 btn3-1">승인취소</a></td>
+										<td>미발급</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" id="listCheck_09" class="checkbox"><label for="listCheck_09" class="listCheck"></label></td>
+										<td>999</td>
+										<td>오피스/지정데스크</td>
+										<td>hkd1234</td>
+										<td><a href="#none">홍길동</a></td>
+										<td>AA기업</td>
+										<td>010-1234-5678</td>
+										<td>hong1234@abcd.com</td>
+										<td>2018.01.09 15:00</td>
+										<td>승인완료</td>
+										<td><a href="#none" class="btn3 btn3-1">승인취소</a></td>
+										<td>미발급</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" id="listCheck_10" class="checkbox"><label for="listCheck_10" class="listCheck"></label></td>
+										<td>999</td>
+										<td>오피스/지정데스크</td>
+										<td>hkd1234</td>
+										<td><a href="#none">홍길동</a></td>
+										<td>AA기업</td>
+										<td>010-1234-5678</td>
+										<td>hong1234@abcd.com</td>
+										<td>2018.01.09 15:00</td>
+										<td>승인완료</td>
+										<td><a href="#none" class="btn3 btn3-1">승인취소</a></td>
+										<td>미발급</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="Btn2Box">
+							<!-- 임시버튼:추후삭제필요 s-->
+							<a href="#none" class="btn2-1 popupBtn" popupTarget="popFindMember">회원찾기팝업_임시버튼</a>
+							<!-- 임시버튼:추후삭제필요 e-->
+							<a href="#none" class="btn2">전체목록</a>
+							<a href="#none" class="btn2">삭제</a>
+							<a href="member_reg.html" class="btn2">등록</a>
+						</div>
+						<div class="pagination">
+							<a class="prev02" href="#none"><span class="tBlind">맨처음페이지</span></a>
+							<a class="prev" href="#none"><span class="tBlind">이전페이지</span></a>
+							<!-- 활성화 페이지의 경우 active 클래스 부여 -->
+							<a href="#none" class="active" >1</a>
+							<a href="#none">2</a>
+							<a href="#none">3</a>
+							<a href="#none">4</a>
+							<a href="#none">5</a>
+							<a href="#none" class="next"><span class="tBlind">다음페이지</span></a>
+							<a href="#none"class="next02"><span class="tBlind">맨끝페이지</span></a>
+						</div>
+					</div>
+				</div>
+
+				<!-- popupContents s-->
+				
+				<!-- SMS,Email발송팝업 -->
+				<div class="popupWrap popSendSmsEmail">
+					<div class="popupContainer">
+						<div class="popupBox">
+							<h1 class="popupHeader">SMS/E-mail <span class="button popCloseBtn b-close"><span class="tBlind">닫기</span></span></h1>
+							<div class="popContentBox">
+								<ul class="toggleTab">
+									<li class="actOn"><a href="#none" targetTabId="tabId_sms">SMS</a></li>
+									<li><a href="#none" targetTabId="tabId_email">E-Mail</a></li>
+								</ul>
+								<form>
+									<fieldset class="fieldset">
+										<legend>발송정보</legend>
+										<table>
+											<tbody>
+												<tr class="tabId tabId_sms tabId_email">
+													<th><label for="msg_list_receive">받는사람</label></th>
+													<td>
+														<textarea name="" id="" cols="" rows="2">장철호(jangch@simplecoms.co.kr), 홍길동(djlfkldk@naver.com), 장철호(jangch@simplecoms.co.kr), 홍길동(djlfkldk@naver.com), ), 장철호(jangch@simplecoms.co.kr), 홍길동(djlfkldk@naver.com)</textarea>
+													</td>
+												</tr>
+												<tr class="tabId tabId_email">
+													<th><label for="msg_attach">첨부파일</label></th>
+													<td><input type="file" id="msg_attach" /></td>
+												</tr>
+												<tr class="tabId tabId_email">
+													<th><label for="msg_subject">제목</label></th>
+													<td><input type="text" id="msg_subject" /></td>
+												</tr>
+												<tr class="tabId tabId_sms tabId_email">
+													<td colspan="2"  class="pr0 pl0 bdb0">
+														<textarea name="" id="" cols="" rows="4"></textarea>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</fieldset>
+									<div class="Btn1Box">
+										<a href="#none" class="btn1">확인</a>
+										<a href="#none" class="btn1 b-close">취소</a>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- QRcode팝업 -->
+				<div class="popupWrap popQRcode">
+					<div class="popupContainer">
+						<div class="popupBox">
+							<h1 class="popupHeader">QR코드 조회 <span class="button popCloseBtn b-close"><span class="tBlind">닫기</span></span></h1>
+							<div class="popContentBox">
+								<div class="QRcodeBox">
+									<img src="<?=$root?>/images/temp/qr_code_img.jpg" alt="qrcode">
+								</div>
+								<div class="Btn1Box">
+									<a href="#none" class="btn1 b-close">확인</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 회원찾기팝업 -->
+				<div class="popupWrap popFindMember">
+					<div class="popupContainer">
+						<div class="popupBox">
+							<h1 class="popupHeader">회원찾기<span class="button popCloseBtn b-close"><span class="tBlind">닫기</span></span></h1>
+							<div class="popContentBox">
+								<table class="mb20">
+									<tr>
+										<th>구분</th>
+										<td class="taL">
+											<input type="radio" name="rdMbrCate_1" id="rdMbrCate1_1"><label for="rdMbrCate1_1">전체</label>
+											<input type="radio" name="rdMbrCate_1" id="rdMbrCate2_1"><label for="rdMbrCate2_1">오피스/지정데스크</label>
+											<input type="radio" name="rdMbrCate_1" id="rdMbrCate3_1"><label for="rdMbrCate3_1">스마트데스크</label>
+										</td>
+									</tr>
+									<tr>
+										<th>회사명/이름</th>
+										<td class="taL">
+											<input type="text" class="shortInput">
+											<a href="#none" class="btn2">검색</a>
+										</td>
+									</tr>
+								</table>
+								<div class="listInfoBox">Total <span>50,123</span></div>
+								<table>
+									<colgroup><col width="50px"><col></colgroup>
+									<thead>
+										<tr>
+											<th>
+												<input type="checkbox" id="listCheck_all_1" class="checkbox chck_all" />
+												<label for="listCheck_all_1" class="listCheck"></label>
+											</th>
+											<th>구분</th>
+											<th>이름/ID</th>
+											<th>회사명</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<input type="checkbox" id="plistCheck_01_1" class="checkbox" />
+												<label for="plistCheck_01_1" class="listCheck"></label>
+											</td>
+											<td>오피스/지정데스크</td>
+											<td>홍길동(asdfass12)</td>
+											<td>AA기업</td>
+										</tr>
+										<tr>
+											<td>
+												<input type="checkbox" id="plistCheck_02_1" class="checkbox" />
+												<label for="plistCheck_02_1" class="listCheck"></label>
+											</td>
+											<td>오피스/지정데스크</td>
+											<td>홍길동(asdfass12)</td>
+											<td>AA기업</td>
+										</tr>
+										<tr>
+											<td>
+												<input type="checkbox" id="plistCheck_03_1" class="checkbox" />
+												<label for="plistCheck_03_1" class="listCheck"></label>
+											</td>
+											<td>오피스/지정데스크</td>
+											<td>홍길동(asdfass12)</td>
+											<td>AA기업</td>
+										</tr>
+										<tr>
+											<td colspan="4">검색결과가 없습니다.</td>
+										</tr>
+									</tbody>
+								</table>
+								<div class="pagination">
+									<a class="prev02" href="#none"></a>
+									<a class="prev" href="#none"></a>
+									<!-- 활성화 페이지의 경우 active 클래스 부여 -->
+									<a class="active" href="#none">1</a>
+									<a href="#none">2</a>
+									<a href="#none">3</a>
+									<a href="#none">4</a>
+									<a href="#none">5</a>
+									<a class="next" href="#none"></a>
+									<a class="next02" href="#none"></a>
+								</div>
+								<div class="Btn1Box">
+									<a href="#none" class="btn1">등록</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- popupContents e-->
+				<!-- content e-->
+
+			</div>
+		</div>
+		<? include '../../include/footer.php' ?> <!-- footer -->
+	</div>
+	<script>
+		currentLnb(1,0); //현재페이지 lnb인식
+	</script>
+</body>
+</html>

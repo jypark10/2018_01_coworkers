@@ -1,0 +1,100 @@
+<? include '../../include/top_user.php' ?> <!-- top -->
+</head>
+<body>
+	<div class="pageWrap sub userReserveWrap"> <!-- pageWrap sub 뒤의 클래스명을 확인해주세요(폴더명관련) -->
+		<? include '../../include/header.php' ?> <!-- header -->
+		<div class="wrap">
+			<div class="contentwrap">
+				<? include '../../include/lnb_user.php' ?> <!-- 사용자lnb -->
+				
+				<!-- content s-->
+				<div class="contentArea reserveSlpRoomBox"><!-- contentArea 뒤의 클래스명을 확인해주세요(파일명관련) -->
+					<div class="contentHeader">
+						<div class="pageLocation">
+							<h2>예약 관리</h2>
+							<ul class="breadcrumb">
+								<li class="breadcrumb_home"><a href="#none" onclick="goHome('user');">HOME</a><em>></em></li>
+								<li><span>예약관리</span><em>></em></li><li> 수면실예약</li>
+							</ul>
+						</div>
+						<div class="cateTitle"><h3>수면실 예약</h3></div>
+					</div>
+					<div class="contentBody">
+						<h4 class="pageTitle">수면실 예약</h4>
+					
+						<div class="findByDate">
+							<span>기준일자</span><span class="clamp_L2"></span><input class="short3 miniCalendar" id="rsvrDateInput" type="text"><span class="clamp_R2"></span>
+							<script>setDatePick('rsvrDateInput');</script>
+						</div>
+						<table class="listTable bookingStatus">
+							<tr>
+								<th>잔여시간</th>
+								<th>예약시간</th>
+								<th>예약대기</th>
+							</tr>
+							<tr>
+								<td>50</td>
+								<td>4</td>
+								<td>1</td>
+							</tr>
+						</table>
+							
+						<!-- [20180108 jy] START 사용자 예약관리 추가영역 -->
+						<div class="fullCalendarBox">
+							<!--  사용자 수면실 예약관리 영역입니다. 이곳에 추가 부탁드립니다~ -->
+						</div>
+						<!-- [20180108 jy] END 사용자 예약관리 추가영역 -->
+						
+						
+						<div class="Btn2Box">
+							<!-- 임시버튼:추후삭제필요 s-->
+							<a href="#none" class="btn2-1 popupBtn" popupTarget="popReserveInfo">예약정보팝업_임시버튼</a>
+							<!-- 임시버튼:추후삭제필요 e-->
+							<a href="#none" class="btn2">예약</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- popupContents s-->
+
+				<!-- 회의실예약정보팝업 -->
+				<div class="popupWrap popReserveInfo">
+					<div class="popupContainer">
+						<div class="popupBox">
+							<h1 class="popupHeader">수면실 예약정보<span class="button popCloseBtn b-close"><span class="tBlind">닫기</span></span></h1>
+							<div class="popContentBox">
+								<table>
+									<tr>
+										<th>예약자</th>
+										<td>홍길동</td>
+									</tr>
+									<tr>
+										<th>예약일자</th>
+										<td>2017.10.119</td>
+									</tr>
+									<tr>
+										<th>예약시간</th>
+										<td>13:00~14:59 / 2시간</td>
+									</tr>
+								</table>
+								<div class="Btn1Box">
+									<a href="#none" class="btn2">예약취소</a>
+									<a href="#none" class="btn2 b-close">닫기</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- popupContents e-->
+				<!-- content e-->
+
+			</div>
+		</div>
+		<? include '../../include/footer.php' ?> <!-- footer -->
+	</div>
+	<script>
+		currentLnb(0,2); //현재페이지 lnb인식
+	</script>
+</body>
+</html>

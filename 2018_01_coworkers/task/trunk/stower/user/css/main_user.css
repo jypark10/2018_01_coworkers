@@ -1,0 +1,142 @@
+/* mainBanner */
+.mainBanner{
+  position: relative;
+  z-index: -9999;
+  width: 100%;
+  height: 441px;
+  margin-top: 0;
+  background: url('../images/main/bg_hasToBeReplaced_1.jpg') no-repeat;
+  background-size: 100%;
+  background-position: 0px -120px;
+}
+
+.mainMenu{margin-top:-405px;}
+
+.mainGrid{
+  width:1024px;
+  height:405px;
+  
+}
+
+.bannerText{
+  float:left;
+  margin-top:220px;
+  /* top: 267px; */
+  padding-left:17px;
+  border-left:2px solid #264f8d;
+}
+
+.bannerText h3{color:#1070ca;font-size:29px; font-weight:normal;}
+.bannerText h2{color:#3162ad;font-size:62px; font-weight:normal;}
+
+.gridMenu{
+  float:right;
+  margin-top:38px;
+}
+.gridMenu ul:last-child{margin-top:13px;}
+.gridMenu ul li{display:inline-block;width:157px;height:157px;position:relative;cursor:pointer;}
+.gridMenu ul li:last-child{margin-left:13px;}
+	.gridMenu ul li a {display:block;width:100%;height:100%;}
+.gridBtn1{background:#265294;border-radius:3px;}
+.gridBtn2{background:#1e5cb8;border-radius:3px;}
+.gridBtn3{background:#2484b6;border-radius:3px;}
+.gridBtn4{background:#106fb1;border-radius:3px;}
+.gridMenu ul li div{font-size:0;position:absolute;right:22px;bottom:15px;text-align:center;}
+.gridMenu ul li img{width:52px;display:block;text-align:center;margin:auto;margin-bottom:10px;}
+.gridMenu ul li span{color:#fff;font-size:15px;font-weight:bold;text-align:center;}
+.gridMenu .gridBtn1 img{margin-right:5px;}
+
+
+/* mainBoard */
+.mainBoard{margin-top:60px;width:100%; /*height:527px;*/height:586px; font-size:0;}
+
+/* mainLeft */
+.mainLeft{width:488px;height:100%;float:left;margin-right:89px;font-size:14px;}
+.mainNotice{width:488px;padding:0; margin-bottom:68px;}
+.mainProg{width:488px;padding:0; margin-bottom:68px;}
+.mainTable{width: 100%;}
+.mainTable thead{text-align:left; font-size:22px; color:#444444; border-bottom:1px solid #dcdcdc;}
+.mainTable thead th{padding-bottom:14px; text-align:left;}
+.mainTable thead th:last-child{font-size:0; text-align:right;}
+.mainTable thead th:last-child:before{content: url('../images/common/i_more.png'); width:23px; cursor:pointer;}
+.mainTable tbody{font-size:13px; cursor:pointer;}
+.mainTable tbody tr td{padding-bottom: 18px;}
+.mainTable tbody tr:first-child td{height:25px;padding:0;}
+.mainTable tbody tr td:last-child{color:#aaaaaa;text-align:right;}
+.mainTable tbody tr td img{margin-left:8px; margin-top:-2px; width:14px;}
+
+/* mainRight */
+.mainRight{width:447px; float:right;}
+.mainRight > .mainTable thead{width:100%; text-align:left; font-size:22px; color:#444444; border-bottom:none;}
+
+.mainRight .mainFeedWrap{width:447px; height:430px;}
+
+.mainRight .mainFeed{float:left; padding:0 10px; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box;}
+
+.mainRight .mainFeed .mainFeedPost{box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; width:407px; height:123px; max-height:300px; border-radius:3px; background:#fff; padding:16px 20px; margin-bottom:5px; box-shadow:1px 1px 1px #cfcfcf; position:relative; border-bottom:1px solid #e9eaec;}
+.mainRight .mainFeed .mainFeedPost div{display:inline-block;}
+.mainRight .mainFeed .mainFeedPost .feedPropic{float:left;width:50px; height:100%; vertical-align:top;}
+.mainRight .mainFeed .mainFeedPost .feedPropic > img{background:#eee; width:40px; height:40px; border-radius:20px; overflow:hidden;}
+
+.mainRight .mainFeed .mainFeedPost .feedInfo{display:inline-block; width:317px; height:100%;}
+.mainRight .mainFeed .mainFeedPost div{display:inline-block; font-size:12px; color:#777777;}
+.mainRight .mainFeed .mainFeedPost div.feedUser{width:317px; border-bottom:1px solid #dcdcdc; line-height:20px;}
+
+.mainRight .mainFeed .mainFeedPost div.feedContent{width:317px; min-height:40px; line-height:16px; padding:7px 3px 0;}
+.mainRight .mainFeed .mainFeedPost .feedInfo div b{font-size:13px;color:#444444;}
+.mainRight .mainFeed .mainFeedPost .feedInfo div span:last-child{color:#999999; float:right;}
+.mainRight .mainFeed .mainFeedPost .mainLikeBtn span,
+.mainRight .mainFeed .mainFeedPost .mainReplyBtn span{font-size:0;}
+.mainRight .mainFeed .mainFeedPost .mainLikeBtn span::before{content: url('../images/common/i_like.png'); cursor:pointer; margin-left:3px; vertical-align:baseline;}
+.mainRight .mainFeed .mainFeedPost .mainLikeBtn.actOn span::before{content: url('../images/common/i_like_on.png');}
+.mainRight .mainFeed .mainFeedPost .mainReplyBtn{margin-left:25px; margin-top: 14px;}
+.mainRight .mainFeed .mainFeedPost .mainReplyBtn span::before{content: url('../images/common/i_reply.png');  cursor:pointer;}
+.mainRight em{font-size:12px; margin-left:5px;}
+.mainRight .mainFeed .mainFeedPost .mainLikeBtn em:hover{color:#df5e5e; font-weight:bold;}
+
+
+/* ============ 커뮤니티 없는 레이아웃 추가 ================= */
+.mainBoard.boardExtended{height:327px;}
+.mainLeft.extended{margin-right:48px; margin-bottom:0;} 
+.mainLeft.rightExtended{float:right; margin-right:0; margin-bottom:0;}
+
+
+/* ============ 관리자 레이아웃 추가 ================= */
+.adminMain.mainBanner{height:320px;}
+.adminMain.bannerText{margin-top:107px; width:100%; margin-bottom:34px;}
+.adminMain.bannerText h2{font-size:62px; font-weight:normal;}
+.adminMain.bannerText h3{font-size:29px; font-weight:normal;}
+.adminMain.mainMenu{padding-bottom:59px;}
+.adminMain.gridMenu{float:left; margin-top:88px; display:inline-block;}
+
+.adminMain.gridMenu .gridBtn1{background:#4979c3;border-radius:3px;}
+.adminMain.gridMenu .gridBtn2{background:#265294;border-radius:3px;}
+.adminMain.gridMenu .gridBtn3{background:#324b9b;border-radius:3px;}
+.adminMain.gridMenu .gridBtn4{background:#4979c3;border-radius:3px;}
+.adminMain.gridMenu .gridBtn5{background:#4f84d5;border-radius:3px;}
+.adminMain.gridMenu .gridBtn6{background:#325aa0;border-radius:3px;}
+.adminMain.gridMenu .gridBtn1 img{width:58px; height:59px; margin-right:13px;}
+.adminMain.gridMenu .gridBtn2 img{width:61px; height:61px;}
+.adminMain.gridMenu .gridBtn3 img{width:56px; height:63px; margin-right:13px;}
+.adminMain.gridMenu .gridBtn4 img{width:70px; height:64px;}
+.adminMain.gridMenu .gridBtn5 img{width:60px; height:60px;}
+.adminMain.gridMenu .gridBtn6 img{width:65px; height:63px;}
+
+.adminMain.gridMenu ul{font-size:0;}
+.adminMain.gridMenu ul:last-child {margin-top:16px;}
+.adminMain.gridMenu ul li{margin-right:16px; width:190px; height:190px;}
+.adminMain.gridMenu ul li:last-child{margin-left:0; margin-right:0;}
+.gridMenu ul li div{bottom:19px;}
+.adminMain.gridMenu ul li img{width:72px; margin-bottom:22px;}
+.adminMain.gridMenu ul li span{font-size:20px; font-weight:normal;}
+
+.adminMain.boardExtended{width:398px; height:395px; margin-top:48px; margin-left:24px; display:inline-block; background:#f3f4f6; border-radius:3px;}
+.adminMain.boardExtended ul{width:100%; height:100%; padding-top:19px; padding-left:21px;}
+.adminMain.boardExtended ul li{position:relative; width:356px; height:110px; border-radius:3px; background:#fff; text-align:center; margin-bottom:15px;}
+.adminMain.boardExtended ul li div{float:left; width:150px; padding:15px; padding-bottom:10px;height:79px;}
+.adminMain.boardExtended ul li div img{width:60px; height:60px; border-radius:30px; background:#3e639a; display:block; margin:auto;margin-bottom:12px;}
+.adminMain.boardExtended ul li div span{color:#495f75; font-size:16px; font-weight:bold;}
+.adminMain.boardExtended ul li div:last-child{float:right; width:205px; margin-top:15px; border-left:1px solid #7d94ab; font-size:40px; line-height:59px; color:#495f75;}
+
+.pageWrap footer {position:absolute;bottom:0;left:0;}
+.footerLogo img{height:18px;}

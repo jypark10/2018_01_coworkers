@@ -1,0 +1,131 @@
+<? include '../../include/top_user.php' ?> <!-- top -->
+</head>
+<body>
+	<div class="pageWrap sub userPurchaseWrap"> <!-- pageWrap sub 뒤의 클래스명을 확인해주세요(폴더명관련) -->
+		<? include '../../include/header.php' ?> <!-- header -->
+		<div class="wrap">
+			<div class="contentwrap">
+				<? include '../../include/lnb_user.php' ?> <!-- 사용자lnb -->
+				
+				<!-- content s-->
+				<div class="contentArea purchaseBox"><!-- contentArea 뒤의 클래스명을 확인해주세요(파일명관련) -->
+					<div class="contentHeader">
+						<div class="pageLocation">
+							<h2>상품구매</h2>
+							<ul class="breadcrumb">
+								<li class="breadcrumb_home"><a href="#none" onclick="goHome('user');">HOME</a><em>></em></li>
+								<li><span>상품구매</span><em>></em></li>
+								<li><span>상품구매</span></li>
+							</ul>
+						</div>
+						<div class="cateTitle"><h3>상품구매</h3></div>
+					</div>
+					<div class="contentBody">
+						<div>
+							<h4 class="pageTitle">스마트데스크 이용기간 구매</h4>
+						</div>
+						<table class="listTable">
+							<thead>
+								<tr>
+									<th>기간</th>
+									<th>가격</th>
+									<th>상품선택</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1개월</td>
+									<td>100,000</td>
+									<td>
+										<input type="checkbox" id="listCheck_01" class="checkbox" />
+										<label for="listCheck_01" class="listCheck"></label>
+									</td>
+								</tr>
+								<tr>
+									<td>3개월</td>
+									<td>180,000</td>
+									<td>
+										<input type="checkbox" id="listCheck_02" class="checkbox" />
+										<label for="listCheck_02" class="listCheck"></label>
+									</td>
+								</tr>
+								<tr>
+									<td>6개월</td>
+									<td>240,000</td>
+									<td>
+										<input type="checkbox" id="listCheck_03" class="checkbox" />
+										<label for="listCheck_03" class="listCheck"></label>
+									</td>
+								</tr>
+								<tr>
+									<td>12개월</td>
+									<td>300,000</td>
+									<td>
+										<input type="checkbox" id="listCheck_04" class="checkbox" />
+										<label for="listCheck_04" class="listCheck"></label>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div>
+							<h4 class="pageTitle">서비스 이용시간 구매</h4>
+						</div>
+						<table class="listTable">
+							<thead>
+								<tr>
+									<th>시간</th>
+									<th>가격</th>
+									<th>상품선택</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>10시간</td>
+									<td>100,000</td>
+									<td>
+										<input type="checkbox" id="listCheck_05" class="checkbox" />
+										<label for="listCheck_05" class="listCheck"></label>
+									</td>
+								</tr>
+								<tr>
+									<td>20시간</td>
+									<td>180,000</td>
+									<td>
+										<input type="checkbox" id="listCheck_06" class="checkbox" />
+										<label for="listCheck_06" class="listCheck"></label>
+									</td>
+								</tr>
+								<tr>
+									<td>30시간</td>
+									<td>240,000</td>
+									<td>
+										<input type="checkbox" id="listCheck_07" class="checkbox" />
+										<label for="listCheck_07" class="listCheck"></label>
+									</td>
+								</tr>
+								<tr>
+									<td>40시간</td>
+									<td>300,000</td>
+									<td>
+										<input type="checkbox" id="listCheck_08" class="checkbox" />
+										<label for="listCheck_08" class="listCheck"></label>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="Btn2Box">
+							<button type="submit" class="btn2">구매</button>
+						</div>
+					</div>
+				</div>
+				<!-- content e-->
+
+			</div>
+		</div>
+		<? include '../../include/footer.php' ?> <!-- footer -->
+	</div>
+	<script>
+		currentLnb(4,0); //현재페이지 lnb인식
+	</script>
+</body>
+</html>

@@ -1,0 +1,337 @@
+<? include '../../include/top_admin.php' ?> <!-- top -->
+</head>
+<body>
+	<div class="pageWrap sub adminCalculateWrap"> <!-- pageWrap sub 뒤의 클래스명을 확인해주세요(폴더명관련) -->
+		<? include '../../include/header.php' ?> <!-- header -->
+		<div class="wrap">
+			<div class="contentwrap">
+				<? include '../../include/lnb_admin.php' ?> <!-- 관리자lnb -->
+				
+				<!-- content s-->
+				<div class="contentArea invoiceWriteBox"><!-- contentArea 뒤의 클래스명을 확인해주세요(파일명관련) -->
+					<div class="contentHeader">
+						<div class="pageLocation">
+							<h2>정산 관리</h2>
+							<ul class="breadcrumb">
+								<li class="breadcrumb_home"><a href="#none" onclick="goHome('admin');">HOME</a><em>></em></li>
+								<li><span>정산관리</span><em>></em></li>
+								<li>Invoice작성</li>
+							</ul>
+						</div>
+						<div class="cateTitle"><h3>Invoice 작성</h3></div>
+					</div>
+					<div class="contentBody">
+						<table class="searchTable">
+							<colgroup><col width="20%"></colgroup>
+							<tr>
+								<th>기간설정</th>
+								<td>
+									<!-- 20180117 주석처리 s--> 
+									<!--
+									<div class="findByDate"><input class="miniCalendar" id="clcltDateInput1" type="text"></div>
+									<div class="dur">~</div>
+									<div class="findByDate"><input class="miniCalendar" id="clcltDateInput2" type="text"></div>
+									<script>setDatePick('clcltDateInput1');setDatePick('clcltDateInput2');</script>
+									-->
+									<!-- 20180117 주석처리 e-->
+									<div class="searchSelect selectBox fL">
+										<label for="selectOpt">2017-11</label>
+										<select id="selectOpt" class="selectOpt">
+											<option value="">2017-11</option>
+											<option value="">2017-11</option>
+										</select>
+									</div>
+									<a href="#none" class="btn2-1">원장데이터 재생성</a>
+								</td>
+							</tr>
+						</table>
+						<h4 class="pageTitle">회사 정보</h4>
+						<table class="viewTable">
+							<tbody>
+								<tr>
+									<th>분류</th>
+									<td>오피스</td>
+								</tr>
+								<tr>
+									<th>회사명</th>
+									<td>AA기업</td>
+								</tr>
+								<tr>
+									<th>호실</th>
+									<td>1801</td>
+								</tr>
+							</tbody>
+						</table>
+						<h4 class="pageTitle">Rental</h4>
+						<table class="writeTable2">
+							<thead>
+								<tr>
+									<th>항목</th>
+									<th>금액</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><input class="wideInput" type="text" /></td>
+									<td><input class="wideInput" type="text" /></td>
+								</tr>
+								<tr>
+									<td><input class="wideInput" type="text" /></td>
+									<td><input class="wideInput" type="text" /></td>
+								</tr>
+							</tbody>
+						</table>
+						<h4 class="pageTitle">Additional Service</h4>
+						<table class="writeTable2">
+							<colgroup><col width="15%"><col width="15%"><col width="15%"><col width="22%"><col width="13%"><col width="20%"></colgroup>
+							<thead>
+								<tr class="taC">
+									<th>항목</th>
+									<th colspan="2">Contents</th>
+									<th colspan="2">Incidential Fee</th>
+									<th>Remarks</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th rowspan="12" class="taC">Additional<br>Fee</th>
+									<td rowspan="3">Additional<br>Service Time</td>
+									<td>Conference Room</td>
+									<td><input type="text"/></td>
+									<td class="tdEpt"><input type="checkbox" id="listCheck_01" class="writeTableCheck"><label for="listCheck_01" class="writeCheck">VAT예외</label></td>
+									<td><input type="text"/></td>
+								</tr>
+								<tr>
+									<td class="bdL">Conference Room</td>
+									<td><input type="text"/></td>
+									<td class="tdEpt"><input type="checkbox" id="listCheck_02" class="writeTableCheck"><label for="listCheck_02" class="writeCheck">VAT예외</label></td>
+									<td><input type="text"/></td>
+								</tr>
+								<tr>
+									<td class="bdL">Conference Room</td>
+									<td><input type="text"/></td>
+									<td class="tdEpt"><input type="checkbox" id="listCheck_03" class="writeTableCheck"><label for="listCheck_03" class="writeCheck">VAT예외</label></td>
+									<td><input type="text"/></td>
+								</tr>
+								<tr>
+									<td colspan="2">Vending Machine</td>
+									<td><input type="text"/></td>
+									<td class="tdEpt"><input type="checkbox" id="listCheck_04" class="writeTableCheck"><label for="listCheck_04" class="writeCheck">VAT예외</label></td>
+									<td><input type="text"/></td>
+								</tr>
+								<tr>
+									<td colspan="2">Printing Machine</td>
+									<td><input type="text"/></td>
+									<td class="tdEpt"><input type="checkbox" id="listCheck_05" class="writeTableCheck"><label for="listCheck_05" class="writeCheck">VAT예외</label></td>
+									<td><input type="text"/></td>
+								</tr>
+								<tr>
+									<td colspan="2">Equipment Rental</td>
+									<td><input type="text"/></td>
+									<td class="tdEpt"><input type="checkbox" id="listCheck_06" class="writeTableCheck"><label for="listCheck_06" class="writeCheck">VAT예외</label></td>
+									<td><input type="text"/></td>
+								</tr>
+								<tr>
+									<td colspan="2">Customized Secretarial Service</td>
+									<td><input type="text"/></td>
+									<td class="tdEpt"><input type="checkbox" id="listCheck_07" class="writeTableCheck"><label for="listCheck_07" class="writeCheck">VAT예외</label></td>
+									<td><input type="text"/></td>
+								</tr>
+								<tr>
+									<td colspan="2">Courier Service</td>
+									<td><input type="text"/></td>
+									<td class="tdEpt"><input type="checkbox" id="listCheck_08" class="writeTableCheck"><label for="listCheck_08" class="writeCheck">VAT예외</label></td>
+									<td><input type="text"/></td>
+								</tr>
+								<tr>
+									<td colspan="2">Stationery</td>
+									<td><input type="text"/></td>
+									<td class="tdEpt"><input type="checkbox" id="listCheck_09" class="writeTableCheck"><label for="listCheck_09" class="writeCheck">VAT예외</label></td>
+									<td><input type="text"/></td>
+								</tr>
+								<tr>
+									<td colspan="2">Miscellaneous Charge</td>
+									<td><input type="text"/></td>
+									<td class="tdEpt"><input type="checkbox" id="listCheck_10" class="writeTableCheck"><label for="listCheck_10" class="writeCheck">VAT예외</label></td>
+									<td><input type="text"/></td>
+								</tr>
+								<tr>
+									<td colspan="2">Beverage</td>
+									<td><input type="text"/></td>
+									<td class="tdEpt"><input type="checkbox" id="listCheck_11" class="writeTableCheck"><label for="listCheck_11" class="writeCheck">VAT예외</label></td>
+									<td><input type="text"/></td>
+								</tr>
+								<tr>
+									<td colspan="2">Telephone</td>
+									<td><input type="text"/></td>
+									<td class="tdEpt"><input type="checkbox" id="listCheck_12" class="writeTableCheck"><label for="listCheck_12" class="writeCheck">VAT예외</label></td>
+									<td><input type="text"/></td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="Btn2Box">
+							<a class="txtbtnRight mb20" href="invoice_set_vat.html">VAT예외항목 Default 설정</a>
+							<a href="cacul_tenant_list.html" class="btn2">목록</a>
+							<a href="#none" class="btn2 popupBtn" popupTarget="popInvoicePreview">미리보기</a>
+							<a href="#none" class="btn2">Invoice 발송</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- popupContents s-->
+
+				<div class="popupWrap popInvoicePreview">
+					<div class="popupContainer">
+						<div class="popupBox">
+							<h1 class="popupHeader">Invoice<span class="button popCloseBtn b-close"><span class="tBlind">닫기</span></span></h1>
+							<div class="popContentBox printBox">
+								<div class="popInvoicePreviewWrap">
+									<ul class="invoicePreviewInfo">
+										<li>세안홀딩스 (주)Seian holdings Co.,LTD</li>
+										<li>President: -------------- Regd. no.: ----------</li>
+										<li>22F S-tower, 82 Saemunan-ro, Jongno-gu, Seoul 03815</li>
+										<li>T: --- --- ---- F: --- --- ---- www.coworkers.com</li>
+									</ul>
+									<h1>INVOICE</h1>
+									<table class="viewTable2 invoicePreviewTop">
+										<tbody>
+											<tr>
+												<th>Company</th>
+												<td colspan="3">AA Company Co.LTD</td>
+											</tr>
+											<tr>
+												<th>Attention</th>
+												<td colspan="3">홍길동</td>
+											</tr>
+											<tr>
+												<th>Issued by</th>
+												<td>Coworkers 관리자</td>
+												<th>Issued date</th>
+												<td>2018-01-10</td>
+											</tr>
+										</tbody>
+									</table>
+
+									<table class="listTable2 invoicePreviewMid">
+										<thead>
+											<tr>
+												<th>Date</th>
+												<th colspan="2">Text</th>
+												<th>Debits</th>
+												<th>Credits</th>
+												<th class="bdr0">Remarks</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													<input type="text" value="DEC01" style="padding:0;width:60px;height:30px;inline-height:30px;text-align:center;">
+													~ 
+													<input type="text" value="DEC01" style="padding:0;width:60px;height:30px;inline-height:30px;text-align:center;">
+												</td>
+												<td>Monthly Rental Charge</td>
+												<td>VAT(10%)</td>
+												<td>10,200,000,000</td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>DEC01 ~ DEC31</td>
+												<td>Conference Room Rental</td>
+												<td>VAT(10%)</td>
+												<td>200,000<br>0</td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>DEC01 ~ DEC31</td>
+												<td>Fitness Center</td>
+												<td>VAT(10%)</td>
+												<td>10,000<br>0</td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>DEC01 ~ DEC31</td>
+												<td>Relax Room</td>
+												<td>VAT(10%)</td>
+												<td>10,000<br>0</td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>DEC01 ~ DEC31</td>
+												<td>Vending Machine</td>
+												<td>VAT(10%)</td>
+												<td>10,000<br>0</td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>DEC01 ~ DEC31</td>
+												<td>Internet</td>
+												<td>VAT(10%)</td>
+												<td>10,000<br>0</td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>DEC01 ~ DEC31</td>
+												<td></td>
+												<td>VAT(10%)</td>
+												<td>19,000</td>
+												<td></td>
+												<td></td>
+											</tr>
+											<tr>
+												<td colspan="6" class="taR bdl0"><strong>Total Amount<span>2,290,900</span></strong></td>
+											</tr>
+										</tbody>
+									</table>
+									<table class="viewTable invoicePreviewBtm">
+										<tr>
+											<th colspan="3">BANK INFORMATION</th>
+										</tr>
+										<tr>
+											<td>BANK NAME</td>
+											<td colspan="2">Shinhan Bank</td>
+										</tr>
+										<tr>
+											<td>BANK ACCOUNT</td>
+											<td colspan="2">--- - --- - ------</td>
+										</tr>
+										<tr>
+											<td>BENEFICIARY</td>
+											<td colspan="2">Seian holdings Co.,LTD.</td>
+										</tr>
+										<tr>
+											<td>SWIFT CODE</td>
+											<td>SHBKKRSE</td>
+											<td class="taR">T: -- - --- - ----, E: -----@coworkers.com</td>
+										</tr>
+									</table>
+
+									<div class="Btn2Box taR non-printBox">
+										<a href="#none" class="btn1">메일발송</a>
+										<!-- <a href="#none" class="btn1" onClick="newWin('invoice_preview.html',800,830); return false;">프린트</a> -->
+										<a href="#none" class="btn1" onclick="printExct('printBox');">인쇄</a>
+										<a href="#none" class="btn1 b-close">닫기</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- popupContents e-->
+
+				<!-- content e-->
+
+			</div>
+		</div>
+		<? include '../../include/footer.php' ?> <!-- footer -->
+	</div>
+	<script>
+		currentLnb(5,0); //현재페이지 lnb인식
+	</script>
+</body>
+</html>

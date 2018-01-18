@@ -1,0 +1,156 @@
+<? include '../../include/top_admin.php' ?> <!-- top -->
+</head>
+<body>
+	<div class="pageWrap sub adminMemberWrap"> <!-- pageWrap sub 뒤의 클래스명을 확인해주세요(폴더명관련) -->
+		<? include '../../include/header.php' ?> <!-- header -->
+		<div class="wrap">
+			<div class="contentwrap">
+				<? include '../../include/lnb_admin.php' ?> <!-- 관리자lnb -->
+				
+				<!-- content s-->
+				<div class="contentArea memberWriteBox"><!-- contentArea 뒤의 클래스명을 확인해주세요(파일명관련) -->
+					<div class="contentHeader">
+						<div class="pageLocation">
+							<h2>회원 관리</h2>
+							<ul class="breadcrumb">
+								<li class="breadcrumb_home"><a href="#none" onclick="goHome('admin');">HOME</a><em>></em></li>
+								<li><span>회원관리</span><em>></em></li><li>회원관리</li>
+							</ul>
+						</div>
+						<div class="cateTitle"><h3>회원 관리</h3></div>
+					</div>
+					<div class="contentBody">
+						<h4 class="pageTitle">회원 등록</h4>
+						<div class="tableScrollX">
+							<table class="writeTable">
+								<tbody>
+									<tr>
+										<th>구분<span class="iStar">*</span></th>
+										<td>
+											<input type="radio" name="rdMbrCate" id="rdMbrCate1"><label for="rdMbrCate1">오피스/지정데스크</label>
+											<input type="radio" name="rdMbrCate" id="rdMbrCate2"><label for="rdMbrCate2">스마트데스크</label>
+											<input type="radio" name="rdMbrCate" id="rdMbrCate3"><label for="rdMbrCate3">일반</label>
+										</td>
+									</tr>
+									<tr>
+										<th>회사명/호수<span class="iStar">*</span></th>
+										<td>
+											<input type="text" class="shortInput"/>
+											<a href="#none" class="btn2 popupBtn" popupTarget="popFindComp">회사찾기</a>
+										</td>
+									</tr>
+									<tr>
+										<th>아이디<span class="iStar">*</span></th>
+										<td>
+											<input type="text" class="shortInput"/>
+											<a href="#none" class="btn2">중복확인</a>
+										</td>
+									</tr>
+									<tr>
+										<th>비밀번호<span class="iStar">*</span></th>
+										<td>
+											<input type="password" class="shortInput"/>
+											<span class="descTxt">(※ 영문, 숫자,특수문자 8자~12자 이내, 공백 불가 / 영문 대소문자 구분)</span>
+										</td>
+									</tr>
+									<tr>
+										<th>비밀번호확인<span class="iStar">*</span></th>
+										<td>
+											<input type="password" class="shortInput"/>
+											<span class="descTxt">비밀번호를 한번 더 입력해 주세요</span>
+										</td>
+									</tr>
+									<tr>
+										<th>이용기간<span class="iStar">*</span></th>
+										<td>
+											<div class="findByDate"><input class="miniCalendar" id="clcltDateInput1" type="text"></div>
+											<div class="dur">~</div>
+											<div class="findByDate"><input class="miniCalendar" id="clcltDateInput2" type="text"></div>
+											<script>setDatePick('clcltDateInput1');setDatePick('clcltDateInput2');</script>
+										</td>
+									</tr>
+									<tr>
+										<th>서비스 이용시간<span class="iStar">*</span></th>
+										<td><input type="text" class="shortInput"/></td>
+									</tr>
+									<tr>
+										<th>이름<span class="iStar">*</span></th>
+										<td><input type="text" class="shortInput"/></td>
+									</tr>
+									<tr>
+										<th>직급<span class="iStar">*</span></th>
+										<td><input type="text" class="shortInput"/></td>
+									</tr>
+									<tr>
+										<th>휴대폰 번호<span class="iStar">*</span></th>
+										<td>
+											<input type="tel" class="shortInput"/>
+										</td>
+									</tr>
+									<tr>
+										<th>E-Mail<span class="iStar">*</span></th>
+										<td>
+											<input type="email" />
+										</td>
+									</tr>
+									<tr>
+										<th>프로필 이미지</th>
+										<td>
+											<input type="file" />
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="Btn2Box">
+							<a href="#none" class="btn2">확인</a>
+							<a href="member_list.html" class="btn2">취소</a>
+						</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- popupContents s-->
+
+				<!-- 회사 찾기 팝업-->
+				<div class="popupWrap popFindComp">
+					<div class="popupContainer">
+						<div class="popupBox">
+							<h1 class="popupHeader">회사 찾기<span class="button popCloseBtn b-close"><span class="tBlind">닫기</span></span></h1>
+							<div class="popContentBox">
+								<input type="text" placeholder="회사명을 입력해 주세요"/>
+								<a href="#none" class="btn2">검색</a>
+								<table>
+									<colgroup><col width="60%"><col width="40%"></colgroup>
+									<thead>
+										<tr>
+											<th>회사명</th>
+											<th>선택</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>AA기업</td>
+											<td>
+												<a href="#none" class="btn2">선택</a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+	
+				<!-- popupContents e-->
+				<!-- content e-->
+
+			</div>
+		</div>
+		<? include '../../include/footer.php' ?> <!-- footer -->
+	</div>
+	<script>
+		currentLnb(1,0); //현재페이지 lnb인식
+	</script>
+</body>
+</html>

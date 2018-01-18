@@ -1,0 +1,190 @@
+<? include '../../include/top_user.php' ?> <!-- top -->
+</head>
+<body>
+	<div class="pageWrap sub userTenantWrap"> <!-- pageWrap sub 뒤의 클래스명을 확인해주세요(폴더명관련) -->
+		<? include '../../include/header.php' ?> <!-- header -->
+		<div class="wrap">
+			<div class="contentwrap">
+				<? include '../../include/lnb_user.php' ?> <!-- 사용자lnb -->
+				
+				<!-- content s-->
+				<div class="contentArea companyInfoBox"><!-- contentArea 뒤의 클래스명을 확인해주세요(파일명관련) -->
+					<div class="contentHeader">
+						<div class="pageLocation">
+							<h2>입주사 관리자 메뉴</h2>
+							<ul class="breadcrumb">
+								<li class="breadcrumb_home"><a href="#none" onclick="goHome('user');">HOME</a><em>></em></li>
+								<li><span>입주사관리자메뉴</span><em>></em></li>
+								<li><span>회사정보</span></li>
+							</ul>
+						</div>
+						<div class="cateTitle"><h3>회사 정보 관리</h3></div>
+					</div>
+					<div class="contentBody">
+						<ul class="tabBox compInfoTab">
+							<li class="actOn"><a href="company_info.html">회사 기본정보</a></li>
+							<li><a href="e_contract.html">전자계약서</a></li>
+						</ul>
+						<h4 class="pageTitle">계약 정보</h4>
+						<table class="writeTable">
+							<tbody>
+								<tr>
+									<th>계약지점</th>
+									<td>광화문</td>
+								</tr>
+								<tr>
+									<th>업체명</th>
+									<td>AA기업</td>
+								</tr>
+								<tr>
+									<th>첨부파일</th>
+									<td>
+										<div class="attachFileWrap">
+											<div class="inputFilePreview">
+												<ul>
+													<li><a href="#none">사업자등록증.png</a></li>
+													<li><a href="#none">통장사본.png</a></li>
+													<li><a href='#none' class='attachReset'>초기화</a></li>
+												</ul>
+											</div>
+											<label for="inputFileBtn" class="btn2">파일등록</label>
+											<input type="file" id="inputFileBtn" class="inputFileBox" multiple>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>사업자(주민)등록번호</th>
+									<td>110-10-111000</td>
+								</tr>
+								<tr>
+									<th>이메일 주소</th>
+									<td><input type="text" class="shortInput" value="abcde@fghijk.com"></td>
+								</tr>
+								<tr>
+									<th>지정 호실</th>
+									<td>1802</td>
+								</tr>
+								<tr>
+									<th>임대 기간(계약)</th>
+									<td>2017.12.01 ~ 2018.11.30</td>
+								</tr>
+							</tbody>
+						</table>
+						<h4 class="pageTitle">대표자 정보</h4>
+						<table class="writeTable">
+							<tbody>
+								<tr>
+									<th>대표자</th>
+									<td><input type="text" class="shortInput" value="홍길동"></td>
+								</tr>
+								<tr>
+									<th>휴대폰</th>
+									<td><input type="text" class="shortInput" value="010-1234-5678"></td>
+								</tr>
+								<tr>
+									<th>이메일</th>
+									<td><input type="text" class="shortInput" value="abcde@fghijk.com"></td>
+								</tr>
+							</tbody>
+						</table>
+						<h4 class="pageTitle">구성원 정보</h4>
+						<table class="writeTable">
+							<tbody>
+								<tr>
+									<th>인원수</th>
+									<td>8명<a href="#none" class="btn2 fR popupBtn" popupTarget="popMemberDetail">구성원 목록</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				
+				<!-- popupContents s-->
+
+				<!-- 구성원 목록 보기 팝업 -->
+				<div class="popupWrap popMemberDetail">
+					<div class="popupContainer">
+						<div class="popupBox">
+							<h1 class="popupHeader">구성원 목록<span class="button popCloseBtn b-close"><span class="tBlind">닫기</span></span></h1>
+							<div class="popContentBox">
+								<table>
+									<thead>
+										<tr>
+											<th>NO</th>
+											<th>이름</th>
+											<th>직급</th>
+											<th>휴대폰</th>
+											<th>E-mail</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>999</td>
+											<td>홍길동</td>
+											<td>차장</td>
+											<td>010-1234-5678</td>
+											<td>abcde@fghijk.com</td>
+										</tr>
+										<tr>
+											<td>999</td>
+											<td>홍길동</td>
+											<td>차장</td>
+											<td>010-1234-5678</td>
+											<td>abcde@fghijk.com</td>
+										</tr>
+										<tr>
+											<td>999</td>
+											<td>홍길동</td>
+											<td>차장</td>
+											<td>010-1234-5678</td>
+											<td>abcde@fghijk.com</td>
+										</tr>
+										<tr>
+											<td>999</td>
+											<td>홍길동</td>
+											<td>차장</td>
+											<td>010-1234-5678</td>
+											<td>abcde@fghijk.com</td>
+										</tr>
+										<tr>
+											<td>999</td>
+											<td>홍길동</td>
+											<td>차장</td>
+											<td>010-1234-5678</td>
+											<td>abcde@fghijk.com</td>
+										</tr>
+									</tbody>
+								</table>
+								<div class="pagination">
+									<a class="prev02" href="#none"></a>
+									<a class="prev" href="#none"></a>
+									<!-- 활성화 페이지의 경우 active 클래스 부여 -->
+									<a class="active" href="#none">1</a>
+									<a href="#none">2</a>
+									<a href="#none">3</a>
+									<a href="#none">4</a>
+									<a href="#none">5</a>
+									<a class="next" href="#none"></a>
+									<a class="next02" href="#none"></a>
+								</div>
+								<div class="Btn1Box">
+									<a href="#none" class="btn1">Excel다운로드</a>
+									<a href="#none" class="btn1 b-close">닫기</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- popupContents e-->
+				<!-- content e-->
+
+			</div>
+		</div>
+		<? include '../../include/footer.php' ?> <!-- footer -->
+	</div>
+	<script>
+		currentLnb(3,0); //현재페이지 lnb인식
+	</script>
+</body>
+</html>

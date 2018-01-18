@@ -1,0 +1,52 @@
+<? include '../../include/top_user.php' ?> <!-- top -->
+</head>
+<body>
+	<div class="pageWrap sub userMypageWrap"> <!-- pageWrap sub 뒤의 클래스명을 확인해주세요(폴더명관련) -->
+		<? include '../../include/header.php' ?> <!-- header -->
+		<div class="wrap">
+			<div class="contentwrap">
+				<? include '../../include/lnb_user.php' ?> <!-- 사용자lnb -->
+				
+				<!-- content s-->
+				<div class="contentArea rsrvFcCalendarBox"><!-- contentArea 뒤의 클래스명을 확인해주세요(파일명관련) -->
+					<div class="contentHeader">
+						<div class="pageLocation">
+							<h2>마이페이지</h2>
+							<ul class="breadcrumb">
+								<li class="breadcrumb_home"><a href="#none" onclick="goHome('user');">HOME</a><em>></em></li>
+								<li><span>마이페이지</span><em>></em></li>
+								<li><span>예약정보</span></li>
+							</ul>
+						</div>
+						<div class="cateTitle"><h3>예약 정보</h3></div>
+					</div>
+					<div class="contentBody">
+						<ul class="tabBox rsrvInfoTab">
+							<li><a href="rsrv_room_calendar.html">회의실 예약정보</a></li>
+							<li class="actOn"><a href="rsrv_fc_calendar.html">F/C 예약정보</a></li>
+							<li><a href="rsrv_slp_room_calendar.html">수면실 예약정보</a></li>
+						</ul>
+						<ul class="tabCalendar">
+							<li><a href="rsrv_fc_calendar.html" class="calendar active" title="달력보기"></a></li>
+							<li><a href="rsrv_fc_list.html" class="list" title="리스트보기"></a></li>
+						</ul>
+
+						<!-- 캘린더영역 s-->
+						<div class="fullCalendarBox">
+							<!-- 이곳에 추가 부탁드립니다 -->
+						</div>
+						<!-- 캘린더영역 e-->
+
+					</div>
+				</div>
+				<!-- content e-->
+
+			</div>
+		</div>
+		<? include '../../include/footer.php' ?> <!-- footer -->
+	</div>
+	<script>
+		currentLnb(2,2); //현재페이지 lnb인식
+	</script>
+</body>
+</html>

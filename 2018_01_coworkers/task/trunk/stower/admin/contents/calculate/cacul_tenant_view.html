@@ -1,0 +1,167 @@
+<? include '../../include/top_admin.php' ?> <!-- top -->
+</head>
+<body>
+	<div class="pageWrap sub adminCalculateWrap"> <!-- pageWrap sub 뒤의 클래스명을 확인해주세요(폴더명관련) -->
+		<? include '../../include/header.php' ?> <!-- header -->
+		<div class="wrap">
+			<div class="contentwrap">
+				<? include '../../include/lnb_admin.php' ?> <!-- 관리자lnb -->
+				
+				<!-- content s-->
+				<div class="contentArea calTenantListBox"><!-- contentArea 뒤의 클래스명을 확인해주세요(파일명관련) -->
+					<div class="contentHeader">
+						<div class="pageLocation">
+							<h2>정산 관리</h2>
+							<ul class="breadcrumb">
+								<li class="breadcrumb_home"><a href="#none" onclick="goHome('admin');">HOME</a><em>></em></li>
+								<li><span>정산관리</span><em>></em></li><li>Invoice작성</li>
+							</ul>
+						</div>
+						<div class="cateTitle"><h3>원장 조회</h3></div>
+					</div>
+					<div class="contentBody">
+						<table class="searchTable">
+							<colgroup><col width="20%"></colgroup>
+							<tr>
+								<th>집계 월</th>
+								<td>
+									<div class="searchSelect selectBox fL">
+										<label for="selectOpt">2017-11</label>
+										<select id="selectOpt" class="selectOpt">
+											<option value="">2017-11</option>
+											<option value="">2017-11</option>
+										</select>
+									</div>
+									<a href="#none" class="btn2-1 fL">조회</a>
+								</td>
+							</tr>
+						</table>
+						<h4 class="pageTitle">회사 정보</h4>
+						<table class="viewTable">
+							<tbody>
+								<tr>
+									<th>분류</th>
+									<td>오피스</td>
+								</tr>
+								<tr>
+									<th>회사명</th>
+									<td>AA기업</td>
+								</tr>
+								<tr>
+									<th>호실</th>
+									<td>1801</td>
+								</tr>
+							</tbody>
+						</table>
+						<h4 class="pageTitle">Rental</h4>
+						<table class="viewTable2">
+							<thead>
+								<tr>
+									<th>항목</th>
+									<th>금액</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>임대료</td>
+									<td>999,999,999</td>
+								</tr>
+								<tr>
+									<td>임대료</td>
+									<td>999,999,999</td>
+								</tr>
+							</tbody>
+						</table>
+						<h4 class="pageTitle">Additional Service</h4>
+						<table class="viewTable2">
+							<colgroup><col width="15%"><col width="15%"><col width="15%"><col width="35%"><col width="20%"></colgroup>
+							<thead>
+								<tr class="taC">
+									<th>항목</th>
+									<th colspan="2">Contents</th>
+									<th>Incidential Fee</th>
+									<th>Remarks</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th rowspan="12" class="taC">Additional<br>Fee</th>
+									<td rowspan="3">Additional<br>Service Time</td>
+									<td>Conference Room</td>
+									<td>999,999,999</td>
+									<td>&nbsp</td>
+								</tr>
+								<tr>
+									<td class="bdL">Conference Room</td>
+									<td>999,999,999</td>
+									<td>&nbsp</td>
+								</tr>
+								<tr>
+									<td class="bdL">Conference Room</td>
+									<td>999,999,999</td>
+									<td>&nbsp</td>
+								</tr>
+								<tr>
+									<td colspan="2">Vending Machine</td>
+									<td>999,999,999</td>
+									<td>&nbsp</td>
+								</tr>
+								<tr>
+									<td colspan="2">Printing Machine</td>
+									<td>999,999,999</td>
+									<td>&nbsp</td>
+								</tr>
+								<tr>
+									<td colspan="2">Equipment Rental</td>
+									<td>999,999,999</td>
+									<td>&nbsp</td>
+								</tr>
+								<tr>
+									<td colspan="2">Customized Secretarial Service</td>
+									<td>999,999,999</td>
+									<td>&nbsp</td>
+								</tr>
+								<tr>
+									<td colspan="2">Courier Service</td>
+									<td>999,999,999</td>
+									<td>&nbsp</td>
+								</tr>
+								<tr>
+									<td colspan="2">Stationery</td>
+									<td>999,999,999</td>
+									<td>&nbsp</td>
+								</tr>
+								<tr>
+									<td colspan="2">Miscellaneous Charge</td>
+									<td>999,999,999</td>
+									<td>&nbsp</td>
+								</tr>
+								<tr>
+									<td colspan="2">Beverage</td>
+									<td>999,999,999</td>
+									<td>&nbsp</td>
+								</tr>
+								<tr>
+									<td colspan="2">Telephone</td>
+									<td>999,999,999</td>
+									<td>&nbsp</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="Btn2Box">
+							<a href="cacul_tenant_list.html" class="btn2">목록</a>
+							<a href="invoice_write.html" class="btn2">Invoice 작성</a>
+						</div>
+					</div>
+				</div>
+				<!-- content e-->
+
+			</div>
+		</div>
+		<? include '../../include/footer.php' ?> <!-- footer -->
+	</div>
+	<script>
+		currentLnb(5,0); //현재페이지 lnb인식
+	</script>
+</body>
+</html>

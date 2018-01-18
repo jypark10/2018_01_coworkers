@@ -1,0 +1,70 @@
+<? include '../../include/top_user.php' ?> <!-- top -->
+</head>
+<body>
+	<div class="pageWrap sub userMypageWrap"> <!-- pageWrap sub 뒤의 클래스명을 확인해주세요(폴더명관련) -->
+		<? include '../../include/header.php' ?> <!-- header -->
+		<div class="wrap">
+			<div class="contentwrap">
+				<? include '../../include/lnb_user.php' ?> <!-- 사용자lnb -->
+				
+				<!-- content s-->
+				<div class="contentArea useHistoryBox"><!-- contentArea 뒤의 클래스명을 확인해주세요(파일명관련) -->
+					<div class="contentHeader">
+						<div class="pageLocation">
+							<h2>마이페이지</h2>
+							<ul class="breadcrumb">
+								<li class="breadcrumb_home"><a href="#none" onclick="goHome('user');">HOME</a><em>></em></li>
+								<li><span>마이페이지</span><em>></em></li>
+								<li><span>이용내역</span></li>
+							</ul>
+						</div>
+						<div class="cateTitle"><h3>이용 내역</h3></div>
+					</div>
+					<div class="contentBody">
+						<h4 class="pageTitle">1월 이용내역 (2018.01.01 ~ 2018.01.19)</h4>
+						<div class="tableScrollX">
+							<table class="viewTable">
+								<tr>
+									<th>이용 가능 남은 시간</th>
+									<td>52시간</td>
+								</tr>
+								<tr>
+									<th>회의실 이용 시간</th>
+									<td>6시간</td>
+								</tr>
+								<tr>
+									<th>이용만료일자</th>
+									<td>2018.12.31</td>
+								</tr>
+								<tr>
+									<th>F/C 이용 시간</th>
+									<td>3시간</td>
+								</tr>
+								<tr>
+									<th>수면실 이용 시간</th>
+									<td>2시간</td>
+								</tr>
+								<tr>
+									<th>복합기 인쇄매수 / 총액</th>
+									<td>70매 / 17,500원</td>
+								</tr>
+								<tr>
+									<th>벤딩머신 사용 총액</th>
+									<td>67,500원</td>
+								</tr>
+							</table>
+						</div>
+
+					</div>
+				</div>
+				<!-- content e-->
+
+			</div>
+		</div>
+		<? include '../../include/footer.php' ?> <!-- footer -->
+	</div>
+	<script>
+		currentLnb(2,3); //현재페이지 lnb인식
+	</script>
+</body>
+</html>

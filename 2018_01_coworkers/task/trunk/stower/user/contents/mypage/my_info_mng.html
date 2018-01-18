@@ -1,0 +1,197 @@
+<? include '../../include/top_user.php' ?> <!-- top -->
+</head>
+<body>
+	<div class="pageWrap sub userMypageWrap"> <!-- pageWrap sub 뒤의 클래스명을 확인해주세요(폴더명관련) -->
+		<? include '../../include/header.php' ?> <!-- header -->
+		<div class="wrap">
+			<div class="contentwrap">
+				<? include '../../include/lnb_user.php' ?> <!-- 사용자lnb -->
+				
+				<!-- content s-->
+				<div class="contentArea myInfoMngBox"><!-- contentArea 뒤의 클래스명을 확인해주세요(파일명관련) -->
+					<div class="contentHeader">
+						<div class="pageLocation">
+							<h2>마이페이지</h2>
+							<ul class="breadcrumb">
+								<li class="breadcrumb_home"><a href="#none" onclick="goHome('user');">HOME</a><em>></em></li>
+								<li><span>마이페이지</span><em>></em></li>
+								<li><span>회원정보</span></li>
+							</ul>
+						</div>
+						<div class="cateTitle"><h3>회원정보</h3></div>
+					</div>
+					<div class="contentBody">
+						<h4 class="pageTitle">기본정보</h4>
+
+						<div class="tableScrollX scroll">
+							<table class="viewTable">
+								<tbody>
+									<tr>
+										<th>프로필사진</th>
+										<td colspan="3">
+											<div class="myInfoPic">
+												<!-- 프로필사진 추가 영역 -->
+												<img src="../../images/common/mypagePic.png" alt="프로필기본이미지">
+											</div>
+											<a href="#none" class="btn2">사진변경</a>
+										</td>
+									</tr>
+									<tr>
+										<th>이름</th>
+										<td>홍길동</td>
+										<th>직급</th>
+										<td>차장</td>
+									</tr>
+									<tr>
+										<th>회사명</th>
+										<td>AA기업</td>
+										<th>호실</th>
+										<td>1801</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<h4 class="pageTitle">세부정보</h4>
+						<div class="tableScrollX">
+							<table class="writeTable">
+								<tbody>
+									<tr>
+										<th>회원분류</th>
+										<td>
+											<input type="radio" id="desk" name="radio" checked>
+											<label for="desk" class="radio" >오피스/지정데스크</label>
+											<input type="radio"  id="basic" name="radio">
+											<label for="basic" class="radio">스마트데스크</label>
+										</td>
+									</tr>
+									<tr>
+										<th>회사명</th>
+										<td>
+											<input type="text" />
+											<a href="#none" class="btn2 popupBtn" popupTarget="popFindComp">검색</a>
+										</td>
+									</tr>
+									<tr>
+										<th>비밀번호</th>
+										<td>
+											<input type="password" /><span class="txtbtnLeft fN m20 popupBtn" popupTarget="popChangePw">비밀번호 변경</span>
+										</td>
+									</tr>
+									<tr>
+										<th>부서</th>
+										<td>
+											<input type="text" />
+										</td>
+									</tr>
+									<tr>
+										<th>직위</th>
+										<td>
+											<input type="text" />
+										</td>
+									</tr>
+									<tr>
+										<th>휴대폰 번호</th>
+										<td>
+											<input type="tel" />
+										</td>
+									</tr>
+									<tr>
+										<th>이메일</th>
+										<td>
+											<input type="email" />
+										</td>
+									</tr>
+									<tr>
+										<th>내 소개</th>
+										<td>
+											<textarea></textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="Btn2Box">
+							<a href="#none" class="btn2">승인신청</a>
+							<a href="#none" class="btn2">정보수정</a>
+							<a href="#none" class="btn2">회원탈퇴</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- popupContents s-->
+
+				<!-- 회사 찾기 팝업-->
+				<div class="popupWrap popFindComp">
+					<div class="popupContainer">
+						<div class="popupBox">
+							<h1 class="popupHeader">회사 찾기<span class="button popCloseBtn b-close"><span class="tBlind">닫기</span></span></h1>
+							<div class="popContentBox">
+								<input type="text" placeholder="회사명을 입력해 주세요"/>
+								<a href="#none" class="btn2">검색</a>
+								<table>
+									<colgroup><col width="60%"><col width="40%"></colgroup>
+									<thead>
+										<tr>
+											<th>회사명</th>
+											<th>선택</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>AA기업</td>
+											<td>
+												<a href="#none" class="btn2">선택</a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!-- 비밀번호변경팝업 -->
+				<div class="popupWrap popChangePw">
+					<div class="popupContainer">
+						<div class="popupBox">
+							<h1 class="popupHeader">비밀번호 변경<span class="button popCloseBtn b-close"><span class="tBlind">닫기</span></span></h1>
+							<div class="popContentBox">
+								<table>
+									<colgroup><col width="35%"><col width="65%"></colgroup>
+									<tbody>
+										<tr>
+											<th>새 비밀번호</th>
+											<td><input type="password" id="" /></td>
+										</tr>
+										<tr>
+											<th>비밀번호 입력확인</th>
+											<td><input type="password" id="" /></td>
+										</tr>
+										<tr>
+											<th>&nbsp;</th>
+											<td>* 6~15자 이내 영문자, 숫자 기호를 사용</td>
+										</tr>
+									</tbody>
+								</table>
+								<div class="Btn1Box">
+									<a href="#none" class="btn1 b-close">취소</a>
+									<a href="#none" class="btn1">확인</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+	
+				<!-- popupContents e-->
+				<!-- content e-->
+
+			</div>
+		</div>
+		<? include '../../include/footer.php' ?> <!-- footer -->
+	</div>
+	<script>
+		currentLnb(2,0); //현재페이지 lnb인식
+	</script>
+</body>
+</html>

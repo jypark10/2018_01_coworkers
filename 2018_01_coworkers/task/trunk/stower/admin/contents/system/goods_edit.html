@@ -1,0 +1,118 @@
+<? include '../../include/top_admin.php' ?> <!-- top -->
+</head>
+<body>
+	<div class="pageWrap sub adminSystemWrap"> <!-- pageWrap sub 뒤의 클래스명을 확인해주세요(폴더명관련) -->
+		<? include '../../include/header.php' ?> <!-- header -->
+		<div class="wrap">
+			<div class="contentwrap">
+				<? include '../../include/lnb_admin.php' ?> <!-- 관리자lnb -->
+				
+				<!-- content s-->
+				<div class="contentArea adminGoodsEditBox"><!-- contentArea 뒤의 클래스명을 확인해주세요(파일명관련) -->
+					<div class="contentHeader">
+						<div class="pageLocation">
+							<h2>시스템 관리</h2>
+							<ul class="breadcrumb">
+								<li class="breadcrumb_home"><a href="#none" onclick="goHome('admin');">HOME</a><em>></em></li>
+								<li><span>시스템관리</span><em>></em></li>
+								<li>상품관리</li>
+							</ul>
+						</div>
+						<div class="cateTitle"><h3>상품 수정</h3></div>
+					</div>
+					<div class="contentBody">
+						<div>
+							<h4 class="pageTitle">상품정보</h4>
+						</div>
+						<table class="writeTable">
+							<colgroup><col width="20%"><col width="30%"><col width="20%"><col width="30%"></colgroup>
+							<tbody>
+								<tr>
+									<th>상품분류</th>
+									<td colspan="3">
+										<input type="radio" name="rdGoodsCate" id="rdGoodsCate1" checked="checked"><label for="rdGoodsCate1">서비스 시간</label>
+										<input type="radio" name="rdGoodsCate" id="rdGoodsCate2"><label for="rdGoodsCate2">스마트데스크 이용기간</label>
+									</td>
+								</tr>
+								<tr>
+									<th>시간</th>
+									<td colspan="3"><input type="text" class="shortInput" value="30시간"/></td>
+								</tr>
+								<tr>
+									<th>가격</th>
+									<td colspan="3"><input type="text" class="shortInput" value="99,999,999"/></td>
+								</tr>
+								<tr>
+									<th>상품활성화</th>
+									<td colspan="3">
+										<input type="radio" name="rdGoodsActOn" id="rdGoodsActOn1" checked="checked"><label for="rdGoodsActOn1">활성화</label>
+										<input type="radio" name="rdGoodsActOn" id="rdGoodsActOn2"><label for="rdGoodsActOn2">비활성화</label>
+									</td>
+								</tr>
+								<tr>
+									<th>등록자</th>
+									<td>Coworkers1</td>
+									<th>수정자</th>
+									<td>Coworkers2</td>
+								</tr>
+								<tr>
+									<th>등록일시</th>
+									<td>2018.12.31 15:16:17</td>
+									<th>수정일시</th>
+									<td>2018.12.31 15:16:17</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="Btn2Box">
+							<a href="goods_view.html" class="btn2">확인</a>
+							<a href="goods_view.html" class="btn2">취소</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- popupContents s-->
+				
+				<!-- 비밀번호변경팝업 -->
+				<div class="popupWrap popChangePw">
+					<div class="popupContainer">
+						<div class="popupBox">
+							<h1 class="popupHeader">비밀번호 변경<span class="button popCloseBtn b-close"><span class="tBlind">닫기</span></span></h1>
+							<div class="popContentBox">
+								<table>
+									<colgroup><col width="35%"><col width="65%"></colgroup>
+									<tbody>
+										<tr>
+											<th>새 비밀번호</th>
+											<td><input type="password" id="" /></td>
+										</tr>
+										<tr>
+											<th>비밀번호 입력확인</th>
+											<td><input type="password" id="" /></td>
+										</tr>
+										<tr>
+											<th>&nbsp;</th>
+											<td>* 6~15자 이내 영문자, 숫자 기호를 사용</td>
+										</tr>
+									</tbody>
+								</table>
+								<div class="Btn1Box">
+									<a href="#none" class="btn1 b-close">취소</a>
+									<a href="#none" class="btn1">확인</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- popupContents e-->
+				<!-- content e-->
+
+			</div>
+		</div>
+		<? include '../../include/footer.php' ?> <!-- footer -->
+	</div>
+	<script>
+		currentLnb(4,5); //현재페이지 lnb인식
+	</script>
+</body>
+</html>

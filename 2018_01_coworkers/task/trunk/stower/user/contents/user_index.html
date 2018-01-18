@@ -1,0 +1,127 @@
+<? include '../include/top_user.php' ?> <!-- top -->
+<link rel="stylesheet" type="text/css" href="../css/main_user.css"><!-- 메인만 추가되는 css -->
+</head>
+<body>
+	<div class="main pageWrap">
+		<!-- header s 메인은 header include 안함-->
+		<header>
+			<div class="wrap">
+				<h1 class="headerLogo"><a href="<?=$root?>"><img src="../images/main/header_coworkers.png" alt="COWORKERS"><img src="../images/main/header_coworkers_02.png" alt="COWORKERS"></a></h1>
+				<ul class="spotMenu">
+					<li>반갑습니다! <span class="loginedUsername"> 홍길동 </span>님</li>
+					<li><a href="../contents/login/user_login.html">로그아웃</a></li>
+				</ul>
+			</div>
+		</header>
+		<!-- header e-->
+		<section class="mainBanner"></section>
+		<div class="wrap mainMenu">
+			
+			<!-- content s-->
+			<div class="mainGrid">
+				<div class="bannerText">
+					<h3>S - Tower Coworkers</h3>
+					<h2>OFFICE INNOVATION</h2>
+				</div>
+				<div class="gridMenu">
+					<ul>
+						<li class="gridBtn1">
+							<a href="<?=$root?>/contents/mypage/my_info_mng.html">
+								<div><img src="../images/main/gridBtn1_mypage.png" alt="마이페이지"><span>마이페이지</span></div>
+							</a>
+						</li>
+						<li class="gridBtn2">
+							<a href="<?=$root?>/contents/reserve/meeting_room_reserve.html">
+								<div><img src="../images/main/gridBtn2_reservation.png" alt="예약관리"><span>예약관리</span></div>
+							</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="gridBtn3">
+							<a href="<?=$root?>/contents/board/notice_list.html">
+								<div><img src="../images/main/gridBtn3_board.png" alt=""><span>게시판</span></div>
+							</a>
+						</li>
+						<li class="gridBtn4">
+							<a href="<?=$root?>/contents/tenant/company_info.html">
+								<div><img src="../images/main/gridBtn4_manager.png" alt=""><span>관리자메뉴</span></div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="mainBoard boardExtended">
+				<div class="mainLeft mainNotice extended">
+					<table class="mainTable">
+						<thead>
+							<tr>
+								<th>공지사항</th>
+								<th>더보기</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr><td></td><td></td></tr>
+							<tr>
+								<td><a href="#none"><strong>[공지]</strong> 2017년 5월 10일 서버 정기점검 안내<span class="new"></span></a></td>
+								<td>2017.12.23</td>
+							</tr>
+							<tr>
+								<td><a href="#none"><strong>[공지]</strong> 시설 사용 가이드 메뉴얼 다운로드<span class="new"></span></a></td>
+								<td>2017.11.26</td>
+							</tr>
+							<tr>
+								<td><a href="#none"><strong>[공지]</strong> 2018년 26층 회의실 시설 교체 공사 기간 안내<span class="new"></span></a></td>
+								<td>2017.10.30</td>
+							</tr>
+							<tr>
+								<td><a href="#none"><strong>[공지]</strong> 방문자 주차권 제공 기준 안내</a></td>
+								<td>2017.09.15</td>
+							</tr>
+							<tr>
+								<td><a href="#none"><strong>[공지]</strong> 방문자 주차권 제공 기준 안내</a></td>
+								<td>2017.09.15</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="mainLeft mainProg rightExtended">
+					<table class="mainTable">
+						<thead>
+							<tr>
+								<th>프로그램</th>
+								<th>더보기</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr><td></td><td></td></tr>
+							<tr>
+								<td><a href="#none"><strong>[교육]</strong> 중간 관리자 리더십 강화훈련<span class="new"></span></a></td>
+								<td>2017.12.23</td>
+							</tr>
+							<tr>
+								<td><a href="#none"><strong>[공지]</strong> 4차산업 미래의 가치와 기대<span class="new"></span></a></td>
+								<td>2017.11.26</td>
+							</tr>
+							<tr>
+								<td><a href="#none"><strong>[공지]</strong> 여성 근로자 노동법 조항의 개선의 필요성</a></td>
+								<td>2017.10.30</td>
+							</tr>
+							<tr>
+								<td><a href="#none"><strong>[공지]</strong> IOT솔루션 활용 범위와 그 미래</a></td>
+								<td>2017.09.15</td>
+							</tr>
+							<tr>
+								<td><a href="#none"><strong>[공지]</strong> IOT솔루션 활용 범위와 그 미래</a></td>
+								<td>2017.09.15</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- content e-->
+
+		</div>
+		<? include '../include/footer.php' ?> <!-- footer -->
+	</div>
+</body>
+</html>

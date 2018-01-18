@@ -1,0 +1,215 @@
+<? include '../../include/top_user.php' ?> <!-- top -->
+</head>
+<body>
+	<div class="pageWrap sub userTenantWrap"> <!-- pageWrap sub 뒤의 클래스명을 확인해주세요(폴더명관련) -->
+		<? include '../../include/header.php' ?> <!-- header -->
+		<div class="wrap">
+			<div class="contentwrap">
+				<? include '../../include/lnb_user.php' ?> <!-- 사용자lnb -->
+				
+				<!-- content s-->
+				<div class="contentArea historyFcBox"><!-- contentArea 뒤의 클래스명을 확인해주세요(파일명관련) -->
+					<div class="contentHeader">
+						<div class="pageLocation">
+							<h2>입주사 관리자 메뉴</h2>
+							<ul class="breadcrumb">
+								<li class="breadcrumb_home"><a href="#none" onclick="goHome('user');">HOME</a><em>></em></li>
+								<li><span>입주사관리자메뉴</span><em>></em></li>
+								<li><span>이용내역</span></li>
+							</ul>
+						</div>
+						<div class="cateTitle"><h3>이용 내역</h3></div>
+					</div>
+					<div class="contentBody">
+						<ul class="tabBox tenantTab">
+							<li><a href="history_meeting_room.html">회의실</a></li>
+							<li class="actOn"><a href="history_fc.html">F/C</a></li>
+							<li><a href="history_slp_room.html">수면실</a></li>
+							<li><a href="history_printer.html">복합기</a></li>
+							<li><a href="history_vending.html">벤딩머신</a></li>
+						</ul>
+						<div class="listSearch">
+							<span>기준 월</span>
+							<div class="searchSelect selectBox">
+								<label for="selectOpt-month">지난 달</label>
+								<select class="selectOpt" id="selectOpt-month">
+									<option value="지난 달">지난 달</option>
+									<option value="이번 달" selected>이번 달</option>
+								</select>
+							</div>
+							<span>집계 조회</span>
+							<div class="searchSelect selectBox">
+								<label for="selectOpt-type">월별</label>
+								<select class="selectOpt" id="selectOpt-type">
+									<option value="월별" targetViewTable="monthlyHistory" selected>월별</option>
+									<option value="주별" targetViewTable="weeklyHistory">주별</option>
+									<option value="일별" targetViewTable="dailyHistory">일별</option>
+								</select>
+							</div>
+						</div>
+						<h4 class="pageTitle">2017.12월 이용내역 집계 (2107.12.01 ~ 2107.12.31)</h4>
+						<div class="tableScrollX">
+							<!-- START 집계조회 : 월별 -->
+							<table class="viewTable mwdViewTable monthlyHistory">
+								<thead>
+									<tr>
+										<th>성명</th>
+										<th>사용 시간</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>홍길동 차장</td>
+										<td>7</td>
+									</tr>
+									<tr>
+										<td>홍길동 차장</td>
+										<td>7</td>
+									</tr>
+									<tr>
+										<td>홍길동 차장</td>
+										<td>7</td>
+									</tr>
+									<tr>
+										<td>홍길동 차장</td>
+										<td>7</td>
+									</tr>
+									<tr>
+										<td>홍길동 차장</td>
+										<td>7</td>
+									</tr>
+									<tr>
+										<td>합계</td>
+										<td>35</td>
+									</tr>
+								</tbody>
+							</table>
+							<!-- END 집계조회 : 월별 -->
+
+							<!-- START 집계조회 : 주별 -->
+							<table class="viewTable mwdViewTable weeklyHistory">
+								<thead>
+									<tr>
+										<th>일자</th>
+										<th>성명</th>
+										<th>사용 시간</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td rowspan="5">2017.12월 1주차</td>
+										<td>홍길동 차장</td>
+										<td>7</td>
+									</tr>
+									<tr>
+										<td>홍길동 차장</td>
+										<td>7</td>
+									</tr>
+									<tr>
+										<td>홍길동 차장</td>
+										<td>7</td>
+									</tr>
+									<tr>
+										<td>홍길동 차장</td>
+										<td>7</td>
+									</tr>
+									<tr>
+										<td>홍길동 차장</td>
+										<td>7</td>
+									<tr>
+										<td rowspan="2">2017.12월 2주차</td>
+										<td>홍길동 차장</td>
+										<td>7</td>
+									</tr>
+									<tr>
+										<td>홍길동 차장</td>
+										<td>7</td>
+									</tr>
+									<tr>
+										<td rowspan="2">2017.12월 3주차</td>
+										<td>홍길동 차장</td>
+										<td>7</td>
+									</tr>
+									<tr>
+										<td>홍길동 차장</td>
+										<td>7</td>
+									</tr>
+									<tr>
+										<td colspan="2">합계</td>
+										<td>63</td>
+									</tr>
+								</tbody>
+							</table>
+							<!-- END 집계조회 : 주별 -->
+							
+							<!-- START 집계조회 : 일별 -->
+							<table class="viewTable mwdViewTable dailyHistory">
+								<thead>
+									<tr>
+										<th>일자</th>
+										<th>성명</th>
+										<th>사용 시간</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td rowspan="5">2017.12.01</td>
+										<td>홍길동 차장</td>
+										<td>7</td>
+									</tr>
+									<tr>
+										<td>홍길동 차장</td>
+										<td>7</td>
+									</tr>
+									<tr>
+										<td>홍길동 차장</td>
+										<td>7</td>
+									</tr>
+									<tr>
+										<td>홍길동 차장</td>
+										<td>7</td>
+									</tr>
+									<tr>
+										<td>홍길동 차장</td>
+										<td>7</td>
+									<tr>
+										<td rowspan="2">2017.12.02</td>
+										<td>홍길동 차장</td>
+										<td>7</td>
+									</tr>
+									<tr>
+										<td>홍길동 차장</td>
+										<td>7</td>
+									</tr>
+									<tr>
+										<td rowspan="2">2017.12.03</td>
+										<td>홍길동 차장</td>
+										<td>7</td>
+									</tr>
+									<tr>
+										<td>홍길동 차장</td>
+										<td>7</td>
+									</tr>
+									<tr>
+										<td colspan="2">합계</td>
+										<td>63</td>
+									</tr>
+								</tbody>
+							</table>
+							<!-- END 집계조회 : 일별 -->
+						</div>
+
+					</div>
+				</div>
+				<!-- content e-->
+
+			</div>
+		</div>
+		<? include '../../include/footer.php' ?> <!-- footer -->
+	</div>
+	<script>
+		currentLnb(3,1); //현재페이지 lnb인식
+		tenantSelectAction(); //입주사관리 이용내역 집계조회별
+	</script>
+</body>
+</html>

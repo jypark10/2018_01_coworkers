@@ -1,0 +1,160 @@
+<? include '../../include/top_admin.php' ?> <!-- top -->
+</head>
+<body>
+	<div class="pageWrap sub adminCalculateWrap"> <!-- pageWrap sub 뒤의 클래스명을 확인해주세요(폴더명관련) -->
+		<? include '../../include/header.php' ?> <!-- header -->
+		<div class="wrap">
+			<div class="contentwrap">
+				<? include '../../include/lnb_admin.php' ?> <!-- 관리자lnb -->
+				
+				<!-- content s-->
+				<div class="contentArea reportOfficeBox"><!-- contentArea 뒤의 클래스명을 확인해주세요(파일명관련) -->
+					<div class="contentHeader">
+						<div class="pageLocation">
+							<h2>정산 관리</h2>
+							<ul class="breadcrumb">
+								<li class="breadcrumb_home"><a href="#none" onclick="goHome('admin');">HOME</a><em>></em></li>
+								<li><span>정산관리</span><em>></em></li><li>월간집계현황</li>
+							</ul>
+						</div>
+						<div class="cateTitle"><h3>월간집계현황</h3></div>
+					</div>
+					<div class="contentBody">
+						<h4 class="pageTitle">월간 집계 리포트</h4>
+						<ul class="adminTapBox">
+							<li><a href="report_all.html" class="btn3 btn3-1 btn4">전체리포트</a></li>
+							<li><a href="#none" class="btn4">오피스점유정보</a></li>
+						</ul>
+						<div class="calendarBarBox">
+							<a href="#none"class="clndClampPrev" title="이전"></a>
+							<span class="clndText">2017</span>
+							<a href="#none" class="clndClampNext" title="다음"></a>
+						</div>
+						<div class="tableScrollX">
+							<table class="listTable2">
+								<thead>
+									<tr>
+										<th rowspan="2">Month</th>
+										<th colspan="2">18F (35 Workstation)</th>
+										<th colspan="2">19F (20 Workstation)</th>
+										<th colspan="2">Total (55 Workstation)</th>
+									</tr>
+									<tr>
+										<th class="bdL">Workstation</th>
+										<th>Occupancy</th>
+										<th>Workstation</th>
+										<th>Occupancy</th>
+										<th>Workstation</th>
+										<th>Occupancy</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan</td>
+										<td>28</td>
+										<td>80%</td>
+										<td>15</td>
+										<td>75%</td>
+										<td>43</td>
+										<td>78%</td>
+									</tr>
+									<tr>
+										<td>Jan</td>
+										<td>28</td>
+										<td>80%</td>
+										<td>15</td>
+										<td>75%</td>
+										<td>43</td>
+										<td>78%</td>
+									</tr>
+									<tr>
+										<td>Jan</td>
+										<td>28</td>
+										<td>80%</td>
+										<td>15</td>
+										<td>75%</td>
+										<td>43</td>
+										<td>78%</td>
+									</tr>
+									<tr>
+										<td>Jan</td>
+										<td>28</td>
+										<td>80%</td>
+										<td>15</td>
+										<td>75%</td>
+										<td>43</td>
+										<td>78%</td>
+									</tr>
+									<tr>
+										<td>Jan</td>
+										<td>28</td>
+										<td>80%</td>
+										<td>15</td>
+										<td>75%</td>
+										<td>43</td>
+										<td>78%</td>
+									</tr>
+									<tr>
+										<td>Jan</td>
+										<td>28</td>
+										<td>80%</td>
+										<td>15</td>
+										<td>75%</td>
+										<td>43</td>
+										<td>78%</td>
+									</tr>
+									<tr>
+										<td>Jan</td>
+										<td>28</td>
+										<td>80%</td>
+										<td>15</td>
+										<td>75%</td>
+										<td>43</td>
+										<td>78%</td>
+									</tr>
+									<tr>
+										<td>Jan</td>
+										<td>28</td>
+										<td>80%</td>
+										<td>15</td>
+										<td>75%</td>
+										<td>43</td>
+										<td>78%</td>
+									</tr>
+									<tr>
+										<td>Jan</td>
+										<td>28</td>
+										<td>80%</td>
+										<td>15</td>
+										<td>75%</td>
+										<td>43</td>
+										<td>78%</td>
+									</tr>
+									<tr>
+										<td>Jan</td>
+										<td>28</td>
+										<td>80%</td>
+										<td>15</td>
+										<td>75%</td>
+										<td>43</td>
+										<td>78%</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="Btn2Box">
+								<a href="#none" class="btn2">Excel저장</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- content e-->
+
+			</div>
+		</div>
+		<? include '../../include/footer.php' ?> <!-- footer -->
+	</div>
+	<script>
+		currentLnb(5,6); //현재페이지 lnb인식
+	</script>
+</body>
+</html>

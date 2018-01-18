@@ -1,0 +1,65 @@
+<? include '../../include/top_admin.php' ?> <!-- top -->
+</head>
+<body>
+	<div class="pageWrap sub adminBoardWrap"> <!-- pageWrap sub 뒤의 클래스명을 확인해주세요(폴더명관련) -->
+		<? include '../../include/header.php' ?> <!-- header -->
+		<div class="wrap">
+			<div class="contentwrap">
+				<? include '../../include/lnb_admin.php' ?> <!-- 관리자lnb -->
+				
+				<!-- content s-->
+				<div class="contentArea noticeEditBox"><!-- contentArea 뒤의 클래스명을 확인해주세요(파일명관련) -->
+					<div class="contentHeader">
+						<div class="pageLocation">
+							<h2>게시판 관리</h2>
+							<ul class="breadcrumb">
+								<li class="breadcrumb_home"><a href="#none" onclick="goHome('admin');">HOME</a><em>></em></li>
+								<li><span>게시판관리</span><em>></em></li><li>공지사항관리</li>
+							</ul>
+						</div>
+						<div class="cateTitle"><h3>공지사항 관리</h3></div>
+					</div>
+					<div class="contentBody">
+						<h4 class="pageTitle">공지사항 수정</h4>
+						<table class="writeTable">
+							<tbody>
+								<tr>
+									<th>제목</th>
+									<td colspan="3"><input type="text"></td>
+								</tr>
+								<tr>
+									<th>작성자</th>
+									<td colspan="3">Coworkers 관리자</td>
+								</tr>
+								<tr>
+									<th><span class="attachClip"></span>첨부파일</th>
+									<td colspan="3">
+										<input type="file">
+									</td>
+								</tr>
+								<tr>
+									<td colspan="4" class="webEditorWrap">
+										<!-- 텍스트에디터 소스 영역 -->
+										<div class="webEditorBox">웹에디터 영역</div>
+										<!-- 텍스트에디터 소스 영역 -->
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="Btn2Box">
+							<a href="#none" class="btn2">확인</a>
+							<a href="notice_list.html" class="btn2">취소</a>
+						</div>
+					</div>
+				</div>
+				<!-- content e-->
+
+			</div>
+		</div>
+		<? include '../../include/footer.php' ?> <!-- footer -->
+	</div>
+	<script>
+		currentLnb(3,0); //현재페이지 lnb인식
+	</script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+html,body{height:100%;}
+body {line-height:initial;}
+h1 {font-size:inherit;}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {line-height:inherit;}
+table {max-width:none;}
+.breadcrumb {padding:inherit;margin-bottom:inherit;background:none;}
+	.breadcrumb > li + li::before {content:"";padding:inherit;color:none;}
+
+.pagination {display:inherit;}

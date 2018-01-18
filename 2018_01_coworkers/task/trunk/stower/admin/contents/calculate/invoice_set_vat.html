@@ -1,0 +1,100 @@
+<? include '../../include/top_admin.php' ?> <!-- top -->
+</head>
+<body>
+	<div class="pageWrap sub adminCalculateWrap"> <!-- pageWrap sub 뒤의 클래스명을 확인해주세요(폴더명관련) -->
+		<? include '../../include/header.php' ?> <!-- header -->
+		<div class="wrap">
+			<div class="contentwrap">
+				<? include '../../include/lnb_admin.php' ?> <!-- 관리자lnb -->
+				
+				<!-- content s-->
+				<div class="contentArea invoiceSetVatBox"><!-- contentArea 뒤의 클래스명을 확인해주세요(파일명관련) -->
+					<div class="contentHeader">
+						<div class="pageLocation">
+							<h2>정산 관리</h2>
+							<ul class="breadcrumb">
+								<li class="breadcrumb_home"><a href="#none" onclick="goHome('admin');">HOME</a><em>></em></li>
+								<li><span>정산관리</span><em>></em></li>
+								<li>VAT 예외항목 Default 설정</li>
+							</ul>
+						</div>
+						<div class="cateTitle"><h3>VAT 예외항목 Default 설정</h3></div>
+					</div>
+					<div class="contentBody">
+						<h4 class="pageTitle">VAT 예외항목 Default 설정</h4>
+						<table class="writeTable2">
+							<colgroup><col width="50%"></colgroup>
+							<thead>
+								<tr>
+									<th>INVOICE 항목</th>
+									<th>VAT 예외항목 Default 여부</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Conference Room</td>
+									<td><input type="checkbox" id="listCheck_01" class="checkbox"><label for="listCheck_01" class="listCheck"></label></td>
+								</tr>
+								<tr>
+									<td>Fitness Center</td>
+									<td><input type="checkbox" id="listCheck_02" class="checkbox"><label for="listCheck_02" class="listCheck"></label></td>
+								</tr>
+								<tr>
+									<td>Relax Room</td>
+									<td><input type="checkbox" id="listCheck_03" class="checkbox"><label for="listCheck_03" class="listCheck"></label></td>
+								</tr>
+								<tr>
+									<td>Vending Machine</td>
+									<td><input type="checkbox" id="listCheck_04" class="checkbox"><label for="listCheck_04" class="listCheck"></label></td>
+								</tr>
+								<tr>
+									<td>Printing Machine</td>
+									<td><input type="checkbox" id="listCheck_05" class="checkbox"><label for="listCheck_05" class="listCheck"></label></td>
+								</tr>
+								<tr>
+									<td>Customized Secretarial Service</td>
+									<td><input type="checkbox" id="listCheck_06" class="checkbox"><label for="listCheck_06" class="listCheck"></label></td>
+								</tr>
+								<tr>
+									<td>Equipment Rental</td>
+									<td><input type="checkbox" id="listCheck_07" class="checkbox"><label for="listCheck_07" class="listCheck"></label></td>
+								</tr>
+								<tr>
+									<td>Courier Service</td>
+									<td><input type="checkbox" id="listCheck_08" class="checkbox"><label for="listCheck_08" class="listCheck"></label></td>
+								</tr>
+								<tr>
+									<td>Stationery</td>
+									<td><input type="checkbox" id="listCheck_09" class="checkbox"><label for="listCheck_09" class="listCheck"></label></td>
+								</tr>
+								<tr>
+									<td>Miscellaneous Charge</td>
+									<td><input type="checkbox" id="listCheck_10" class="checkbox"><label for="listCheck_10" class="listCheck"></label></td>
+								</tr>
+								<tr>
+									<td>Parking Ticket</td>
+									<td><input type="checkbox" id="listCheck_11" class="checkbox"><label for="listCheck_11" class="listCheck"></label></td>
+								</tr>
+								<tr>
+									<td>Beverage</td>
+									<td><input type="checkbox" id="listCheck_12" class="checkbox"><label for="listCheck_12" class="listCheck"></label></td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="Btn2Box">
+							<a href="invoice_list.html" class="btn2">설정저장</a>
+							<a href="#none" class="btn2" onclick="history.back(-1);">뒤로가기</a>
+						</div>
+					</div>
+				</div>
+				<!-- content e-->
+
+			</div>
+		</div>
+		<? include '../../include/footer.php' ?> <!-- footer -->
+	</div>
+	<script>
+		currentLnb(5,1); //현재페이지 lnb인식
+	</script>
+</body>
+</html>

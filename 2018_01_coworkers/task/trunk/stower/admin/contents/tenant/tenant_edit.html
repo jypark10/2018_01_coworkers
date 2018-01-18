@@ -1,0 +1,909 @@
+<? include '../../include/top_admin.php' ?> <!-- top -->
+</head>
+<body>
+	<div class="pageWrap sub adminTenantWrap"> <!-- pageWrap sub 뒤의 클래스명을 확인해주세요(폴더명관련) -->
+		<? include '../../include/header.php' ?> <!-- header -->
+		<div class="wrap">
+			<div class="contentwrap">
+				<? include '../../include/lnb_admin.php' ?> <!-- 관리자lnb -->
+				
+				<!-- content s-->
+				<div class="contentArea tenantEditBox"><!-- contentArea 뒤의 클래스명을 확인해주세요(파일명관련) -->
+					<div class="contentHeader">
+						<div class="pageLocation">
+							<h2>입주사 관리</h2>
+							<ul class="breadcrumb">
+								<li class="breadcrumb_home"><a href="#none" onclick="goHome('admin');">HOME</a><em>></em></li>
+								<li><span>입주사관리</span><em>></em></li><li>입주사관리</li>
+							</ul>
+						</div>
+						<div class="cateTitle"><h3>입주사 관리</h3></div>
+					</div>
+					<div class="contentBody">
+						<h4 class="pageTitle">입주원 기본정보</h4>
+						<table class="writeTable">
+							 <tbody>
+								 <tr>
+									<th>입주원</th>
+									<td>
+										10명
+										<a href="#none" class="btn2 popupBtn" popupTarget="popOpenMbList">구성원 상세</a>
+									</td>
+								 </tr>
+							 </tbody>
+						</table>
+						<h4 class="pageTitle">입주사 기본정보 수정</h4>
+						<div class="pageDesc"><span class="iStar">*</span>은 필수 입력 항목입니다.</div>
+						<table class="writeTable">
+							<tbody>
+								<tr>
+									<th>회사명<span class="iStar">*</span></th>
+									<td><input type="text"/></td>
+								</tr>
+								<tr>
+									<th>회사명(영문)</th>
+									<td><input type="text"/></td>
+								</tr>
+								<tr>
+									<th>서비스 종류</th>
+									<td><input type="text" class="shortInput"/></td>
+								</tr>
+								
+								<tr>
+									<th>사업자 번호<span class="iStar">*</span></th>
+									<td>
+										<input type="text" class="shortInput"/>
+										<!-- <a href="#" class="txtbtnRight">사업자 정보확인</a> -->
+									</td>
+								</tr>
+								<tr>
+									<th>업종</th>
+									<td><input type="text" class="shortInput"/></td>
+								</tr>
+								<tr>
+									<th>호실<span class="iStar">*</span></th>
+									<td>
+										<input type="text" class="shortInput"/>
+										<a href="#none" class="btn2 popupBtn" popupTarget="popOpenOfficeChoice">호실선택</a>
+									</td>
+								</tr>
+								<tr>
+									<th>계약일자</th>
+									<td>
+										<div class="findByDate"><input class="miniCalendar" id="contractDateInput1" type="text"></div>
+										<script>setDatePick('contractDateInput1');</script>
+									</td>
+								</tr>
+								<tr>
+									<th>임대기간<span class="iStar">*</span></th>
+									<td>
+										<div class="findByDate"><input class="miniCalendar" id="rentDateInput1" type="text"></div>
+										<div class="dur">~</div>
+										<div class="findByDate"><input class="miniCalendar" id="rentDateInput2" type="text"></div>
+										<script>setDatePick('rentDateInput1');setDatePick('rentDateInput2');</script>
+									</td>
+								</tr>
+								<tr>
+									<th>대표자명<span class="iStar">*</span></th>
+									<td><input type="text" class="shortInput"/></td>
+								</tr>
+								<tr>
+									<th>서비스 이용시간<span class="iStar">*</span></th>
+									<td><input type="text" class="shortInput"/></td>
+								</tr>
+								<tr>
+									<th>입주사 담당자ID<span class="iStar">*</span></th>
+									<td>
+										<input type="text" class="shortInput"/>
+										<a href="#none" class="btn2 popupBtn" popupTarget="popOpenMgChange">검색</a>
+									</td>
+								</tr>
+								<tr>
+									<th>입주사 담당자명<span class="iStar">*</span></th>
+									<td><input type="text" class="shortInput"/></td>
+								</tr>
+								<tr>
+									<th>직급<span class="iStar">*</span></th>
+									<td><input type="text" class="shortInput"/></td>
+								</tr>
+								<tr>
+									<th>휴대폰번호<span class="iStar">*</span></th>
+									<td><input type="text" class="shortInput"/></td>
+								</tr>
+								<tr>
+									<th>E-Mail<span class="iStar">*</span></th>
+									<td><input type="text" class="shortInput"/></td>
+								</tr>
+								<tr>
+									<th>입주사 담당자 주소</th>
+									<td><input type="text"/></td>
+								</tr>
+								<tr>
+									<th>전자계약서</th>
+									<td><a href="#none" class="btn2 popupBtn" popupTarget="popEcontrant">전자계약서 조회</a></td>
+								</tr>
+								<tr>
+									<th>결제분류<span class="iStar">*</span></th>
+									<td>
+										<input id="rdPay1" type="radio" name="rdPay"/><label for="rdPay1">세금계산서</label>
+										<input id="rdPay2" type="radio" name="rdPay"/><label for="rdPay2">카드결제</label>
+									</td>
+								</tr>
+								<tr>
+									<th>시설비</th>
+									<td><input type="text" class="shortInput"/></td>
+								</tr>
+								<tr>
+									<th>서비스 보증금</th>
+									<td><input type="text" class="shortInput"/></td>
+								</tr>
+								<tr>
+									<th>월임대료<span class="iStar">*</span></th>
+									<td><input type="text" class="shortInput"/></td>
+								</tr>
+								<tr>
+									<th>회원수(명)</th>
+									<td><input type="text" class="shortInput"/></td>
+								</tr>
+								<tr>
+									<th>사업장 면적(m<sup>2</sup>)</th>
+									<td><input type="text" class="shortInput"/></td>
+								</tr>
+								<tr>
+									<th>입주사 담당자 분류</th>
+									<td>
+										<input id="rdManager1" type="radio" name="rdManager"/><label for="rdManager1">서명권자</label>
+										<input id="rdManager2" type="radio" name="rdManager"/><label for="rdManager2">지급 담당자</label>
+										<input id="rdManager3" type="radio" name="rdManager"/><label for="rdManager3">기타</label>
+									</td>
+								</tr>
+								<tr>
+									<th>첨부파일(계약관련)</th>
+									<td>
+										<div class="attachFileWrap">
+											<div class="inputFilePreview">파일을 첨부하세요</div>
+											<label for="inputFileBtn" class="btn2">파일등록</label>
+											<input type="file" id="inputFileBtn" class="inputFileBox" multiple>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>비고</th>
+									<td><textarea name="" id="" rows="4"></textarea></td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="Btn2Box">
+							<a href="#" class="btn2">수정</a>
+						</div>
+					</div>
+				</div>
+				
+				<!-- popupContents s-->
+				
+				<!-- 구성원조회팝업 -->
+				<div class="popupWrap popOpenMbList">
+					<div class="popupContainer">
+						<div class="popupBox">
+							<h1 class="popupHeader">구성원 조회<span class="button popCloseBtn b-close"><span class="tBlind">닫기</span></span></h1>
+							<div class="popContentBox">
+								<table>
+									<colgroup>
+										<col width="10%">
+										<col width="10%">
+										<col width="10%">
+										<col width="20%">
+										<col width="20%">
+										<col width="20%">
+										<col width="10%">
+									</colgroup>
+									<thead>
+										<tr>
+											<th>NO</th>
+											<th>이름</th>
+											<th>직급</th>
+											<th>휴대폰 번호</th>
+											<th>담당자 E-mail</th>
+											<th>가입일자</th>
+											<th>승인상태</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>홍길동</td>
+											<td>차장</td>
+											<td>010-1234-1234</td>
+											<td>hong5894@nate.com</td>
+											<td>2017.10.30</td>
+											<td>승인대기</td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>이성계</td>
+											<td>대리</td>
+											<td>010-1234-1234</td>
+											<td>hong5894@nate.com</td>
+											<td>2017.10.30</td>
+											<td>승인대기</td>
+										</tr>
+										<tr>
+											<td>3</td>
+											<td>김두환</td>
+											<td>차장</td>
+											<td>010-1234-1234</td>
+											<td>hong5894@nate.com</td>
+											<td>2017.10.30</td>
+											<td>승인대기</td>
+										</tr>
+										<tr>
+											<td>4</td>
+											<td>김흥국</td>
+											<td>차장</td>
+											<td>010-1234-1234</td>
+											<td>hong5894@nate.com</td>
+											<td>2017.10.30</td>
+											<td>승인대기</td>
+										</tr>
+										<tr>
+											<td>5</td>
+											<td>김태희</td>
+											<td>차장</td>
+											<td>010-1234-1234</td>
+											<td>hong5894@nate.com</td>
+											<td>2017.10.30</td>
+											<td>승인대기</td>
+										</tr>
+										<tr>
+											<td>6</td>
+											<td>조나단</td>
+											<td>과장</td>
+											<td>010-1234-1234</td>
+											<td>hong5894@nate.com</td>
+											<td>2017.10.30</td>
+											<td>승인완료</td>
+										</tr>
+										<tr>
+											<td>7</td>
+											<td>이서진</td>
+											<td>사원</td>
+											<td>010-1234-1234</td>
+											<td>hong5894@nate.com</td>
+											<td>2017.10.30</td>
+											<td>승인대기</td>
+										</tr>
+										<tr>
+											<td>8</td>
+											<td>강유미</td>
+											<td>사원</td>
+											<td>010-1234-1234</td>
+											<td>hong5894@nate.com</td>
+											<td>2017.10.30</td>
+											<td>승인대기</td>
+										</tr>
+										<tr>
+											<td>9</td>
+											<td>안영미</td>
+											<td>대리</td>
+											<td>010-1234-1234</td>
+											<td>hong5894@nate.com</td>
+											<td>2017.10.30</td>
+											<td>승인완료</td>
+										</tr>
+										<tr>
+											<td>10</td>
+											<td>신동엽</td>
+											<td>차장</td>
+											<td>010-1234-1234</td>
+											<td>hong5894@nate.com</td>
+											<td>2017.10.30</td>
+											<td>승인완료</td>
+										</tr>
+									</tbody>
+								</table>
+								<div class="Btn1Box">
+									<a href="#none" class="btn1 b-close">확인</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!-- 호실선택팝업 -->
+				<div class="popupWrap popOpenOfficeChoice">
+					<div class="popupContainer">
+						<div class="popupBox">
+							<h1 class="popupHeader">호실 선택<span class="button popCloseBtn b-close"><span class="tBlind">닫기</span></span></h1>
+							<div class="popContentBox">
+								<div class="officeChoiceBox">
+									<h2>18층</h2>
+									<!--- Line01 / 18층호실팝업 --->
+									<ul>
+										<li class="choiced"><a href="#none">1801</a></li>
+										<li class="choiced"><a href="#none">1802</a></li>
+										<li class="soldout"><a href="#none">1803</a></li>
+										<li><a href="#none">1804</a></li>
+										<li><a href="#none">1805</a></li>
+										<li><a href="#none">1806</a></li>
+										<li><a href="#none">1807</a></li>
+										<li><a href="#none">1808</a></li>
+										<li><a href="#none">1809</a></li>
+										<li><a href="#none">1810</a></li>
+										<li><a href="#none">1811</a></li>
+										<li><a href="#none">1812</a></li>
+										<li><a href="#none">1813</a></li>
+										<li><a href="#none">1814</a></li>
+										<li><a href="#none">1815</a></li>
+										<li><a href="#none">1816</a></li>
+										<li><a href="#none">1817</a></li>
+										<li><a href="#none">1818</a></li>
+										<li><a href="#none">1819</a></li>
+										<li><a href="#none">1820</a></li>
+										<li><a href="#none">1821</a></li>
+										<li><a href="#none">1822</a></li>
+										<li class="soldout"><a href="#none">1823</a></li>
+										<li><a href="#none">1824</a></li>
+										<li><a href="#none">1825</a></li>
+										<li><a href="#none">1826</a></li>
+										<li class="soldout"><a href="#none">1827</a></li>
+										<li><a href="#none">1828</a></li>
+										<li><a href="#none">1829</a></li>
+										<li><a href="#none">1830</a></li>
+										<li><a href="#none">1831</a></li>
+										<li><a href="#none">1832</a></li>
+										<li><a href="#none">1833</a></li>
+										<li><a href="#none">1834</a></li>
+										<li><a href="#none">1835</a></li>
+									</ul>
+									<h2>19층</h2>
+									<ul>
+										<li><a href="#none">1901</a></li>
+										<li><a href="#none">1902</a></li>
+										<li><a href="#none">1903</a></li>
+										<li><a href="#none">1904</a></li>
+										<li><a href="#none">1905</a></li>
+										<li><a href="#none">1906</a></li>
+										<li><a href="#none">1907</a></li>
+										<li><a href="#none">1908</a></li>
+										<li><a href="#none">1909</a></li>
+										<li><a href="#none">1910</a></li>
+										<li class="soldout"><a href="#none">1911</a></li>
+										<li><a href="#none">1912</a></li>
+										<li><a href="#none">1913</a></li>
+										<li><a href="#none">1914</a></li>
+										<li><a href="#none">1915</a></li>
+										<li><a href="#none">1916</a></li>
+										<li><a href="#none">1917</a></li>
+										<li class="soldout"><a href="#none">1918</a></li>
+										<li><a href="#none">1919</a></li>
+										<li><a href="#none">1920</a></li>
+										<li class="soldout"><a href="#none">1921</a></li>
+										<li class="soldout"><a href="#none">1922</a></li>
+										<li><a href="#none">1923</a></li>
+										<li><a href="#none">1924</a></li>
+										<li><a href="#none">1925</a></li>
+										<li><a href="#none">1926</a></li>
+										<li><a href="#none">1927</a></li>
+										<li><a href="#none">1928</a></li>
+										<li><a href="#none">1929</a></li>
+										<li class="soldout"><a href="#none">1930</a></li>
+									</ul>
+									<script>officeChoice();</script>
+								</div>
+								<div class="Btn1Box">
+									<a href="#none" class="btn1">확인</a></span>
+									<a href="#none" class="btn1 b-close">취소</a></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!-- 입주사 담당자변경 팝업-->
+				<div class="popupWrap popOpenMgChange">
+					<div class="popupContainer">
+						<div class="popupBox">
+							<h1 class="popupHeader">입주사 담당자 변경<span class="button popCloseBtn b-close"><span class="tBlind">닫기</span></span></h1>
+							<div class="popContentBox">
+								<table>
+									<colgroup><col width="10%"><col width="30%"><col width="30%"><col width="30%"></colgroup>
+									<thead>
+										<tr>
+											<th>선택</th>
+											<th>ID</th>
+											<th>이름</th>
+											<th>직급</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td><input id="MgSelect1" type="radio" name="MgSelect"/><label for="MgSelect1">hhong12</label></td>
+											<td>hhong12</td>
+											<td>홍길동</td>
+											<td>차장</td>
+										</tr>
+										<tr>
+											<td><input id="MgSelect2" type="radio" name="MgSelect"/><label for="MgSelect2">sskkeee</label></td>
+											<td>sskkeee</td>
+											<td>이성계</td>
+											<td>대리</td>
+										</tr>
+										<tr>
+											<td><input id="MgSelect3" type="radio" name="MgSelect"/><label for="MgSelect3">aaa1234</label></td>
+											<td>aaa1234</td>
+											<td>이몽룡</td>
+											<td>대표이사</td>
+										</tr>
+										<tr>
+											<td><input id="MgSelect4" type="radio" name="MgSelect"/><label for="MgSelect4">leess7894</label></td>
+											<td>leess7894</td>
+											<td>이순신</td>
+											<td>부장</td>
+										</tr>
+									</tbody>
+								</table>
+								<div class="pagination">
+									<a class="prev02" href="#none"><span class="tBlind">맨처음페이지</span></a>
+									<a class="prev" href="#none"><span class="tBlind">이전페이지</span></a>
+									<!-- 활성화 페이지의 경우 active 클래스 부여 -->
+									<a href="#none" class="active" >1</a>
+									<a href="#none">2</a>
+									<a href="#none">3</a>
+									<a href="#none">4</a>
+									<a href="#none">5</a>
+									<a href="#none" class="next"><span class="tBlind">다음페이지</span></a>
+									<a href="#none"class="next02"><span class="tBlind">맨끝페이지</span></a>
+								</div>
+								<div class="Btn1Box">
+									<a href="#none" class="btn1">변경</a>
+									<a href="#none" class="btn1 b-close">취소</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!-- 전자계약서조회팝업 -->
+				<div class="popupWrap popEcontrant">
+					<div class="popupContainer">
+						<div class="popupBox">
+							<h1 class="popupHeader">전자계약서 조회<span class="button popCloseBtn b-close"><span class="tBlind">닫기</span></span></h1>
+							<div class="popContentBox">
+								<div class="eContractWrap printBox">
+									<table>
+										<tr>
+											<td colspan="2" class="contractLogo">
+												<img src="../../images/common/contract_logo.png" alt="코워커스로고">
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2" class="taC"><h1>MEMBERSHIP AGREEMENT</h1></td>
+										</tr>
+										<tr>
+											<td>Date:</td>
+											<td><span class="blueT">계약일자(ex. 2017.11.14)</span></td>
+										</tr>
+										<tr>
+											<td>Lessor:</td>
+											<td>Seian Holdings Co. Ltd. (CEO 박석훈 대표)<br>18/19F S-Tower, 82 Saemunan-ro, Jongno-gu, Seoul , 03185, Korea</td>
+										</tr>
+										<tr>
+											<td>Lessee:</td>
+											<td><span class="blueT">회사명(영문)</span></td>
+										</tr>
+										<tr>
+											<td colspan="2">This Agreement is made by and between <span class="blueT">회사명(영문)</span> and Seian Holdings Co. Ltd doing business as Vertex Korea with respect to the following service.</td>
+										</tr>
+									</table>
+									<h4 class="pageTitle">CONTACT INFORMATION – FOR Company</h4>
+									<table class="viewTable">
+										<tbody>
+											<tr>
+												<th>Primary Member Name<br>대표회원 이름</th>
+												<td>입주사 관리자명</td>
+											</tr>
+											<tr>
+												<th>Phone Number<br>전화번호</th>
+												<td>휴대폰번호</td>
+											</tr>
+											<tr>
+												<th>Email Address<br>이메일 주소</th>
+												<td>E-Mail</td>
+											</tr>
+											<tr>
+												<th>Address<br>주소</th>
+												<td>입주사 담당자 주소</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="breakPage"></div>
+									<h4 class="pageTitle">COWORKERS 회원 가입 계약서</h4>
+									<h5 class="pageTitle">회원 가입 명세서</h5>
+									<table class="viewTable">
+										<tbody>
+											<tr>
+												<th>Company Name<br>회사명</th>
+												<td>회사명(영문)</td>
+											</tr>
+											<tr>
+												<th>Service Type<br>서비스 종류</th>
+												<td>서비스 종류(ex. Office)</td>
+											</tr>
+											<tr>
+												<th>Industry<br>업종</th>
+												<td>업종</td>
+											</tr>
+											<tr>
+												<th>Start Date<br>개시일</th>
+												<td>임대기간 시작일(Ex. 02.December,2017)</td>
+											</tr>
+											<tr>
+												<th>Commitment Term<br>약정기간</th>
+												<td>임대기간 종료일 – 임대기간 시작일</td>
+											</tr>
+											<tr>
+												<th>Office Number<br>사무실 번호</th>
+												<td>호실(ex. #1905)</td>
+											</tr>
+											<tr>
+												<th>Registered Address<br>사업장 주소지</th>
+												<td>19F, S-Tower, 82Saemunanro, Jongno-Gu, Seoul<br>서울시 종로구 새문안로 82</td>
+											</tr>
+											<tr>
+												<th>Set up Fee<br>시설비</th>
+												<td>시설비</td>
+											</tr>
+											<tr>
+												<th>Security Deposit<br>서비스 보증금</th>
+												<td>KRW 6,300,000</td>
+											</tr>
+											<tr>
+												<th>Monthly Rate<br>월임대료</th>
+												<td>KRW3,150,000 +10% VAT</td>
+											</tr>
+											<tr>
+												<th>Payment Method<br>지급방식</th>
+												<td>결제분류 선택(ex. Cash, Credit Card)</td>
+											</tr>
+											<tr>
+												<th>Comp. Coworkers Zone hours offered<br>무료 회의장 사용시간</th>
+												<td>서비스 이용시간(Ex. 15hours per month)</td>
+											</tr>
+											<tr>
+												<th>No. of member<br>회원수</th>
+												<td>4</td>
+											</tr>
+											<tr>
+												<th>Size of office<br>사업장 면적</th>
+												<td>18.35㎡</td>
+											</tr>
+											<tr>
+												<th>Business Registration No.<br>사업자등록번호</th>
+												<td>사업자번호</td>
+											</tr>
+											<tr>
+												<th>Remarks<br>비고</th>
+												<td>비고</td>
+											</tr>
+										</tbody>
+									</table>
+									<table>
+										<tr>
+											<td>
+												<label for="eCont_01">If the primary Member is also the Authorised Signatory, please check here.</label><br>
+												<label for="eCont_01">대표회원이 서명권자인 경우, 여기에 표시해 주시기 바랍니다.</label>
+											</td>
+											<td>
+												<input type="checkbox" id="eCont_01">
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<label for="eCont_02">IIf the primary Member is also the Billing Contact, please check here.</label><br>
+												<label for="eCont_02">대표회원이 지급 담당자인 경우, 여기에 표시해 주시기 바랍니다.</label>
+											</td>
+											<td>
+												<input type="checkbox" id="eCont_02">
+											</td>
+										</tr>
+									</table>
+									<h5 class="pageTitle">COWORKERS BANK ACCOUNT DETAIL<br>(입금계좌 정보)</h5>
+									<table class="viewTable">
+										<tbody>
+											<tr>
+												<th>Name of Bank<br>은행명</th>
+												<td>Shinhan Bank,Sejongno Branch 신한은행</td>
+											</tr>
+											<tr>
+												<th>Address of the Bank<br>은행 주소</th>
+												<td>1F S-Tower, 82 Saemunanro, Jongno-Gu, Seoul<br>서울시 종로구 새문안로 82 1층 신한은행</td>
+											</tr>
+											<tr>
+												<th>Swift Code<br>코드</th>
+												<td>SHBKKRSE</td>
+											</tr>
+											<tr>
+												<th>Account No.<br>계좌번호</th>
+												<td>140-009-489904</td>
+											</tr>
+											<tr>
+												<th>Beneficiary’s Name<br>예금주</th>
+												<td>Seian Holdings Co.,LTD 세안홀딩스㈜ 박석훈</td>
+											</tr>
+										</tbody>
+									</table>
+									<h5 class="pageTitle">COWORKERS Business Registration Number<br>(법인 사업자 등록번호)</h5>
+									<table class="viewTable">
+										<tbody>
+											<tr>
+												<th>Company Name<br>법인명</th>
+												<td>Seian Holdings Co.,LTD 세안홀딩스㈜</td>
+											</tr>
+											<tr>
+												<th>President<br>대표자</th>
+												<td>박 석 훈</td>
+											</tr>
+											<tr>
+												<th>Business Registered Address<br>사업장 소재지</th>
+												<td>82 Saemunanro, Jongno-Gu, Seoul<br>서울시 종로구 새문안로 82</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="breakPage"></div>
+									<h4 class="blueT">Remarks</h4>
+									<ul class="blueT">
+										<li>- A cap on the renewal increase – When renewal contract is made, the limit for rent increase shall be less than 4% for the second year.</li>
+										<li>-	If 회사명(영문) office next door is vacant, give Priority to 회사명(영문).</li>
+										<li>-	As the space is not complete today we would require a clause around resolving issues within a reasonable timeframe.</li>
+										<li>-	회사명(영문) must move in within one month of the official opening date of Coworkers.</li>
+									</ul>
+									<div>
+										<ul>
+											<li>
+												<h4><em>1.</em> Description of Leased Premises 사무실설명</h4>
+												<p>S-tower with 7 stories underground and 20 stories above ground at 82 Saemunanro, Jongno-gu, Seoul;<br>지하7층 지상 20층의 에스타워에 위치하고 있다;</p>
+											</li>
+											<li>
+												<h4><em>2.</em> Limitation of Use 사무실 용도</h4>
+												<p>The Lessee leases the Leased Premises for use as a business office, and the Lessee may not use any part of the Leased Premises for any other purposes such as warehouse, depositary, laboratory, exhibit hall and shop.<br> 임차인은 임대한 면적을 사무실 용도로 사용한다.</p>
+											</li>
+											<li>
+												<h4><em>3.</em> Term of Lease 임대기간</h4>
+												<p>The term of lease hereunder shall be a period of 12 months commencing on <span class="blueT">2 December, 2017</span> and ending on <span class="blueT">1 December, 2018</span>.<br> 본 계약은 <span class="blueT">2017년 12월 2일</span>부터 시작하여 12개월 유효하며, <span class="blueT">2018년 12월 1일</span>에 종료한다.</p>
+											</li>
+											<li>
+												<h4><em>4.</em>	Extension of the Term of Lease 계약기간 연장</h4>
+												<p>In case neither party to this Agreement separately gives the other notice of its intention two (2) months prior to the expiration of the term of lease, the term of this Agreement shall be deemed to be extended for 12 months; provided, however, that during the term of extension, the security deposit and monthly payment shall be adjusted upon mutual consultation.<br> 계약종료일 2개월 전까지 쌍방 별도 의사표시가 없을 때에는 상호 합의하여 본 계약을 12개월 간 자동연장 하는 것으로 간주한다.  단, 보증금, 월 임대료는 상호 합의하여 결정한다.</p>
+											</li>
+											<li>
+												<h4><em>5.</em>	Termination during the Term of Lease 계약기간 내 해지</h4>
+												<p>This Agreement shall not be terminated during the term of Agreement.  In case the Lessee wishes to terminate this Agreement unilaterally, the Lessee shall pay to the Lessor any of the amounts equivalent to the virtual office rent of one (1) month as liquidated damages: <br>본 계약 기간 중에는 중도 해약을 할 수 없다.  만약 임차인이 일방적인 해약을 하고자 할 시에는 임차인은 1개월 분의 오피스 임대료에 해당하는 금액을 임대인에게 손해 배상조로 지급하여야 한다.</p>
+											</li>
+											<li>
+												<h4><em>6.</em> Security Deposit 임대보증금</h4>
+												<ul>
+													<li><p><em>6-1.</em>This Agreement shall not be terminated during the term of Agreement.  In case the Lessee wishes to terminate this Agreement unilaterally, the Lessee shall pay to the Lessor any of the amounts equivalent to the virtual office rent of one (1) month as liquidated damages: <br>본 계약 기간 중에는 중도 해약을 할 수 없다.  만약 임차인이 일방적인 해약을 하고자 할 시에는 임차인은 1개월 분의 오피스 임대료에 해당하는 금액을 임대인에게 손해 배상조로 지급하여야 한다.</p></li>
+													<li><p><em>6-2.</em>In case the Lessee fails to make up or settle the increased amount on the due date, the Lessor may charge the interest calculated at the default rate used by Shinhan Bank, and the Lessee shall pay the increased amount plus interest at the same time. 만약 증감된 금액을 임차인이 그 유효일에 지체없이 정산 보충을 하지 않을 시에는 임대인은 지체일수에 대하여 신한은행 연체 이자율을 적용한 이자를 청구할 수 있으며, 임차인은 증감된 차액과 이자를 동시에 납부하여야 한다</p></li>
+												</ul>
+											</li>
+											<li>
+												<h4><em>7.</em>	Termination during the Term of Lease 계약기간 내 해지</h4>
+												<p>If the Leased Premises are restored into their original shape and condition and are surrendered to the Lessor after the expiration of this Agreement (including the termination and cancellation thereof), any and all debts owed by the Lessee to the Lessor shall be deducted from the security deposit and the balance, if any, shall be refunded to the Lessee immediately from completion of move-out process.<br> 보증금은 본 계약이 종결(해지, 해약 포함)되어 임대차 물건이 임대인에게 원상복구 되어 명도 된 후 임차인은 임대인에 대한 일절의 채무의 변제에 충당되고 그 잔액이 있으면 임대인은 이를 임차인에게 즉시 반환한다.</p>
+											</li>
+											<li>
+												<h4><em>8.</em>	Payment of Monthly Rent 월 임대료 납부</h4>
+												<p>Upon the execution of this Agreement, the Lessee shall pay in advance the monthly rent for the relevant month, (including the Value-Added Tax) thereafter by the 10th day of the month preceding the relevant month (if the 10th day is a holiday, by the next day).  In case the Lessee delays the payment of monthly rent, the Lessee shall definitely pay to the Lessor, as liquidated damages, the amount calculated by applying the default rate of general loan used by Shinhan Bank to the delinquent payments for the default period.<br>월 임대료는 본 계약 체결과 동시에 해당월분을 선납하고 이후 매월 월 임대료를 해당 전월 10일까지(부가가치세 포함) 임대인에게 선납하여야 한다.  단, 납입일이 공휴일인 경우에는 그 익일까지 납부하여야 하며 월 임대료 납입이 지연될 경우 신한은행 일반대출 연체 이자율을 적용 지연일수에 따른 손해액을 임차인은 임대인에게 필히 납부하여야 한다.</p>
+											</li>
+											<li>
+												<h4><em>9.</em>	Calculation of Monthly Rent 월 임대료 계산</h4>
+												<p>If this Agreement expires or is terminated in the middle of a month, the monthly rent shall be calculated based on the pro-rata number of calendar days up to the date of completion of the surrender. <br>월 도중에 임대차 계약이 시작될 경우에는 일수에 따라 월 임대료와 관리비를 계산하며 임대차 계약이 종료되거나 해약되는 경우에는 일수로 계산한다.</p>
+											</li>
+											<li>
+												<h4><em>10.</em>	Payment Currency 지불 통화</h4>
+												<p>The Lessee shall pay the safety deposit, monthly rent, and other expenses payable by the Lessee hereunder in Korean Won in cash (including cashier's check issued by banks) to the bank designated by the Lessor; provided, however, that such payments shall be made in foreign currency upon agreement between the parties.<br>임차인은 보증금, 월 임대료, 및 기타 납부의무가 있는 제비용에 대하여는 대한민국 법화로서 현금(은행발행 자기앞 수표 포함)으로 임대인이 지정하는 은행을 통하여 지급하여야 한다.  단 당사자합의에 의해 외국통화로 지급할 수 있다.</p>
+											</li>
+											<li>
+												<h4><em>11.</em> Prohibition of Assignment of Rights and Sublease 권리 양도 및 전대 금지</h4>
+												<ul>
+													<li><p><em>11-1.</em> The Lessee shall neither assign nor sublease its rights and obligations hereunder to a third party.  Any claims related to this Agreement shall not be assigned, pledged or mortgaged, except the cases approved by the Lessor.<br>임차인은 임대차 계약상의 권리와 의무를 제삼자에게 양도 또는 전대할 수 없으며, 본 계약에 관한 채권을 양도하거나 질권 및 담보로 제공할 수 없다. 단, 임대인이 승인한 경우에는 예외로 한다.</p></li>
+													<li><p><em>11-2.</em> In case the Lessee violates the preceding paragraph of 11-1, the Lessor may immediately terminate this Agreement. 임차인이 전항에 위반하였을 시는 임대인은 즉시 본 계약을 해지할 수 있다.</p></li>
+												</ul>
+											</li>
+											<li>
+												<h4><em>12.</em> Remodeling and Installation of Facilities within the Leased Premises 임대공간 내의 기물변경 및 설치</h4>
+												<ul>
+													<li><p><em>12-1.</em> Strong or weak electricity other than the existing one, attachment of advertising materials, or installing or remodeling other facilities within the Leased Premises is not allowed.<br>임차인이 임차한 건물내에 기설 공급 외 강전, 약전 전력의 부설 또는 선전물의 첩부와 기타 설비의 신설 또는 변조를 할 수 없다.</p></li>
+													<li><p><em>12-2.</em> The Lessee may not charge the Lessor any expenses already paid by the Lessee or incurred otherwise in connection with the Leased Premises, including the expenses which add the value of Leased Premises, the expenses which are necessary for the proper management of Leased Premises, and premium, etc.<br>임차인은 임차장소에 대하여 자비 부담이 있었다거나 기타 어떤 이유로도 임대인에게 그에 대한 유익비, 필요비, 권리금 등 일절의 비용을 청구할 수 없다.</p></li>
+												</ul>
+											</li>
+											<li>
+												<h4><em>13.</em> Restriction on Common Use by a Third Party</h4>
+												<p>The Lessee may not cause a third party to use the Leased Premises jointly with the Lessee or as its liaison office without the written consent of the Lessor.  In case the Lessee breaches, the preceding clause, Clause11-2, will be applied.<br>임차인은 임대인의 서면상 동의없이 임차인 이외의 제삼자를 공용케 하거나 또는 연락 사무소로 사용케 할 수 없으며, 이를 위반할 시는 제11조 2항을 적용한다.</p>
+											</li>
+											<li>
+												<h4><em>14.</em> Restricted Matters for Lessee 임차인의 금지사항</h4>
+												<p>The Lessee may not conduct any of the following:<br>임차인은 다음 사항의 행동을 하지 못한다.</p>
+												<ul>
+													<li><p><em>14-1.</em> Installing or presenting signboards or advertisement materials in a manner that gives the public an unpleasant feeling or that may obstruct the hallway or other common facilities;<br> 공중에 대하여 불쾌감을 주거나 또는 통로, 기타 공동시설물에 방해가 될만한 간판, 광고물을 설치 또는 게시하는 행위</p></li>
+													<li><p><em>14-2.</em> Bringing in or keeping within any part of the Leased Premises or any part of the Building any  inflammables, dangerous goods, or other goods that may possibly be harmful or offensive to the human body or damaging to property without any appropriate preventative measures thereagainst to ensure the harmlessness and safety of such goods or materials; <br>임차장소 또는 건물내의 기타 장소에 인화물, 위험성 있는 물품, 기타 인체에 유해하고 불쾌감을 주거나, 또는 재산을 파손할 염려가 있는 물품을 무해하고 안전토록 충분한 예방책을 강구치 않은 채 반입 또는 보관하는 행위</p></li>
+													<li><p><em>14-3.</em> Using charcoal, coal, oil, LPG or fuels for heating other than that provided by the Lessor; <br>목탄, 석탄, 유류, LPG 또는 임대인이 공급하는 이외의 난방을 위한 연료를 사용하는 행위</p></li>
+													<li><p><em>14-4.</em> Making loud noises, playing musical instruments, keeping pets other than fish in aquariums, or doing other acts which may be unpleasant or displeasing to other lessees; <br>소란스러운 행위, 악기사용, 어항 이외의 애완동물의 사육 및 타 임차인에 대하여 불쾌감과 혐오감을 주고 폐가 되는 행위</p></li>
+													<li><p><em>14-5.</em> Destroying, damaging or changing the structures of the Building or any of the equipment or facilities of the Building equipped by the Lessor, or installing the vending machine;<br> 임대인이 설비한 구조물, 기구 혹은 시설을 파괴, 오손 또는 변경하는 행위 및 각종 자판기를 설치하는 행위</p></li>
+													<li><p><em>14-6.</em> Using the Leased Premises for residential purposes or allowing its employee to use the Leased Premises for purposes other than that specified in this Agreement.<br>임차장소를 거주의 목적으로 사용하거나 그의 직원으로 하여금 해당 장소를 임대차 계약상의 사용목적 이외로 사용하는 행위</p></li>
+												</ul>
+											</li>
+											<li>
+												<h4><em>15.</em> Restriction on Use of Common Facilities 공용시설의 사용제한</h4>
+												<p>During legal holidays in Korea, on Sundays or if necessary under the Lessor's circumstances, the Lessor may suspend the operation of elevator or other facilities or, at the Lessor's election, restrict the operation to the minimum extent.<br>임대인은 대한민국의 법정 공휴일이나 매 일요일, 기타 임대인의 사정상 필요 시에는 승강기 및 제시설의 운전을 중지하든지 혹은 임대인의 선택에 따라 최소한도로 제한할 수 있다.</p>
+											</li>
+											<li>
+												<h4><em>16.</em> Indemnification for Lessor 임대인의 면책사항</h4>
+												<ul>
+													<li><p><em>16-1.</em> The Lessor shall not be responsible for damage to person or property due to fire, theft, acts of God, any force major events or other causes which are not attributable to the Lessor.<br>화재, 도난, 천재지변 기타 불가항력적인 사유나 임대인의 책임에 귀속할 수 없는 사유로 인한 인적 물적 손해에 대하여는 임대인은 그 책임을 지지 아니한다.</p></li>
+													<li><p><em>16-2.</em> The Lessor shall not be responsible for the shortage of any service or suspension of use of any common facilities which were caused by the repair, alteration or remodeling of the Leased Premises.  However, the Lessor shall notify the Lessee of any expected repair, alteration or remodeling in advance. <br>임대인이 수리, 변경, 개조를 함으로 인하여 발생하는 제 서비스의 부족 및 공동 사용부분의 사용정지에 관해서는 임대인은 그 책임을 지지 아니한다.  단, 수리, 변경, 개조이전에 임차인에게 통지하기로 한다.</p></li>
+													<li><p><em>16-3.</em> The Lessee shall be fully responsible for damage to person or property which was caused due to fire, theft or other causes within the Leased Premises regardless of whether or not it resulted from the Lessee's willful misconduct or negligence, and the Lessor shall not be responsible therefor in any way.  However, the Lessor shall be responsible for the damages caused due to reasons which are solely attributable to the Lessor. <br>임차인은 그가 임차한 목적물 내에서 화재, 도난, 기타사유로 인하여 발생한 인적 물적 손해에 대하여는 임차인의 고의, 과실 유무에 불구하고 임차인이 대내, 대외적으로 책임을 지고 임대인은 그에 대한 하등의 책임을 부담하지 않는다.  단, 임대인만의 책임으로 인하여 발생한 경우에는 그러하지 아니하다.</p></li>
+												</ul>
+											</li>
+											<li>
+												<h4><em>17.</em> Surrender of Leased Premises 임대장소의 명도</h4>
+												<p>The Lessor may terminate this Agreement or reject to renew this Agreement in order to collect the unpaid rent and all other costs.  The Lessor shall have the right to cause the Lessee to immediately surrender the Leased Premises or take other appropriate action.<br>임대인은 체납된 임대료 및 기타 제반 요금을 회수하기 위하여 계약을 해지하거나 계약의 갱신 및 기간의 연장을 거부할 수 있으며 임대장소의 즉시 명도 기타 적절한 절차를 취할 권리를 보유한다.</p>
+											</li>
+											<li>
+												<h4><em>18.</em> Obligation of Surrender and Restoration 명도 및 원상복구 의무</h4>
+												<ul>
+													<li><p><em>18-1.</em> When this Agreement is terminated, the Lessee shall, on or before the termination date, remove his belongings and property, return the Lessor's property and Security card keys and surrender all of the Leased Premises.<br>이 계약이 종료된 때에는 임차인은 계약종료일 이전에 임차인 소유물 및 재산을 반출하여야 하며 임대인에게 소유재산 및 출입카드를 반납하고 기타 임대차 물건 전부를 명도하여야 한다.</p></li>
+													<li><p><em>18-2.</em> The Lessee shall restore the Leased Premises to their original condition and shape at the time of execution of this Agreement by removing at its own expense any belongings. <br>임차인이 부설한 설비, 칸막이, 기타 시설은 임차인의 비용 부담으로 철거하여 이 계약 체결 당시로 원상복구 하여야 한다.</p></li>
+													<li><p><em>18-3.</em> In the event that the Lessee fails to remove his/her belongings or property due to reasons   attributable to the Lessee despite of the termination of the term of lease provided in Clause 3, the Lessee shall pay to the Lessor, as compensation for damage, double the normal rent for the period from the date of expiration to the date when the Leased Premises are completely surrendered or restored.  However, the Lessee may request the Lessor to restore the Leased Premises to its original state with the payment of the cost therefor. <br>제3조의 임대차 기간이 경과 하였음에도 불구하고 임차인의 사정으로 임차인의 소유물 및 재산을 반출하지 못하였을 경우에는 임차인은 이 계약 종료된 날부터 기산하여 실제로 명도 또는 복구된 날까지 통상 월 임대료 및 관리비의 2배에 해당하는 금액을 손해 배상조로 임대인에게 지급하여야 한다.  다만 임차인은 원상회복비용을 납부하면서 임대인이 원상회복을 실시하도록 요청할 수 있다.</p></li>
+													<li><p><em>18-4.</em> In the event that the Lessee fails to surrender the Leased Premises within the period as set forth in 23-1 after the termination of this Agreement, the Lessor may move the Lessee's belongings to an appropriate place.  In this case, all expenses incurred therefrom shall be paid by the Lessee. <br>이 계약이 종료된 후에 임차인이 제1항의 기한이내에 임대차 물건을 임대인에게 명도하지 않는 경우에는 임대인은 임차인 소유의 물건을 적절한 장소로 철거할 수 있다. 이 경우에 발생하는 모든 비용은 임차인의 부담으로 한다.</p></li>
+												</ul>
+											</li>
+											<li>
+												<h4><em>19.</em> Lessor's Right of Disposition 임대인의 처분권리</h4>
+												<ul>
+													<li><p><em>19-1.</em> The Lessee, its legal representative or executor may not be indemnified from fulfillment of the obligations of this Agreement during the term of this lease despite being absent from Korea.  If this Agreement expires during the absence of the Lessee from Korea, the Lessor shall recover its right to occupy the Leased Premises and move the Lessee's property to a warehouse or other place.  In the event the Lessee fails to give its intention regarding disposition and treatment of its belongings within 60 days from expiration of the term of this Agreement without completion of payment of the unpaid amount, the Lessor may sell the Lessee's belongings or property by any appropriate means. <br>임차인 또는 그의 법적 위임자 및 집행책임자 등이 한국내에 부재중임을 이유로 본 임대차계약 기간중 의무 이행의 책임을 면할 수 없으며 임차인이 한국에 부재중 계약이 종결될 시에는 임대인은 임대장소의 점유권을 회복하고 임차인의 재산을 창고나 기타 장소에 이관하며 모든 체납액을 완전히 정산하지 못하고 계약이 종결된 후 60일 이내에 임차인으로부터 자기 소유재산의 처분 및 취급에 대하여 하등의 요구가 없을시 에는 해당재산과 소유물을 적절한 방법에 의하여 매각할 수 있다.</p></li>
+													<li><p><em>19-2.</em> Upon sale as set forth in the preceding paragraph, clause 24-1, the Lessor shall have the right to receive first all unpaid amount including costs of transportation, storage and warehousing of the relevant belongings and property. <br>전항의 매각에 있어서 임대인은 해당 재산의 운반 및 보관 및 창고료를 포함한 미결중인 체납금을 우선 변제 받을 권리를 보유한다.</p></li>
+												</ul>
+											</li>
+											<li>
+												<h4><em>20.</em> Measure Upon Change of Lessor 임대인 변경에 대한 조치</h4>
+												<p>In the event of change in the ownership, name, management right and operation right on the Serviced Office, this Agreement shall remain in full force and effect during the term of this Agreement.  New lessor and the person having the operation right shall be obligated to perform all provisions of this Agreement. <br>당 임대빌딩의 소유권, 명칭, 관리권 및 운영권자의 이동이 발생하였을 시라도 본 임대차계약 기간 중은 계약의 효력이 존속할 것이며 신임대인 및 신운영권자는 본 계약 전 조문을 이행 할 의무가 있다.</p>
+											</li>
+											<li>
+												<h4><em>21.</em> Inspection of Leased Premises 임대장소의 점검</h4>
+												<p>The Lessor or its employee shall be permitted to have access to the Leased Premises at any time for the purpose of inspection of the condition of furniture or fixtures installed in the Leased Premises or of showing the Leased Premises to prospective lessees even prior to the termination of this Agreement.  In such case, such access may not be rejected by the Lessee without any justifiable reason. <br>임대차계약 종결 전이라 할지라도 임대한 사무실에 비치한 가구나 장구의 상태를 임대인 또는 그의 종업원이 조사할 목적이나 또는 다른 임차 희망자에게 그 장소를 보여주기 위하여 한시라도 임차장소를 조사할 권리를 보유하며 임차인은 정당한 이유없이 임대인 입장을 거부할 수 없다.</p>
+											</li>
+											<li>
+												<h4><em>22.</em> Notice of Change in Court Registration or Identity 등기사항 또는 신분 등 변경의 통지</h4>
+												<p>In the event of material changes in the trade name, representative, business purpose, other commercial registration matters or identity of the Lessee, the Lessee shall, in principle, give notice to the Lessor in writing. <br>임차인의 상호, 대표자, 영업목적, 기타 상업 등기사항 또는 신분상에 중요한 변경이 있을 때는 임차인은 지체없이 서면으로 임대인에게 통지함을 원칙으로 한다.</p>
+											</li>
+											<li>
+												<h4><em>23.</em> Operation Hour 공동사용 부분의 운영시간</h4>
+												<ul>
+													<li><p><em>23-1.</em> The Lessor shall determine the operation hour for business suppport as follows; from 9AM to 6PM from Monday to Friday. The Lessee shall accept the hours of operation of elevators, electricity and common facilities separately in the Building Management Regulations. The Lessor may, from time to time, amend, revise and repeal the management regulations as needed for protection of the Lessor's property and smooth management of the Coworkers.  The Building Management Regulations shall be deemed to be a part of this Agreement.  However, the Lessor shall notify the Lessee of such amendment, revision or repeal of the management regulations in advance. <br>운영시간은 월요일부터 금요일까지 오전 9시부터 오후 6시까지이며 이 시간 동안 컨시어지 서비스를 받을 수 있다. 현관의 개폐, 승강기의 운영, 전기 및 설비의 공동 사용부분의 운영시간은 임대인이 건물 임차인의 편의를 고려하여 별도 관리규정에서 이를 정하며 임대인은 이 계약에 의거 임대인의 재산보전과 원활한 건물관리를 위하여 임대인은 이 규정을 필요에 따라 개정, 개폐할 수 있으며 본 관리규정은 이 계약서의 일부로 간주한다.  단, 임대인은 관리규정을 개정, 개폐하기 전에 임차인에게 이를 통지하기로 한다.</p></li>
+													<li><p><em>23-2.</em> When the Lessor extends the operation hour as set forth in 28-1 by request of the Lessee, the Lessee shall bear all expense incurred therefrom. <br>임차인의 청구에 의하여 임대인이 전항의 시간을 연장할 때는 제비용은 임차인이 부담한다.</p></li>
+												</ul>
+											</li>
+											<li>
+												<h4><em>24.</em> Taxes and Public Imposts to be Paid by Lessee 임차인이 부담할 조세공과</h4>
+												<p>The Lessee shall bear all taxes and public imposts to be imposed on all alterations and facilities newly or additionally installed by the Lessee whether a notice of taxes or public imposts was issued to the Lessee or the Lessor. <br>임차인이 신설, 부설한 모든 조작, 설비에 부과되는 조세공과는 수취인 명의의 여하에 불구하고 임차인의 부담으로 한다.</p>
+											</li>
+											<li>
+												<h4><em>25.</em> Fire Insurance Premium 화재보험료</h4>
+												<p>When the fire insurance premium for the Building increases due to the Lessee's act or belongings, the Lessee shall pay the entire amount of the increased portion to the Lessor.<br>임차인의 행위 또는 소유물 등으로 인하여 건물의 화재보험료가 증액될 때에는 그 증액분 전액을 임대인에게 지불한다.</p>
+											</li>
+											<li>
+												<h4><em>26.</em> Compensation for Damage 손해의 배상</h4>
+												<ul>
+													<li><p><em>26-1.</em> In the event that the Lessor or other lessees in the Business Center suffers personal injury or damage to property by the intentional misconduct or negligence of the Lessee or its agents, employees, contractors, visitors and other persons having relation with the Lessee, the Lessee shall compensate for all damage incurred therefrom. <br>임차인 또는 그 대리인, 사용인, 계약자, 방문자 기타 임차인의 관계자의 고의 또는 과실에 의해 임대인 및 타 임차인 등 제삼자의 신체나 재산상에 손해를 입혔을 경우 임차인은 이에 의해 발생한 일절의 손해를 배상하여야 한다.</p></li>
+													<li><p><em>26-2.</em> The Lessee shall not claim any compensation against the Lessor for damage which the Lessee suffered due to acts by a third party including other lessees in the Building. <br>타 임차인 등 제삼자의 행위에 의해 임차인이 입은 손해에 대해서는 임차인은 임대인에 대해 아무런 청구도 하지 못한다.</p></li>
+													<li><p><em>26-3.</em> The Lessee shall be solely responsible for the safety maintenance of the Lessee's property.  In the event of the occurrence of any damage to the Leased Premises, the Lessor shall not be responsible for compensation thereof.  However, the Lessor shall arrange and control the guards so as to be able to control commonly used corridors and places in the Building. <br>임차인의 재산에 대한 적정한 안전단속은 임차인의 단독책임이며 임차 장소 내에서 손해가 발생하였을 시라도 임대인은 하등의 책임을 지지않으나 임대인은 건물내의 공동통로 및 사용장소를 단속키 위하여 경비원을 배치 관리한다.</p></li>
+												</ul>
+											</li>
+											<li>
+												<h4><em>27.</em> Termination of Agreement 계약의 해지</h4>
+												<ul>
+													<li><p><em>27-1.</em> Two (2) months written notice is required to either party prior to the termination of this Agreement.<br>계약해지 2개월 전에 서면통보 해야 한다.</p></li>
+													<li><p><em>27-2-1.</em> If the Lessee's property is subject to attachment, temporary seizure or preliminary injunction due to other liabilities, if petition for auction sales was made against the Lessee, or if there is any material change in the Lessee's asset, credit or businesses such as a dishonoring of its notes by banks, composition, bankruptcy, etc., which makes the Lessor to believe that this Agreement may not be able to be continued; <br>타 채무로 인하여 중요재산의 압류, 가압류, 가처분등을 받거나 또는 경매의 신청을 받았을 때와 부도, 도산, 화의, 회사정리, 파산등 임차인이 그 자산, 신용 또는 사업등에 중대한 변경을 일으켜 임대인이 본 계약을 계속하기 어려운 상태라고 인정되었을 때</p></li>
+													<li><p><em>27-2-2.</em> If the Lessee violates any clause of this Agreement or the Building Management Regulations and fails to correct such violation within 7 days from the receipt of notice stating the Lessor's demand of correction; or <br>본 계약서 각 조항 또는 건물 관리규정을 위반하고 위반통지를 받은 후 7일이내에 위반사항을 시정하지 않은 경우</p></li>
+													<li><p><em>27-3.</em> If the Lessee fails to pay the rent for two months or more or has not paid the rent on the due date of payment two times or more. <br>월 임대료, 관리비등을 2개월 이상 체납하거나 납부일자를 2회 이상 위반하였을 때</p></li>
+													<li><p><em>27-4.</em>  Although this Agreement is terminated due to any of the above clauses, the Lessor may claim compensation for damage against the Lessee.<br>각 항에 의해 본 계약이 해지된 경우라도 임대인은 임차인에 대해 손해배상을 청구할 수 있다.</p></li>
+												</ul>
+											</li>
+											<li>
+												<h4><em>28.</em> Parking Right 주차권</h4>
+												<p>Parking right shall be determined by parking lot management regulations to be concluded separately.  The use of the parking lot shall be suspended simultaneously upon termination of this Agreement for the Leased Premises.<br>주차권은 별도 주차장 관리 규정에서 이를 정하기로 하며 주차장 사용은 임대빌딩 사무실 임대차 계약의 해지와 병행하여 자동적으로 해지한다.</p>
+											</li>
+											<li>
+												<h4><em>29.</em> Registration of Lease Right 임차권의 등기</h4>
+												<p>The lease right hereunder shall not be registered.<br>본 계약에 따른 임차인의 임차권은 등기하지 아니한다.</p>
+											</li>
+											<li>
+												<h4><em>30.</em>  Application of General Laws and Others 일반법령 및 기타의 적용</h4>
+												<p>Matters which are not specified in this Agreement or any discrepancy in interpreting this Agreement shall be settled in accordance with the Korean laws and the generally accepted Korean lease practices at the time of such occurrence.  If there are no such practices, the said matters or discrepancy shall be settled by mutual consultation between the Lessor and the Lessee.  Any dispute shall be subject to the jurisdiction of the Seoul Center District Court. <br>본 계약에 정한 이외의 사항 또는 이의가 발생할 시에는 대한민국 법령 및 사건 당시 한국 내에서 임대차 관습에 의하고 관습이 없으면 임대인과 임차인간에 협의하여 정하며, 분쟁에 의한 관할법원은 서울중앙지방법원으로 한다.</p>
+											</li>
+										</ul>
+									</div>
+
+									<table class="signTable">
+										<tr>
+											<td rowspan="3">Lessor</td>
+											<td>Company Name: </td>
+											<td>Seian Holdings Co., Ltd.</td>
+										</tr>
+										<tr>
+											<td>Address: </td>
+											<td>S-tower, 82 Saemuinan-ro, Jongno-gu, Seoul 110-700</td>
+										</tr>
+										<tr>
+											<td>Representative: </td>
+											<td>Suk Hoon PARK</td>
+										</tr>
+									</table>
+									<table class="signTable">
+										<tr>
+											<td rowspan="3">임대인</td>
+											<td>주 소: </td>
+											<td>서울특별시 종로구 새문안로 82 에스타워</td>
+										</tr>
+										<tr>
+											<td>상 호: </td>
+											<td>세 안 홀 딩 스 주 식 회 사</td>
+										</tr>
+										<tr>
+											<td>성 명: </td>
+											<td>대 표 이 사 박 석 훈</td>
+										</tr>
+									</table>
+									<div class="signatureLine"><span></span></div>
+									<table class="signTable">
+										<tr>
+											<td rowspan="3">Lessee</td>
+											<td>Company Name: </td>
+											<td class="blueT">회사명(영문)</td>
+										</tr>
+										<tr>
+											<td>Address: </td>
+											<td>19F, S-tower, 82 Saemuinan-ro, Jongno-gu, Seoul 110-700</td>
+										</tr>
+										<tr>
+											<td>Representative: </td>
+											<td></td>
+										</tr>
+									</table>
+									<table class="signTable">
+										<tr>
+											<td rowspan="3">임차인</td>
+											<td>주 소: </td>
+											<td>서울특별시 종로구 새문안로 82 에스타워 <span class="blueT">19층</span></td>
+										</tr>
+										<tr>
+											<td>상 호: </td>
+											<td class="blueT">회사명</td>
+										</tr>
+										<tr>
+											<td>성 명: </td>
+											<td></td>
+										</tr>
+									</table>
+									<div class="signatureLine"><span></span></div>
+								</div>
+								<div class="Btn1Box">
+									<a href="#none" class="btn1" onclick="printExct('printBox');">인쇄</a>
+									<a href="#none" class="btn1 b-close">확인</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- popupContents e-->
+				<!-- content e-->
+			</div>
+		</div>
+		<? include '../../include/footer.php' ?> <!-- footer -->
+	</div>
+	<script>
+		currentLnb(0,0); //현재페이지 lnb인식
+	</script>
+</body>
+</html>

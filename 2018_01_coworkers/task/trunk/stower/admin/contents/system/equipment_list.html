@@ -1,0 +1,241 @@
+<? include '../../include/top_admin.php' ?> <!-- top -->
+</head>
+<body>
+	<div class="pageWrap sub adminSystemWrap"> <!-- pageWrap sub 뒤의 클래스명을 확인해주세요(폴더명관련) -->
+		<? include '../../include/header.php' ?> <!-- header -->
+		<div class="wrap">
+			<div class="contentwrap">
+				<? include '../../include/lnb_admin.php' ?> <!-- 관리자lnb -->
+				
+				<!-- content s-->
+				<div class="contentArea equipmentListBox"><!-- contentArea 뒤의 클래스명을 확인해주세요(파일명관련) -->
+					<div class="contentHeader">
+						<div class="pageLocation">
+							<h2>시스템 관리</h2>
+							<ul class="breadcrumb">
+								<li class="breadcrumb_home"><a href="#none" onclick="goHome('admin');">HOME</a><em>></em></li>
+								<li><span>시스템관리</span><em>></em></li>
+								<li>부대시설 관리</li>
+							</ul>
+						</div>
+						<div class="cateTitle"><h3>부대시설 관리</h3></div>
+					</div>
+					<div class="contentBody">
+						<div>
+							<h4 class="pageTitle">부대시설 현황</h4>
+							<div class="listSearch">
+								<div class="searchSelect selectBox">
+									<label for="selectOpt">전체</label>
+									<select class="selectOpt" id="selectOpt">
+										<option value="전체">전체</option>
+										<option value="">부대시설</option>
+										<option value="">수면실</option>
+										<option value="">지점</option>
+									</select>
+								</div>
+								<div class="searchText">
+									<input type="text" placeholder="검색어 입력"/>
+									<button type="button"><img src="../../images/common/i_search.png" alt="search" /></button>
+								</div>
+							</div>
+						</div>
+						<div class="tableScrollX">
+							<table class="listTable">
+								<thead>
+									<tr>
+										<th>NO</th>
+										<th>부대시설명</th>
+										<th>수량</th>
+										<th>배치</th>
+										<th>이동여부</th>
+										<th>최근수정일자</th>
+										<th>상태</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>999</td>
+										<td>모니터 55인치</td>
+										<td>1</td>
+										<td>무관</td>
+										<td>가능</td>
+										<td>2017-12-31</td>
+										<td>정상</td>
+									</tr>
+									<tr>
+										<td>999</td>
+										<td>모니터 55인치</td>
+										<td>1</td>
+										<td>무관</td>
+										<td>가능</td>
+										<td>2017-12-31</td>
+										<td>정상</td>
+									</tr>
+									<tr>
+										<td>999</td>
+										<td>모니터 55인치</td>
+										<td>1</td>
+										<td>무관</td>
+										<td>가능</td>
+										<td>2017-12-31</td>
+										<td>정상</td>
+									</tr>
+									<tr>
+										<td>999</td>
+										<td>모니터 55인치</td>
+										<td>1</td>
+										<td>무관</td>
+										<td>가능</td>
+										<td>2017-12-31</td>
+										<td>정상</td>
+									</tr>
+									<tr>
+										<td>999</td>
+										<td>모니터 55인치</td>
+										<td>1</td>
+										<td>무관</td>
+										<td>가능</td>
+										<td>2017-12-31</td>
+										<td>정상</td>
+									</tr>
+									<tr>
+										<td>999</td>
+										<td>모니터 55인치</td>
+										<td>1</td>
+										<td>무관</td>
+										<td>가능</td>
+										<td>2017-12-31</td>
+										<td>정상</td>
+									</tr>
+									<tr>
+										<td>999</td>
+										<td>모니터 55인치</td>
+										<td>1</td>
+										<td>무관</td>
+										<td>가능</td>
+										<td>2017-12-31</td>
+										<td>정상</td>
+									</tr>
+									<tr>
+										<td>999</td>
+										<td>모니터 55인치</td>
+										<td>1</td>
+										<td>무관</td>
+										<td>가능</td>
+										<td>2017-12-31</td>
+										<td>정상</td>
+									</tr>
+									<tr>
+										<td>999</td>
+										<td>모니터 55인치</td>
+										<td>1</td>
+										<td>무관</td>
+										<td>가능</td>
+										<td>2017-12-31</td>
+										<td>정상</td>
+									</tr>
+									<tr>
+										<td>999</td>
+										<td>모니터 55인치</td>
+										<td>1</td>
+										<td>무관</td>
+										<td>가능</td>
+										<td>2017-12-31</td>
+										<td>정상</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="Btn2Box">
+							<a href="#none" class="btn2 popupBtn" popupTarget="popEquipmentReg">장비추가</a>
+						</div>
+						<div class="pagination">
+							<a class="prev02" href="#none"><span class="tBlind">맨처음페이지</span></a>
+							<a class="prev" href="#none"><span class="tBlind">이전페이지</span></a>
+							<!-- 활성화 페이지의 경우 active 클래스 부여 -->
+							<a href="#none" class="active" >1</a>
+							<a href="#none">2</a>
+							<a href="#none">3</a>
+							<a href="#none">4</a>
+							<a href="#none">5</a>
+							<a href="#none" class="next"><span class="tBlind">다음페이지</span></a>
+							<a href="#none"class="next02"><span class="tBlind">맨끝페이지</span></a>
+						</div>
+					</div>
+				</div>
+
+				<!-- popupContents s-->
+
+				<!-- 장비추가팝업-->
+				<div class="popupWrap popEquipmentReg">
+					<div class="popupContainer">
+						<div class="popupBox">
+							<h1 class="popupHeader">부대시설 추가 <span class="button popCloseBtn b-close"><span class="tBlind">닫기</span></span></h1>
+							<div class="popContentBox">
+								<table>
+									<colgroup><col width="30%"><col width="70%"></colgroup>
+									<tbody>
+										<tr>
+											<th>부대시설명</th>
+											<td><input type="text" id="" /></td>
+										</tr>
+										<tr>
+											<th>수량</th>
+											<td><input type="text" id="" /></td>
+										</tr>
+										<tr>
+											<th>배치</th>
+											<td>
+												<div class="selectBox">
+													<label for="selectOpt-1">광화문</label>
+													<select class="selectOpt" id="selectOpt-1">
+														<option value="">광화문</option>
+													</select>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th>이동여부</th>
+											<td>
+												<div class="selectBox">
+													<label for="selectOpt-2">가능</label>
+													<select class="selectOpt" id="selectOpt-2">
+														<option value="">가능</option>
+													</select>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th>상태</th>
+											<td>
+												<div class="selectBox">
+													<label for="selectOpt-3">정상</label>
+													<select class="selectOpt" id="selectOpt-3">
+														<option value="">정상</option>
+													</select>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<div class="Btn1Box">
+									<a href="#none" class="btn1">추가</a>
+									<a href="#none" class="btn1 b-close">취소</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- popupContents e-->
+
+				<!-- content e-->
+
+			</div>
+		</div>
+		<? include '../../include/footer.php' ?> <!-- footer -->
+	</div>
+	<script>
+		currentLnb(4,3); //현재페이지 lnb인식
+	</script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<? include '../../include/top_admin.php' ?> <!-- top -->
+</head>
+<body>
+	<div class="pageWrap sub adminReserveWrap"> <!-- pageWrap sub 뒤의 클래스명을 확인해주세요(폴더명관련) -->
+		<? include '../../include/header.php' ?> <!-- header -->
+		<div class="wrap">
+			<div class="contentwrap ">
+				<? include '../../include/lnb_admin.php' ?> <!-- 사용자lnb -->
+				
+				<!-- content s-->
+				<div class="contentArea reserveFcRegBox"><!-- contentArea 뒤의 클래스명을 확인해주세요(파일명관련) -->
+					<div class="contentHeader">
+						<div class="pageLocation">
+							<h2>예약 관리</h2>
+							<ul class="breadcrumb">
+								<li class="breadcrumb_home"><a href="#none" onclick="goHome('admin');">HOME</a><em>></em></li>
+								<li><span>예약관리</span><em>></em></li>
+								<li>F/C 예약관리</li>
+							</ul>
+						</div>
+						<div class="cateTitle"><h3> F/C 예약관리</h3></div>
+					</div>
+					<div class="contentBody">
+						<h4 class="pageTitle">F/C 예약등록</h4>
+						<table class="writeTable">
+							<tbody>
+								<tr>
+									<th>사용자명</th>
+									<td><input type="text" class="shortInput"/><a href="#none" class="btn2 popupBtn" popupTarget="popFindMember">검색</a></td>
+								</tr>
+								<tr>
+									<th>F/C No</th>
+									<td>
+										<div class="selectBox rName">
+											<label for="selectOpt-room">F/C 1</label>
+											<select class="selectOpt" id="selectOpt-room">
+												<option value="">F/C 1</option>
+												<option value="">F/C 2</option>
+											</select>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>예약일자</th>
+									<td>
+										<div class="findByDate fL"><span class="clamp_L2"></span><input class="miniCalendar" id="rsvrDateInput" type="text"><span class="clamp_R2"></span></div>
+										<script>setDatePick('rsvrDateInput');</script>
+									</td>
+								</tr>
+								<tr>
+									<th>예약시간</th>
+									<td>
+										<div class="selectBox rTime">
+											<label for="selectOpt-1">13</label>
+											<select class="selectOpt" id="selectOpt-1">
+												<option value="13">13</option>
+												<option value="14">14</option>
+												<option value="15">15</option>
+											</select>
+										</div>
+										<em>시</em><em>~</em>
+										<div class="selectBox rTime">
+											<label for="selectOpt-2">15</label>
+											<select class="selectOpt"  id="selectOpt-2">
+												<option value="15">15</option>
+												<option value="16">16</option>
+												<option value="17">17</option>
+											</select>
+										</div>
+										<em>시</em>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+	
+						<div class="Btn2Box">
+							<button type="submit" class="btn2">예약</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- popupContents s-->
+				
+				<!-- 회원찾기팝업 -->
+				<div class="popupWrap popFindMember">
+					<div class="popupContainer">
+						<div class="popupBox">
+							<h1 class="popupHeader">회원찾기<span class="button popCloseBtn b-close"><span class="tBlind">닫기</span></span></h1>
+							<div class="popContentBox">
+								<table class="mb20">
+									<tr>
+										<th>구분</th>
+										<td class="taL">
+											<input type="radio" name="rdMbrCate_1" id="rdMbrCate1_1"><label for="rdMbrCate1_1">전체</label>
+											<input type="radio" name="rdMbrCate_1" id="rdMbrCate2_1"><label for="rdMbrCate2_1">오피스/지정데스크</label>
+											<input type="radio" name="rdMbrCate_1" id="rdMbrCate3_1"><label for="rdMbrCate3_1">스마트데스크</label>
+										</td>
+									</tr>
+									<tr>
+										<th>회사명/이름</th>
+										<td class="taL">
+											<input type="text" class="shortInput">
+											<a href="#none" class="btn2">검색</a>
+										</td>
+									</tr>
+								</table>
+								<div class="listInfoBox">Total <span>50,123</span></div>
+								<table>
+									<colgroup><col width="50px"><col></colgroup>
+									<thead>
+										<tr>
+											<th>
+												<input type="checkbox" id="listCheck_all_1" class="checkbox chck_all" />
+												<label for="listCheck_all_1" class="listCheck"></label>
+											</th>
+											<th>구분</th>
+											<th>이름/ID</th>
+											<th>회사명</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<input type="checkbox" id="plistCheck_01_1" class="checkbox" />
+												<label for="plistCheck_01_1" class="listCheck"></label>
+											</td>
+											<td>오피스/지정데스크</td>
+											<td>홍길동(asdfass12)</td>
+											<td>AA기업</td>
+										</tr>
+										<tr>
+											<td>
+												<input type="checkbox" id="plistCheck_02_1" class="checkbox" />
+												<label for="plistCheck_02_1" class="listCheck"></label>
+											</td>
+											<td>오피스/지정데스크</td>
+											<td>홍길동(asdfass12)</td>
+											<td>AA기업</td>
+										</tr>
+										<tr>
+											<td>
+												<input type="checkbox" id="plistCheck_03_1" class="checkbox" />
+												<label for="plistCheck_03_1" class="listCheck"></label>
+											</td>
+											<td>오피스/지정데스크</td>
+											<td>홍길동(asdfass12)</td>
+											<td>AA기업</td>
+										</tr>
+										<tr>
+											<td colspan="4">검색결과가 없습니다.</td>
+										</tr>
+									</tbody>
+								</table>
+								<div class="pagination">
+									<a class="prev02" href="#none"></a>
+									<a class="prev" href="#none"></a>
+									<!-- 활성화 페이지의 경우 active 클래스 부여 -->
+									<a class="active" href="#none">1</a>
+									<a href="#none">2</a>
+									<a href="#none">3</a>
+									<a href="#none">4</a>
+									<a href="#none">5</a>
+									<a class="next" href="#none"></a>
+									<a class="next02" href="#none"></a>
+								</div>
+								<div class="Btn1Box">
+									<a href="#none" class="btn1">등록</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- popupContents e-->
+				<!-- content e-->
+
+			</div>
+		</div>
+		<? include '../../include/footer.php' ?> <!-- footer -->
+	</div>
+	<script>
+		currentLnb(2,1); //현재페이지 lnb인식
+	</script>
+</body>
+</html>

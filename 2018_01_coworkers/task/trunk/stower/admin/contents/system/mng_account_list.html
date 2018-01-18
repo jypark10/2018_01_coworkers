@@ -1,0 +1,174 @@
+<? include '../../include/top_admin.php' ?> <!-- top -->
+</head>
+<body>
+	<div class="pageWrap sub adminSystemWrap"> <!-- pageWrap sub 뒤의 클래스명을 확인해주세요(폴더명관련) -->
+		<? include '../../include/header.php' ?> <!-- header -->
+		<div class="wrap">
+			<div class="contentwrap">
+				<? include '../../include/lnb_admin.php' ?> <!-- 관리자lnb -->
+				
+				<!-- content s-->
+				<div class="contentArea mngAccountListBox"><!-- contentArea 뒤의 클래스명을 확인해주세요(파일명관련) -->
+					<div class="contentHeader">
+						<div class="pageLocation">
+							<h2>시스템 관리</h2>
+							<ul class="breadcrumb">
+								<li class="breadcrumb_home"><a href="#none" onclick="goHome('admin');">HOME</a><em>></em></li>
+								<li><span>시스템관리</span><em>></em></li>
+								<li> 관리자 계정관리</li>
+							</ul>
+						</div>
+						<div class="cateTitle"><h3>관리자 계정관리</h3></div>
+					</div>
+					<div class="contentBody">
+						<div>
+							<h4 class="pageTitle">관리자 계정 목록</h4>
+							<div class="listSearch">
+								<div class="searchSelect selectBox">
+									<label for="selectOpt">전체</label>
+									<select id="selectOpt" class="selectOpt">
+										<option value="">사용자명</option>
+										<option value="">연락처</option>
+									</select>
+								</div>
+								<div class="searchText">
+									<input type="text" placeholder="검색어 입력"/>
+									<button type="button"><img src="../../images/common/i_search.png" alt="search" /></button>
+								</div>
+							</div>
+						</div>
+						<div class="tableScrollX">
+							<table class="listTable">
+								<thead>
+									<tr>
+										<th>NO</th>
+										<th>사용자명</th>
+										<th>ID</th>
+										<th>부서명</th>
+										<th>연락처</th>
+										<th>등록일자</th>
+										<th>상태</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>999</td>
+										<td><a href="mng_account_view.html">홍길동</a></td>
+										<td>ABCDEFG</td>
+										<td>경영지원팀</td>
+										<td>010-1234-5386</td>
+										<td>2017-10-31</td>
+										<td>정상</td>
+									</tr>
+									<tr>
+										<td>999</td>
+										<td><a href="mng_account_view.html">홍길동</a></td>
+										<td>ABCDEFG</td>
+										<td>경영지원팀</td>
+										<td>010-1234-5386</td>
+										<td>2017-10-31</td>
+										<td>정상</td>
+									</tr>
+									<tr>
+										<td>999</td>
+										<td><a href="mng_account_view.html">홍길동</a></td>
+										<td>ABCDEFG</td>
+										<td>경영지원팀</td>
+										<td>010-1234-5386</td>
+										<td>2017-10-31</td>
+										<td>정상</td>
+									</tr>
+									<tr>
+										<td>999</td>
+										<td><a href="mng_account_view.html">홍길동</a></td>
+										<td>ABCDEFG</td>
+										<td>경영지원팀</td>
+										<td>010-1234-5386</td>
+										<td>2017-10-31</td>
+										<td>정상</td>
+									</tr>
+									<tr>
+										<td>999</td>
+										<td><a href="mng_account_view.html">홍길동</a></td>
+										<td>ABCDEFG</td>
+										<td>경영지원팀</td>
+										<td>010-1234-5386</td>
+										<td>2017-10-31</td>
+										<td>정상</td>
+									</tr>
+									<tr>
+										<td>999</td>
+										<td><a href="mng_account_view.html">홍길동</a></td>
+										<td>ABCDEFG</td>
+										<td>경영지원팀</td>
+										<td>010-1234-5386</td>
+										<td>2017-10-31</td>
+										<td>정상</td>
+									</tr>
+									<tr>
+										<td>999</td>
+										<td><a href="mng_account_view.html">홍길동</a></td>
+										<td>ABCDEFG</td>
+										<td>경영지원팀</td>
+										<td>010-1234-5386</td>
+										<td>2017-10-31</td>
+										<td>정상</td>
+									</tr>
+									<tr>
+										<td>999</td>
+										<td><a href="mng_account_view.html">홍길동</a></td>
+										<td>ABCDEFG</td>
+										<td>경영지원팀</td>
+										<td>010-1234-5386</td>
+										<td>2017-10-31</td>
+										<td>정상</td>
+									</tr>
+									<tr>
+										<td>999</td>
+										<td><a href="mng_account_view.html">홍길동</a></td>
+										<td>ABCDEFG</td>
+										<td>경영지원팀</td>
+										<td>010-1234-5386</td>
+										<td>2017-10-31</td>
+										<td>정상</td>
+									</tr>
+									<tr>
+										<td>999</td>
+										<td><a href="mng_account_view.html">홍길동</a></td>
+										<td>ABCDEFG</td>
+										<td>경영지원팀</td>
+										<td>010-1234-5386</td>
+										<td>2017-10-31</td>
+										<td>정상</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="Btn2Box">
+							<a href="mng_account_write.html" class="btn2">계정등록</a>
+						</div>
+						<div class="pagination">
+							<a class="prev02" href="#none"><span class="tBlind">맨처음페이지</span></a>
+							<a class="prev" href="#none"><span class="tBlind">이전페이지</span></a>
+							<!-- 활성화 페이지의 경우 active 클래스 부여 -->
+							<a href="#none" class="active" >1</a>
+							<a href="#none">2</a>
+							<a href="#none">3</a>
+							<a href="#none">4</a>
+							<a href="#none">5</a>
+							<a href="#none" class="next"><span class="tBlind">다음페이지</span></a>
+							<a href="#none"class="next02"><span class="tBlind">맨끝페이지</span></a>
+						</div>
+					</div>
+				</div>
+				<!-- content e-->
+
+			</div>
+		</div>
+		<? include '../../include/footer.php' ?> <!-- footer -->
+	</div>
+	<script>
+		currentLnb(4,4); //현재페이지 lnb인식
+	</script>
+</body>
+</html>

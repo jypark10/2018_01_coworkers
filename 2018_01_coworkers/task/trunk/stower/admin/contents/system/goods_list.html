@@ -1,0 +1,219 @@
+<? include '../../include/top_admin.php' ?> <!-- top -->
+</head>
+<body>
+	<div class="pageWrap sub adminSystemWrap"> <!-- pageWrap sub 뒤의 클래스명을 확인해주세요(폴더명관련) -->
+		<? include '../../include/header.php' ?> <!-- header -->
+		<div class="wrap">
+			<div class="contentwrap">
+				<? include '../../include/lnb_admin.php' ?> <!-- 관리자lnb -->
+				
+				<!-- content s-->
+				<div class="contentArea adminGoodsListBox"><!-- contentArea 뒤의 클래스명을 확인해주세요(파일명관련) -->
+					<div class="contentHeader">
+						<div class="pageLocation">
+							<h2>시스템 관리</h2>
+							<ul class="breadcrumb">
+								<li class="breadcrumb_home"><a href="#none" onclick="goHome('admin');">HOME</a><em>></em></li>
+								<li><span>시스템관리</span><em>></em></li>
+								<li>상품관리</li>
+							</ul>
+						</div>
+						<div class="cateTitle"><h3>상품관리</h3></div>
+					</div>
+					<div class="contentBody">
+						<div>
+							<h4 class="pageTitle">상품 목록</h4>
+							<div class="listSearch">
+								<div class="searchSelect selectBox">
+									<label for="selectOpt">전체</label>
+									<select id="selectOpt" class="selectOpt">
+										<option value="">사용자명</option>
+										<option value="">연락처</option>
+									</select>
+								</div>
+								<div class="searchText">
+									<input type="text" placeholder="검색어 입력"/>
+									<button type="button"><img src="../../images/common/i_search.png" alt="search" /></button>
+								</div>
+							</div>
+						</div>
+						<div class="tableScrollX">
+							<table class="listTable">
+								<colgroup><col width="50px"><col width="50px"><col width="250px"></colgroup>
+								<thead>
+									<tr>
+										<th>
+											<input type="checkbox" id="listCheck_all" class="checkbox chck_all" />
+											<label for="listCheck_all" class="listCheck"></label>
+										</th>
+										<th>NO</th>
+										<th>상품분류</th>
+										<th>시간</th>
+										<th>가격</th>
+										<th>상품활성화</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<input type="checkbox" id="listCheck_01" class="checkbox" />
+											<label for="listCheck_01" class="listCheck"></label>
+										</td>
+										<td>999</td>
+										<td class="tdSubject"><a href="goods_view.html">스마트데스크 이용기간</a></td>
+										<td>30일</td>
+										<td>99,100,000</td>
+										<td>활성화</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="checkbox" id="listCheck_01" class="checkbox" />
+											<label for="listCheck_01" class="listCheck"></label>
+										</td>
+										<td>999</td>
+										<td class="tdSubject"><a href="goods_view.html">스마트데스크 이용기간</a></td>
+										<td>30일</td>
+										<td>99,100,000</td>
+										<td>활성화</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="checkbox" id="listCheck_01" class="checkbox" />
+											<label for="listCheck_01" class="listCheck"></label>
+										</td>
+										<td>999</td>
+										<td class="tdSubject"><a href="goods_view.html">스마트데스크 이용기간</a></td>
+										<td>30일</td>
+										<td>99,100,000</td>
+										<td>활성화</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="checkbox" id="listCheck_01" class="checkbox" />
+											<label for="listCheck_01" class="listCheck"></label>
+										</td>
+										<td>999</td>
+										<td class="tdSubject"><a href="goods_view.html">스마트데스크 이용기간</a></td>
+										<td>30일</td>
+										<td>99,100,000</td>
+										<td>활성화</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="checkbox" id="listCheck_01" class="checkbox" />
+											<label for="listCheck_01" class="listCheck"></label>
+										</td>
+										<td>999</td>
+										<td class="tdSubject"><a href="goods_view.html">스마트데스크 이용기간</a></td>
+										<td>30일</td>
+										<td>99,100,000</td>
+										<td>활성화</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="checkbox" id="listCheck_01" class="checkbox" />
+											<label for="listCheck_01" class="listCheck"></label>
+										</td>
+										<td>999</td>
+										<td class="tdSubject"><a href="goods_view.html">스마트데스크 이용기간</a></td>
+										<td>30일</td>
+										<td>99,100,000</td>
+										<td>활성화</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="checkbox" id="listCheck_01" class="checkbox" />
+											<label for="listCheck_01" class="listCheck"></label>
+										</td>
+										<td>999</td>
+										<td class="tdSubject"><a href="goods_view.html">스마트데스크 이용기간</a></td>
+										<td>30일</td>
+										<td>99,100,000</td>
+										<td>활성화</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="checkbox" id="listCheck_01" class="checkbox" />
+											<label for="listCheck_01" class="listCheck"></label>
+										</td>
+										<td>999</td>
+										<td class="tdSubject"><a href="goods_view.html">스마트데스크 이용기간</a></td>
+										<td>30일</td>
+										<td>99,100,000</td>
+										<td>활성화</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="checkbox" id="listCheck_01" class="checkbox" />
+											<label for="listCheck_01" class="listCheck"></label>
+										</td>
+										<td>999</td>
+										<td class="tdSubject"><a href="goods_view.html">스마트데스크 이용기간</a></td>
+										<td>30일</td>
+										<td>99,100,000</td>
+										<td>활성화</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="checkbox" id="listCheck_01" class="checkbox" />
+											<label for="listCheck_01" class="listCheck"></label>
+										</td>
+										<td>999</td>
+										<td class="tdSubject"><a href="goods_view.html">스마트데스크 이용기간</a></td>
+										<td>30일</td>
+										<td>99,100,000</td>
+										<td>활성화</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="Btn2Box">
+							<a href="#none" class="btn2 popupBtn" popupTarget="popGoodsDel">삭제</a>
+							<a href="goods_edit.html" class="btn2">수정</a>
+							<a href="goods_edit.html" class="btn2">등록</a>
+						</div>
+						<div class="pagination">
+							<a class="prev02" href="#none"><span class="tBlind">맨처음페이지</span></a>
+							<a class="prev" href="#none"><span class="tBlind">이전페이지</span></a>
+							<!-- 활성화 페이지의 경우 active 클래스 부여 -->
+							<a href="#none" class="active" >1</a>
+							<a href="#none">2</a>
+							<a href="#none">3</a>
+							<a href="#none">4</a>
+							<a href="#none">5</a>
+							<a href="#none" class="next"><span class="tBlind">다음페이지</span></a>
+							<a href="#none"class="next02"><span class="tBlind">맨끝페이지</span></a>
+						</div>
+					</div>
+				</div>
+
+				<!-- popupContents s-->
+
+				<!-- 삭제팝업 -->
+				<div class="popupWrap popGoodsDel">
+					<div class="popupContainer">
+						<div class="popupBox">
+							<h1 class="popupHeader">삭제 확인<span class="button popCloseBtn b-close"><span class="tBlind">닫기</span></span></h1>
+							<div class="popContentBox">
+								<p class="mb0">삭제된 상품은 다시 복구할 수 없습니다. <br>삭제 하시겠습니까?</p>
+								<div class="Btn1Box">
+									<a href="#none" class="btn1">예</a>
+									<a href="#none" class="btn1 b-close">아니요</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- popupContents s-->
+				<!-- content e-->
+
+			</div>
+		</div>
+		<? include '../../include/footer.php' ?> <!-- footer -->
+	</div>
+	<script>
+		currentLnb(4,5); //현재페이지 lnb인식
+	</script>
+</body>
+</html>

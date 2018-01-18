@@ -1,0 +1,84 @@
+<? include '../../include/top_admin.php' ?> <!-- top -->
+</head>
+<body>
+	<div class="pageWrap sub adminBoardWrap"> <!-- pageWrap sub 뒤의 클래스명을 확인해주세요(폴더명관련) -->
+		<? include '../../include/header.php' ?> <!-- header -->
+		<div class="wrap">
+			<div class="contentwrap">
+				<? include '../../include/lnb_admin.php' ?> <!-- 관리자lnb -->
+				
+				<!-- content s-->
+				<div class="contentArea noticeViewBox"><!-- contentArea 뒤의 클래스명을 확인해주세요(파일명관련) -->
+					<div class="contentHeader">
+						<div class="pageLocation">
+							<h2>게시판 관리</h2>
+							<ul class="breadcrumb">
+								<li class="breadcrumb_home"><a href="#none" onclick="goHome('admin');">HOME</a><em>></em></li>
+								<li><span>게시판관리</span><em>></em></li><li>공지사항관리</li>
+							</ul>
+						</div>
+						<div class="cateTitle"><h3>공지사항 관리</h3></div>
+					</div>
+					<div class="contentBody">
+						<h4 class="pageTitle">공지사항 상세</h4>
+						<table class="viewTable">
+							<tbody>
+								<tr>
+									<th>제목</th>
+									<td colspan="3">[공지] 5월 10일 시스템 점검 안내</td>
+								</tr>
+								<tr>
+									<th>작성자</th>
+									<td>Coworkers 관리자</td>
+									<th>작성일시</th>
+									<td>2017.05.10 14:22:13</td>
+								</tr>
+								<tr>
+									<th><span class="attachClip"></span>첨부파일</th>
+									<td colspan="3">
+										<a class="attachment" href="#" download>첨부파일 1</a>
+										<a class="attachment" href="#" download>첨부파일 2</a>
+										<a class="attachment" href="#" download>첨부파일 3</a>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="4" class="articleBodyWrap">
+										<div class="articleBody">
+											<p>2017년 5월 10일 15:00~ 17:00 2시간동안 시스템 정기점검을 실시합니다. 상기 시간 중 시스템은 쓸 수 있으나 접속이 끊어지거나 속도 저하가 발생할 수 있으니 주의하시기 바랍니다.</p>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="Btn2Box">
+							<a href="notice_list.html" class="btn2">목록</a>
+							<a href="notice_edit.html" class="btn2">수정</a>
+							<a href="#none" class="btn2">삭제</a>
+						</div>
+						<table class="listTable3">
+							<tbody>
+								<tbody>
+								<tr>
+									<th><span class="prevList">이전글</span></th>
+									<td class="tdSubject"><a href="#none">[공지] 회의실 점검<span class="new"></span></a></td>
+								</tr>
+								<tr>
+									<th><span class="nextList">다음글</span></th>
+									<td class="tdSubject"><a href="#none">[공지] 1번 수면실 이용불가 안내</a></td>
+								</tr>
+							</tbody>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<!-- content e-->
+
+			</div>
+		</div>
+		<? include '../../include/footer.php' ?> <!-- footer -->
+	</div>
+	<script>
+		currentLnb(3,0); //현재페이지 lnb인식
+	</script>
+</body>
+</html>

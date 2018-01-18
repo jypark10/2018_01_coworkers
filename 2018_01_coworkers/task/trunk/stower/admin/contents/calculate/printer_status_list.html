@@ -1,0 +1,192 @@
+<? include '../../include/top_admin.php' ?> <!-- top -->
+</head>
+<body>
+	<div class="pageWrap sub adminCalculateWrap"> <!-- pageWrap sub 뒤의 클래스명을 확인해주세요(폴더명관련) -->
+		<? include '../../include/header.php' ?> <!-- header -->
+		<div class="wrap">
+			<div class="contentwrap">
+				<? include '../../include/lnb_admin.php' ?> <!-- 관리자lnb -->
+				
+				<!-- content s-->
+				<div class="contentArea printerStatusListBox"><!-- contentArea 뒤의 클래스명을 확인해주세요(파일명관련) -->
+					<div class="contentHeader">
+						<div class="pageLocation">
+							<h2>정산 관리</h2>
+							<ul class="breadcrumb">
+								<li class="breadcrumb_home"><a href="#none" onclick="goHome('admin');">HOME</a><em>></em></li>
+								<li><span>정산관리</span><em>></em></li><li>복합기이용내역</li>
+							</ul>
+						</div>
+						<div class="cateTitle"><h3>복합기 이용 내역</h3></div>
+					</div>
+					<div class="contentBody">
+						<h4 class="pageTitle">복합기 이용 현황</h4>
+						<table class="searchTable">
+							<colgroup><col width="100px"><col><col width="100px"><col width="340px"></colgroup>
+							<tr>
+								<th>회사명</th>
+								<td><input type="text"></td>
+								<th>사용일자</th>
+								<td>
+									<div class="findByDate"><input class="miniCalendar" id="clcltDateInput1" type="text"></div>
+									<div class="dur">~</div>
+									<div class="findByDate"><input class="miniCalendar" id="clcltDateInput2" type="text"></div>
+									<script>setDatePick('clcltDateInput1');setDatePick('clcltDateInput2');</script>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="4">
+									<div class="btn2Box taR">
+										<a href="#none" class="btn2">전체검색</a>
+										<a href="#none" class="btn2">검색</a>
+									</div>
+								</td>
+							</tr>
+						</table>
+						<div class="tableScrollX">
+							<table class="listTable">
+								<thead>
+									<tr>
+										<th>NO</th>
+										<th>회사명</th>
+										<th>사용자</th>
+										<th>용지</th>
+										<th>색상</th>
+										<th>수량</th>
+										<th>사용일시</th>
+										<th>금액</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>999</td>
+										<td>AA기업</td>
+										<td>홍길동</td>
+										<td>A3</td>
+										<td>컬러</td>
+										<td>5</td>
+										<td>2018.01.10 11:00:00</td>
+										<td>2,000</td>
+									</tr>
+									<tr>
+										<td>999</td>
+										<td>AA기업</td>
+										<td>홍길동</td>
+										<td>A3</td>
+										<td>컬러</td>
+										<td>5</td>
+										<td>2018.01.10 11:00:00</td>
+										<td>2,000</td>
+									</tr>
+									<tr>
+										<td>999</td>
+										<td>AA기업</td>
+										<td>홍길동</td>
+										<td>A3</td>
+										<td>컬러</td>
+										<td>5</td>
+										<td>2018.01.10 11:00:00</td>
+										<td>2,000</td>
+									</tr>
+									<tr>
+										<td>999</td>
+										<td>AA기업</td>
+										<td>홍길동</td>
+										<td>A3</td>
+										<td>컬러</td>
+										<td>5</td>
+										<td>2018.01.10 11:00:00</td>
+										<td>2,000</td>
+									</tr>
+									<tr>
+										<td>999</td>
+										<td>AA기업</td>
+										<td>홍길동</td>
+										<td>A3</td>
+										<td>컬러</td>
+										<td>5</td>
+										<td>2018.01.10 11:00:00</td>
+										<td>2,000</td>
+									</tr>
+									<tr>
+										<td>999</td>
+										<td>AA기업</td>
+										<td>홍길동</td>
+										<td>A3</td>
+										<td>컬러</td>
+										<td>5</td>
+										<td>2018.01.10 11:00:00</td>
+										<td>2,000</td>
+									</tr>
+									<tr>
+										<td>999</td>
+										<td>AA기업</td>
+										<td>홍길동</td>
+										<td>A3</td>
+										<td>컬러</td>
+										<td>5</td>
+										<td>2018.01.10 11:00:00</td>
+										<td>2,000</td>
+									</tr>
+									<tr>
+										<td>999</td>
+										<td>AA기업</td>
+										<td>홍길동</td>
+										<td>A3</td>
+										<td>컬러</td>
+										<td>5</td>
+										<td>2018.01.10 11:00:00</td>
+										<td>2,000</td>
+									</tr>
+									<tr>
+										<td>999</td>
+										<td>AA기업</td>
+										<td>홍길동</td>
+										<td>A3</td>
+										<td>컬러</td>
+										<td>5</td>
+										<td>2018.01.10 11:00:00</td>
+										<td>2,000</td>
+									</tr>
+									<tr>
+										<td>999</td>
+										<td>AA기업</td>
+										<td>홍길동</td>
+										<td>A3</td>
+										<td>컬러</td>
+										<td>5</td>
+										<td>2018.01.10 11:00:00</td>
+										<td>2,000</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="Btn2Box">
+							<a href="#none" class="btn2">인쇄</a>
+							<a href="#none" class="btn2">Excel저장</a>
+						</div>
+						<div class="pagination">
+							<a class="prev02" href="#none"><span class="tBlind">맨처음페이지</span></a>
+							<a class="prev" href="#none"><span class="tBlind">이전페이지</span></a>
+							<!-- 활성화 페이지의 경우 active 클래스 부여 -->
+							<a href="#none" class="active" >1</a>
+							<a href="#none">2</a>
+							<a href="#none">3</a>
+							<a href="#none">4</a>
+							<a href="#none">5</a>
+							<a href="#none" class="next"><span class="tBlind">다음페이지</span></a>
+							<a href="#none"class="next02"><span class="tBlind">맨끝페이지</span></a>
+						</div>
+					</div>
+				</div>
+				<!-- content e-->
+
+			</div>
+		</div>
+		<? include '../../include/footer.php' ?> <!-- footer -->
+	</div>
+	<script>
+		currentLnb(5,4); //현재페이지 lnb인식
+	</script>
+</body>
+</html>

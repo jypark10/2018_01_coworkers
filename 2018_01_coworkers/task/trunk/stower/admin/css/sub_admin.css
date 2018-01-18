@@ -1,0 +1,88 @@
+/* contentHeader ========================== */
+.adminSystemWrap .pageLocation h2 {background:url(../images/sub/lo_system.png) no-repeat;}
+.adminReserveWrap .pageLocation h2 {background:url(../images/sub/lo_reserve.png) no-repeat; padding-bottom:2px;}
+.adminCalculateWrap .pageLocation h2 {padding-bottom:4px; background:url(../images/sub/lo_calculate.png) no-repeat;}
+.adminBoardWrap .pageLocation h2 {padding-bottom:4px; background:url(../images/sub/lo_board.png) no-repeat;}
+.adminTenantWrap .pageLocation h2 {padding-bottom:4px; background:url(../images/sub/lo_tenant.png) no-repeat;}
+.adminMemberWrap .pageLocation h2 {background:url(../images/sub/lo_member.png) no-repeat;}
+
+
+/* system ========================== */
+.bln_green_c {padding-left:20px;background:url(../images/common/occupied.png) no-repeat 0 50%;}
+.bln_red_c {padding-left:20px;color:#f06060;background:url(../images/common/empty.png) no-repeat 0 50%;}
+
+
+/* reserve ========================== */
+.adminReserveWrap .bookingStatus{margin-bottom:0; box-sizing:border-box; border-top: 2px solid #dcdcdc; border-bottom: 2px solid #dcdcdc;}
+.adminReserveWrap .bookingStatus th{padding:15px 0 10px; background:none; font-size:13px; height:initial; line-height:1;}
+.adminReserveWrap .bookingStatus td{padding:0; padding-bottom:16px; font-size:25px; color:#222;  border:0;}
+	.floorSearchBox {float:right;margin-right:20px;}
+		.floorSearchBox span:first-child {margin-right:10px;}
+	.adminReserveWrap .selectBox.searchSelect{display:inline-block;}
+.adminReserveWrap .contentBody span{font-size:13px; color:#222; font-weight:bold;}
+
+.fullCalendarBox {margin-top:10px;width:100%;min-height:300px;background:#eee;border:1px solid #ccc;}
+
+.adminReserveWrap .reserveFcBox .findByDate,
+.adminReserveWrap .reserveSlpRoomBox .findByDate{float:right; width:auto;}
+
+.adminReserveWrap .listTable-2 .findByDate{float:none;}
+.adminReserveWrap input[type="text"],
+.adminReserveWrap label,
+.adminReserveWrap select, 
+.adminReserveWrap .selectBox{height:30px; line-height:30px;}
+
+.adminReserveWrap .listTable-2 th{width:130px;}
+
+.adminReserveWrap .selectBox.rName{width:243px; background: url(../images/common/select.png) 92% no-repeat;}
+.adminReserveWrap .selectBox.rTime{display:inline-block; margin-right:10px; width:90px; background: url(../images/common/select.png) 92% no-repeat;}
+.adminReserveWrap .selectBox.rTime ~ em{margin: 0 10px;}
+
+.adminReserveWrap .Btn2Box ul{text-align:left;}
+.adminReserveWrap .Btn2Box ul li{float:left; height:30px; line-height:30px;}
+.adminReserveWrap .Btn2Box ul li input{margin: 0 10px 0 10px; width:170px; text-indent:20px;}
+
+.adminReserveWrap .attendList {padding:11px; height:137px; border:1px solid #dcdcdc; border-radius:3px; overflow:hidden;}
+	.adminReserveWrap span.attendListName {float:left;margin-bottom:10px;width:100%;font-weight:normal;color:#666;}
+.adminReserveWrap .attendList > ul{clear:both;height:115px; overflow-y:auto;}
+.adminReserveWrap .attendList > ul > li{padding-bottom:9px; height:30px;}
+.adminReserveWrap .attendList > ul > li > ul {float:left;width:100%;}
+.adminReserveWrap .attendList > ul > li > ul > li {float:left; margin-right:10px; line-height:30px;}
+.adminReserveWrap .attendList > ul > li > ul > li label {width:19px;height:19px;}
+.adminReserveWrap .attendList + .Btn2Box{margin-bottom:10px;}
+
+
+/* calculate ========================== */
+.adminCalculateWrap .txtbtnRight{float:none; display:block; text-align:right;}
+
+.invoiceSetVatBox .writeTable2 th,
+.invoiceSetVatBox .writeTable2 td {text-align:center;}
+
+.adminCalculateWrap .searchTable th {width:auto;padding-left:20px;},
+.adminCalculateWrap .searchTable td {width:auto;padding-right:20px;}
+	.searchTable .findByDate input {margin:0;}
+
+.colorTip{float:left; margin-top:10px; margin-right:13px; font-size:13px;}
+	.colorMR:before{margin-left:3px; margin-right:3px; content:url(../images/common/colorMR_325aa1.png); vertical-align:middle;}	
+	.colorFit:before{margin-left:3px; margin-right:3px; content:url(../images/common/colorFit_13b1af.png); vertical-align:middle;}	
+	.colorRel:before{margin-right:5px; content:url(../images/common/colorRel_ef8d53.png); vertical-align:middle;}
+
+.adminTapBox {display:inline-block;margin-bottom:20px;width:100%;}
+	.adminTapBox li {float:left;}
+
+.calendarBarBox{clear:both;display:block;padding:25px; width:100%; font-size:25px; color:#222; border:0; text-align: center; border-top: 2px solid #dcdcdc;}
+	.clndClampNext {float:left; width:11px; height:22px; background:url(../images/common/clamp_year_L.png) no-repeat;}
+	.clndText {}
+	.clndClampPrev{float:right; width:11px; height:22px; background:url(../images/common/clamp_year_R.png) no-repeat;}
+
+
+/* member ========================== */
+.memberListBox .searchTable input[type="radio"] + label {width:130px;}
+
+
+/* board ========================== */
+.inquiryViewBox td.articleBodyWrap,
+.inquiryWriteBox td.articleBodyWrap,
+.inquiryEditBox td.articleBodyWrap {border-bottom: 1px solid #dcdcdc;}
+.inquiryDescBox {float:left;text-align:left;font-weight:bold;font-size:16px;color:#666;}
+.adminTenantWrap .writeTable .txtbtnRight {float:none;margin-left:10px;}

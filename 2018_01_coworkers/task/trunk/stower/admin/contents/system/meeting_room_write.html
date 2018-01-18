@@ -1,0 +1,151 @@
+<? include '../../include/top_admin.php' ?> <!-- top -->
+</head>
+<body>
+	<div class="pageWrap sub adminSystemWrap"> <!-- pageWrap sub 뒤의 클래스명을 확인해주세요(폴더명관련) -->
+		<? include '../../include/header.php' ?> <!-- header -->
+		<div class="wrap">
+			<div class="contentwrap">
+				<? include '../../include/lnb_admin.php' ?> <!-- 관리자lnb -->
+				
+				<!-- content s-->
+				<div class="contentArea adminMtrWriteBox"><!-- contentArea 뒤의 클래스명을 확인해주세요(파일명관련) -->
+					<div class="contentHeader">
+						<div class="pageLocation">
+							<h2>시스템 관리</h2>
+							<ul class="breadcrumb">
+								<li class="breadcrumb_home"><a href="#none" onclick="goHome('admin');">HOME</a><em>></em></li>
+								<li><span>시스템관리</span><em>></em></li>
+								<li>회의실 관리</li>
+							</ul>
+						</div>
+						<div class="cateTitle"><h3>회의실 등록 및 수정</h3></div>
+					</div>
+					<div class="contentBody">
+						<div>
+							<h4 class="pageTitle">회의실 목록</h4>
+						</div>
+						<table class="writeTable">
+							<tbody>
+								<tr>
+									<th>호수</th>
+									<td><input type="text" /></td>
+								</tr>
+								<tr>
+									<th>회의실명</th>
+									<td><input type="text" /></td>
+								</tr>
+								<tr>
+									<th>지점</th>
+									<td>
+										<div class="selectBox shortInput">
+											<label for="selectOpt-branch">광화문</label>
+											<select class="selectOpt"  id="selectOpt-branch">
+												<option value="광화문">광화문</option>
+											</select>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>층구분</th>
+									<td><input type="text" class="shortInput"/></td>
+								</tr>
+								<tr>
+									<th>수용인원</th>
+									<td><input type="text" class="shortInput"/></td>
+								</tr>
+								<tr>
+									<th>면적(㎡)</th>
+									<td><input type="text" class="shortInput"/></td>
+								</tr>
+								<tr>
+									<th>기본사용시간</th>
+									<td><input type="text" class="shortInput"/></td>
+								</tr>
+								<tr>
+									<th>기본사용료</th>
+									<td><input type="text" class="shortInput"/></td>
+								</tr>
+								<tr>
+									<th>운영시간</th>
+									<td><span class="tdTxtBox">09:00 ~ 18:00</span><span class="txtbtnRight mt10 popupBtn" popupTarget="popOpenHourPolicy">운영시간정책설정</span></td>
+								</tr>
+								<tr>
+									<th>회의실상태</th>
+									<td>
+										<div class="selectBox shortInput">
+											<label for="selectOpt-condition">운영중</label>
+											<select class="selectOpt"  id="selectOpt-condition">
+												<option value="운영중">운영중</option>
+												<option value="점검중">점검중</option>
+											</select>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>비고</th>
+									<td>
+										<textarea name="" id="" rows="4"></textarea>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="Btn1Box taR">
+							<a href="#none" class="btn1">확인</a>
+							<a href="meeting_room_list.html" class="btn1">취소</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- popupContents s-->
+
+				<!-- 운영시간정책설정-->
+				<div class="popupWrap popOpenHourPolicy">
+					<div class="popupContainer">
+						<div class="popupBox">
+							<h1 class="popupHeader">운영시간 정책 설정<span class="button popCloseBtn b-close"><span class="tBlind">닫기</span></span></h1>
+							<div class="popContentBox">
+								<p>회의실 운영 시간이 일괄적으로 적용됩니다.</p>
+								<table>
+									<colgroup><col width="45%"><col width="10%"><col width="45%"></colgroup>
+									<tbody>
+										<tr>
+											<td>
+												<div class="selectBox">
+													<label for="selectOpt-1">09:00</label>
+													<select class="selectOpt"  id="selectOpt-1">
+														<option value="09:00">09:00</option>
+													</select>
+												</div>
+											</td>
+											<td class="dur">~</td>
+											<td>
+												<div class="selectBox">
+													<label for="selectOpt-2">18:00</label>
+													<select class="selectOpt"  id="selectOpt-2">
+														<option value="18:00">18:00</option>
+													</select>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<div class="Btn1Box">
+									<a href="#none" class="btn1">확인</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- popupContents s-->
+				<!-- content e-->
+
+			</div>
+		</div>
+		<? include '../../include/footer.php' ?> <!-- footer -->
+	</div>
+	<script>
+		currentLnb(4,1); //현재페이지 lnb인식
+	</script>
+</body>
+</html>

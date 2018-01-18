@@ -1,0 +1,65 @@
+<? include '../../include/top_user.php' ?> <!-- top -->
+</head>
+<body>
+	<div class="pageWrap sub userBoardWrap"> <!-- pageWrap sub 뒤의 클래스명을 확인해주세요(폴더명관련) -->
+		<? include '../../include/header.php' ?> <!-- header -->
+		<div class="wrap">
+			<div class="contentwrap">
+				<? include '../../include/lnb_user.php' ?> <!-- 사용자lnb -->
+				
+				<!-- content s-->
+				<div class="contentArea faqListBox"><!-- contentArea 뒤의 클래스명을 확인해주세요(파일명관련) -->
+					<div class="contentHeader">
+						<div class="pageLocation">
+							<h2>게시판</h2>
+							<ul class="breadcrumb">
+								<li class="breadcrumb_home"><a href="#none" onclick="goHome('user');">HOME</a><em>></em></li>
+								<li><span>게시판</span><em>></em></li><li>FAQ</li>
+							</ul>
+						</div>
+						<div class="cateTitle"><h3>FAQ</h3></div>
+					</div>
+					<div class="contentBody">
+						<table class="viewTable">
+							<tbody>
+								<tr>
+									<th>분류</th>
+									<td colspan="3">회의실 예약</td>
+								</tr>
+								<tr>
+									<th>질문</th>
+									<td colspan="3">[공지] 5월 10일 시스템 점검 안내</td>
+								</tr>
+								<tr>
+									<th><span class="attachClip"></span>첨부파일</th>
+									<td colspan="3">
+										<a class="attachment" href="#" download>첨부파일 1</a>
+										<a class="attachment" href="#" download>첨부파일 2</a>
+										<a class="attachment" href="#" download>첨부파일 3</a>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="4" class="articleBodyWrap">
+										<div class="articleBody">
+											<p>회의실 사용은 다음과 같습니다.예약버튼 클릭 → 회의실 정보 입력 → 예약 확정자세한 정보는 첨부파일에 나와있습니다.</p>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="Btn2Box">
+							<a href="faq_list.html" class="btn2">목록</a>
+						</div>
+					</div>
+				</div>
+				<!-- content e-->
+
+			</div>
+		</div>
+		<? include '../../include/footer.php' ?> <!-- footer -->
+	</div>
+	<script>
+		currentLnb(1,2); //현재페이지 lnb인식
+	</script>
+</body>
+</html>

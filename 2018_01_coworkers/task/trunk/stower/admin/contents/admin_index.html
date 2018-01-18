@@ -1,0 +1,87 @@
+<? include '../include/top_admin.php' ?> <!-- top -->
+<link rel="stylesheet" type="text/css" href="../css/main_admin.css"><!-- 메인만 추가되는 css -->
+</head>
+<body>
+	<div class="pageWrap">
+		<!-- header s 메인은 header include 안함-->
+		<header>
+			<div class="wrap">
+				<h1 class="headerLogo"><a href="#none"><img src="../images/main/header_coworkers.png" alt="COWORKERS"><img src="../images/main/header_coworkers_02.png" alt="COWORKERS"></a></h1>
+				<ul class="spotMenu">
+					<li>반갑습니다! <span class="loginedUsername"> 홍길동 </span>님</li>
+					<li><a href="../contents/login/admin_login.html">로그아웃</a></li>
+				</ul>
+			</div>
+		</header>
+		<!-- header e-->
+		<section class="mainBanner adminMain"></section>
+		<div class="wrap mainMenu adminMain">
+			
+			<!-- content s-->
+			<div class="mainGrid adminMain">
+				<div class="bannerText adminMain">
+					<h3>S - Tower Coworkers</h3>
+					<h2>OFFICE INNOVATION</h2>
+				</div>
+				<div class="gridMenu adminMain">
+					<ul>
+						<li class="gridBtn1">
+							<a href="<?=$root?>/contents/tenant/tenant_list.html">
+								<div><img src="../images/main/admin_gridBtn1_company.png" alt="입주사관리"><span>입주사관리</span></div>
+							</a>
+						</li>
+						<li class="gridBtn2">
+							<a href="<?=$root?>/contents/member/member_list.html">
+								<div><img src="../images/main/admin_gridBtn2_member.png" alt="회원관리"><span>회원관리</span></div>
+							</a>
+						</li>
+						<li class="gridBtn5">
+							<a href="<?=$root?>/contents/reserve/meeting_room_reserve.html">
+								<div><img src="../images/main/gridBtn2_reservation.png" alt="예약관리"><span>예약관리</span></div>
+							</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="gridBtn3">
+							<a href="<?=$root?>/contents/board/notice_list.html">
+								<div><img src="../images/main/gridBtn3_board.png" alt="게시판관리"><span>게시판관리</span></div>
+							</a>
+						</li>
+						<li class="gridBtn4">
+							<a href="<?=$root?>/contents/system/office_list.html">
+								<div><img src="../images/main/admin_gridBtn4_system.png" alt="시스템관리"><span>시스템관리</span></div>
+							</a>
+						</li>
+						<li class="gridBtn6">
+							<a href="<?=$root?>/contents/calculate/cacul_tenant_list.html">
+								<div><img src="../images/main/admin_gridBtn6_cal.png" alt="정산관리"><span>정산관리</span></div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="mainBoard boardExtended adminMain">
+				<div class="extended">
+					<ul>
+						<li>
+							<div><img src="../images/main/admin_main_01.png" alt="금주 입주"><span>금주 입주</span></div>
+							<div>05</div>
+						</li>
+						<li>
+							<div><img src="../images/main/admin_main_02.png" alt="금주 계약종료"><span>금주 계약종료</span></div>
+							<div>03</div>
+						</li>
+						<li>
+							<div><img src="../images/main/admin_main_03.png" alt="금주 회의예약"><span>금주 회의예약</span></div>
+							<div>05</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- content e-->
+
+		</div>
+		<? include '../include/footer.php' ?> <!-- footer -->
+	</div>
+</body>
+</html>

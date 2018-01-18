@@ -1,0 +1,125 @@
+<? include '../../include/top_user.php' ?> <!-- top -->
+</head>
+<body>
+	<div class="pageWrap sub userSignupWrap"> <!-- pageWrap sub 뒤의 클래스명을 확인해주세요(폴더명관련) -->
+		<!-- header s 메인은 header include 안함-->
+		<header>
+			<div class="wrap">
+				<h1 class="headerLogo"><a href="#none"><img src="../../images/main/header_coworkers.png" alt="COWORKERS"><img src="../../images/main/header_coworkers_02.png" alt="COWORKERS"></a></h1>
+			</div>
+		</header>
+		<!-- header e-->
+		<div class="wrap">
+			<div class="signup_step">
+				<ul class="signupStepUl">
+					<li>STEP 01</li>
+					<li class="active">STEP 02</li>
+					<li>STEP 03</li>
+				</ul>
+				<div class="step2Box">
+					<h1>회원구분</h1>
+					<table>
+						<tr>
+							<th>이름</th>
+							<td colspan="2">
+								<input type="radio" id="desk" name="radio" checked>
+								<label for="desk" class="radio" >오피스/지정데스크</label>
+								<input type="radio"  id="basic" name="radio">
+								<label for="basic" class="radio">일반</label>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="step2Box">
+					<h1>회사정보</h1>
+					<table>
+						<tr>
+							<th>사업자(법인)명</th>
+							<td colspan="2">
+								<div class="selectBox">
+									<label for="selectOpt">AA기업</label>
+									<select id="selectOpt" class="selectOpt">
+										<option value="AA기업">AA기업</option>
+										<option value="BB기업">BB기업</option>
+									</select>
+								</div>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="step2Box">
+					<h1>기본정보</h1>
+					<div>
+						<table>
+							<tr>
+								<th>아이디</th>
+								<td><input type="text" id="user_id" placeholder="coworkers0123" /></td>
+								<td class="error">아이디 오류 메시지 입력1</td>
+							</tr>
+							<tr>
+								<th>비밀번호</th>
+								<td><input type="password" id="user_pw" placeholder="*************" /></td>
+								<td class="error">비밀번호 오류 메시지 입력1</td>
+							</tr>
+							<tr>
+								<th>비밀번호 확인</th>
+								<td><input type="password" id="user_pwCheck" placeholder="*************" /></td>
+								<td class="error">비밀번호가 일치하지 않습니다. 다시 입력해주세요.</td>
+							</tr>
+							<tr>
+								<th>이름</th>
+								<td><input type="text" id="user_name" placeholder="홍길동" /></td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>부서</th>
+								<td><input type="text" id="user_team" placeholder="경영전략부" /></td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>직위</th>
+								<td><input type="text" id="user_pos" placeholder="차장" /></td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>전화번호</th>
+								<td class="user_tel">
+									<span><input type="tel" placeholder="02" /></span>
+									<span> - </span>
+									<span><input type="tel" placeholder="0000" /></span>
+									<span> - </span>
+									<span><input type="tel" placeholder="0000" /></span>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>휴대폰 번호</th>
+								<td class="user_tel">
+									<span><input type="tel" placeholder="010" /></span>
+									<span> - </span>
+									<span><input type="tel" placeholder="0000" /></span>
+									<span> - </span>
+									<span><input type="tel" placeholder="0000" /></span>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>이메일</th>
+								<td><input type="email" id="user_email" placeholder="coworkers@stower.com" /></td>
+								<td></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+
+				<div class="pageBtnBox taC">
+					<a href="signup_1.html"class="btnS1">이전</a>
+					<a href="signup_3.html" class="btnS1">다음</a>
+				</div>
+			</div>
+		</div>
+
+		<? include '../../include/footer.php' ?> <!-- footer -->
+	</div>
+</body>
+</html>

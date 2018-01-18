@@ -1,0 +1,164 @@
+<? include '../../include/top_user.php' ?> <!-- top -->
+</head>
+<body>
+	<div class="pageWrap sub userMypageWrap"> <!-- pageWrap sub 뒤의 클래스명을 확인해주세요(폴더명관련) -->
+		<? include '../../include/header.php' ?> <!-- header -->
+		<div class="wrap">
+			<div class="contentwrap">
+				<? include '../../include/lnb_user.php' ?> <!-- 사용자lnb -->
+				
+				<!-- content s-->
+				<div class="contentArea rsrvSlpRoomListBox"><!-- contentArea 뒤의 클래스명을 확인해주세요(파일명관련) -->
+					<div class="contentHeader">
+						<div class="pageLocation">
+							<h2>마이페이지</h2>
+							<ul class="breadcrumb">
+								<li class="breadcrumb_home"><a href="#none" onclick="goHome('user');">HOME</a><em>></em></li>
+								<li><span>마이페이지</span><em>></em></li>
+								<li><span>예약정보</span></li>
+							</ul>
+						</div>
+						<div class="cateTitle"><h3>예약 정보</h3></div>
+					</div>
+					<div class="contentBody">
+						<ul class="tabBox rsrvInfoTab">
+							<li><a href="rsrv_room_calendar.html">회의실 예약정보</a></li>
+							<li><a href="rsrv_fc_calendar.html">F/C 예약정보</a></li>
+							<li class="actOn"><a href="rsrv_slp_room_calendar.html">수면실 예약정보</a></li>
+						</ul>
+						<ul class="tabCalendar">
+							<li><a href="rsrv_slp_room_calendar.html" class="calendar" title="달력보기"></a></li>
+							<li><a href="rsrv_slp_room_list.html" class="list active" title="리스트보기"></a></li>
+						</ul>
+						<div class="tableScrollX">
+						  <table class="listTable">
+							<thead>
+							  <tr>
+								<th>NO</th>
+								<th>예약일자</th>
+								<th>예약시간</th>
+								<th>수면실</th>
+								<th>소모시간</th>
+								<th>신청일</th>
+								<th>상태</th>
+							  </tr>
+							</thead>
+							<tbody>
+							  <tr>
+								<td>999</td>
+								<td>2018.01.10</td>
+								<td>11:00~13:00</td>
+								<td>1905</td>
+								<td>2</td>
+								<td>2018.01.07</td>
+								<td>예약</td>
+							  </tr>
+							  <tr>
+								<td>999</td>
+								<td>2018.01.10</td>
+								<td>11:00~13:00</td>
+								<td>1905</td>
+								<td>2</td>
+								<td>2018.01.07</td>
+								<td>예약</td>
+							  </tr>
+							  <tr>
+								<td>999</td>
+								<td>2018.01.10</td>
+								<td>11:00~13:00</td>
+								<td>1905</td>
+								<td>2</td>
+								<td>2018.01.07</td>
+								<td>예약</td>
+							  </tr>
+							  <tr>
+								<td>999</td>
+								<td>2018.01.10</td>
+								<td>11:00~13:00</td>
+								<td>1905</td>
+								<td>2</td>
+								<td>2018.01.07</td>
+								<td>예약</td>
+							  </tr>
+							  <tr>
+								<td>999</td>
+								<td>2018.01.10</td>
+								<td>11:00~13:00</td>
+								<td>1905</td>
+								<td>2</td>
+								<td>2018.01.07</td>
+								<td>예약</td>
+							  </tr>
+							  <tr>
+								<td>999</td>
+								<td>2018.01.10</td>
+								<td>11:00~13:00</td>
+								<td>1905</td>
+								<td>2</td>
+								<td>2018.01.07</td>
+								<td>예약</td>
+							  </tr>
+							  <tr>
+								<td>999</td>
+								<td>2018.01.10</td>
+								<td>11:00~13:00</td>
+								<td>1905</td>
+								<td>2</td>
+								<td>2018.01.07</td>
+								<td>예약</td>
+							  </tr>
+							  <tr>
+								<td>999</td>
+								<td>2018.01.10</td>
+								<td>11:00~13:00</td>
+								<td>1905</td>
+								<td>2</td>
+								<td>2018.01.07</td>
+								<td>예약</td>
+							  </tr> 
+							  <tr>
+								<td>999</td>
+								<td>2018.01.10</td>
+								<td>11:00~13:00</td>
+								<td>1905</td>
+								<td>2</td>
+								<td>2018.01.07</td>
+								<td>예약</td>
+							  </tr>
+							  <tr>
+								<td>999</td>
+								<td>2018.01.10</td>
+								<td>11:00~13:00</td>
+								<td>1905</td>
+								<td>2</td>
+								<td>2018.01.07</td>
+								<td>예약</td>
+							  </tr>                 
+							</tbody>
+						  </table>
+						</div>
+						<div class="pagination">
+							<a class="prev02" href="#none"><span class="tBlind">맨처음페이지</span></a>
+							<a class="prev" href="#none"><span class="tBlind">이전페이지</span></a>
+							<!-- 활성화 페이지의 경우 active 클래스 부여 -->
+							<a href="#none" class="active" >1</a>
+							<a href="#none">2</a>
+							<a href="#none">3</a>
+							<a href="#none">4</a>
+							<a href="#none">5</a>
+							<a href="#none" class="next"><span class="tBlind">다음페이지</span></a>
+							<a href="#none"class="next02"><span class="tBlind">맨끝페이지</span></a>
+						</div>
+					</div>
+				</div>
+				<!-- content e-->
+
+			</div>
+		</div>
+		<? include '../../include/footer.php' ?> <!-- footer -->
+	</div>
+	<script>
+		currentLnb(2,2); //현재페이지 lnb인식
+	</script>
+</body>
+</html>

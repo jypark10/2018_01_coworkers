@@ -1,0 +1,159 @@
+/* 팝업 ========================== */
+.popupWrap{display:none; position: relative;font-size:13px;z-index:9999;}
+	.popupContainer{}
+		.popupBox{position:relative; width:100%; height:100%; margin:auto; background:#fff; border-radius:3px; overflow:hidden; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box;}
+			.popupBox .popContentBox {padding:30px; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; width:100%; height:auto; border:1px solid #e6e6e6; border-top:0;}
+				.popupBox p{text-align:center; margin-bottom:30px;}
+				
+				.popupBox table {margin-bottom:20px;width:100%; height:auto;border-top:1px solid #dcdcdc;}
+				.popupBox table input[type="checkbox"] {display:none;}
+					.popupBox table .listCheck {width:19px;height:19px;}
+					.popupBox th {padding:10px 15px;text-align:center;font-weight:bold; color:#444;background:#eaedf2;border-bottom:1px solid #dcdcdc;}
+					.popupBox td {padding:10px 15px;text-align:center;border-bottom:1px solid #dcdcdc;}
+					.popupBox td div.selectBox {width:100%;}
+				.popupBox .Btn1Box {clear:both;padding:30px 0 10px;}
+				.popupBox .Btn1Box a {display:inline-block;}
+
+				.popupHeader{height:45px; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; padding:15px; background:#5985ca; color:#fff; font-size:16px; font-weight:normal;}
+					.popupHeader span{float:right; font-size:13px; font-weight:bold; cursor:pointer;}
+					.popCloseBtn {width:13px; height:13px; background: url(../images/common/close.png) no-repeat;}
+
+				.popupTab{width:100%;  height:40px; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; border-bottom:1px solid #3b6ebb; margin-bottom: 35px;}
+					.popupTab li{width:164px; font-size:20px; float:left; height:40px; padding:10px 0; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; text-align:center; cursor:pointer; background:#fff; color:#444; font-weight:normal; border-radius:3px 3px 0 0; border-bottom:1px solid #3b6ebb; }  
+					.popupTab li:last-child{width:186px;}
+					.popupTab li.active{border:1px solid #3b6ebb; color:#3b6ebb; font-weight:bold; border-top-width:2px; border-bottom-color:#fff;}
+
+					.user_phone_num .selectBox{width:109px !important; height:40px; border:1px solid #e5e5e5; border-radius:3px; margin-right:7px !important; color:#666; background:url(../images/common/select.png) 74px no-repeat;}
+				
+				.popupBox textarea {padding:10px;}
+
+				.popupBox .pagination{padding:0; border:0; margin-bottom:0;}
+				.popupBox div.pagination {width:325px;}
+					.popupBox .pagination a.prev{margin-right:5px; margin-left:5px;} 
+					.popupBox .pagination a.next{margin-right:5px; margin-left:5px;} 
+
+
+/* 로그인 ========================== */
+.popFindIdPw {width:540px;}
+	.popFindIdPw table {width:100%;}
+		.popFindIdPw th {padding:10px 20px;width:30%;text-align:left;}
+		.popFindIdPw td {padding:10px 20px;}
+		.popFindIdPw .tdEpt {padding-left:0px}
+			.popFindIdPw input[type="tel"] {width:100%;}
+			.popFindIdPw input[type="email"] {width:100%;}
+
+
+/* 예약관리 ========================== */
+.popAddPeople {width:400px;}
+.popReserveInfo {width:440px;}
+	.popReserveInfo th,
+	.popReserveInfo td {text-align:left;}
+
+
+/* 시스템관리 ========================== */
+.popOfficeReg {width:540px;}
+.popOpenHourPolicy {width:440px;}
+	.popOpenHourPolicy table {border-top:0;}
+		.popOpenHourPolicy th,
+		.popOpenHourPolicy td {border-bottom:0;}
+.popOpenHourPolicy2 {width:440px;}
+.popFacilityReg {width:540px;}
+.popEquipmentReg {width:440px;}
+.popAccountDel {width:440px;}
+.popChangePw {width:440px;}
+	.popChangePw table {border-top:0;}
+		.popChangePw th,
+		.popChangePw td {border-bottom:0;background:none;}
+.popGoodsDel {width:440px;}
+
+
+/* 정산관리 ========================== */
+.popInvoicetDel {width:440px;}
+
+.popInvoicePreview{width:740px !important;}
+	.popInvoicePreview .popContentBox{height:600px !important; overflow-y:auto;}
+		.popInvoicePreviewWrap ul {margin-bottom:30px;}
+		.popInvoicePreviewWrap .invoicePreviewInfo li{margin-bottom:10px;}
+		
+		.popInvoicePreviewWrap .viewTable2 {margin:17px 0 36px;}
+			.popInvoicePreviewWrap .viewTable2 th{width:130px;}
+			.popInvoicePreviewWrap .viewTable2 td{text-align:left;}
+		
+		.popInvoicePreviewWrap table td:last-child{width:auto;}
+		.popInvoicePreviewWrap table tr:nth-of-type(1) > td > span{display:inline-block; width:60px; height:30px; line-height:30px; border:1px solid #dcdcdc; border-radius :2px;}
+		
+		.popInvoicePreviewWrap .listTable2{margin-bottom:0;}
+		.popInvoicePreviewWrap .listTable2 tr:last-of-type{border-top:2px solid #dcdcdc;}
+		.popInvoicePreviewWrap .listTable2 th{width:auto; text-align:center;line-height:40px;border-bottom:1px solid #dcdcdc;}
+		.popInvoicePreviewWrap .listTable2 th,
+		.popInvoicePreviewWrap .listTable2 td {padding:0 10px; height:40px;white-space:nowrap;}
+		.popInvoicePreviewWrap .listTable2 th {border-top:1px solid #dcdcdc;}
+		.popInvoicePreviewWrap .listTable2 td {padding-top:10px;vertical-align:top;border-bottom:0; }
+		.popInvoicePreviewWrap .listTable2 tr:first-child td {padding-top:10px;padding-bottom:10px;vertical-align:middle;}
+		.popInvoicePreviewWrap .listTable2 th:first-child,
+		.popInvoicePreviewWrap .listTable2 td:first-child {border-left:0 !important;}
+		.popInvoicePreviewWrap .listTable2 td:nth-of-type(4){text-align:right;}
+		.popInvoicePreviewWrap .listTable2 td:last-child{padding: 20px 0;}
+		.popInvoicePreviewWrap .listTable2 td:last-child span{margin-left:12px;}
+		.popInvoicePreviewWrap .listTable2 thead tr:last-of-type{border-top:0;}
+		.popInvoicePreviewWrap .listTable2 thead tr th{padding:5px; height:0;}
+		.popInvoicePreviewWrap .listTable2 thead tr:nth-of-type(2) th{padding:0 10px; height:20px;border-right:1px solid #dcdcdc;}
+		.popInvoicePreviewWrap .listTable2 tbody tr:first-of-type{border-bottom:1px solid #dcdcdc;}
+
+		.popInvoicePreviewWrap .invoicePreviewBtm {margin-top:0;margin-bottom:30px; border-bottom:2px solid #dcdcdc;}
+		.popInvoicePreviewWrap .invoicePreviewBtm th {padding:20px 20px 0 20px;text-align:left;background:none;border-top:2px solid #dcdcdc;border-bottom:0;}
+		.popInvoicePreviewWrap .invoicePreviewBtm td {padding:0 20px;;text-align:left;border-bottom:0;}
+		.popInvoicePreviewWrap .invoicePreviewBtm tr:last-of-type td{padding-bottom:20px;}
+
+
+/* 마이페이지 ========================== */
+.popFindComp{width:440px;}
+	.popFindComp input{width:70%; height:30px;}
+		.popFindComp table{margin:20px 0}
+			.popFindComp th,
+			.popFindComp td {height:40px; text-align:center;}
+			.popFindComp th {background:#eaedf2;}
+			.popFindComp td {border-bottom:1px solid #dcdcdc;}
+			.popFindComp table .btn2{margin:5px 0; width:60px;}
+
+
+/* 회원관리 ========================== */
+.popSendSmsEmail {width:540px;}
+	.popSendSmsEmail table {margin-bottom:0;}
+		.popSendSmsEmail td {text-align:left;}
+.popQRcode {width:400px;}
+	.QRcodeBox {margin:0 auto;width:150px;}
+.popFindMember {width:600px;}
+
+
+/* 게시판관리 ========================== */
+.popShowMemberList {width:440px;}
+
+
+/* 입주사관리 ========================== */
+.popOpenMbList {width:840px;}
+.popOpenOfficeChoice {width:600px;}
+	.officeChoiceBox {width:100%;}
+		.officeChoiceBox h2 {clear:both;margin-bottom:10px;font-size:16px;}
+		.officeChoiceBox ul {float:left;margin-bottom:30px;width:100%;border-top:1px solid #dcdcdc;border-left:1px solid #dcdcdc;}
+			.officeChoiceBox li {float:left;width:10%;border-bottom:1px solid #dcdcdc;border-right:1px solid #dcdcdc;}
+				.officeChoiceBox li a {display:block;padding-top:15px;padding-bottom:15px;width:100%;text-align:center;}
+			.officeChoiceBox li.choiced {color:#fff;background:#3b6ebb;}
+			.officeChoiceBox li.soldout {text-decoration:line-through;background:#dcdcdc;}
+		
+.popOpenMgChange {width:540px;}
+	.popOpenMgChange td:first-child {text-align:left;}
+
+.popMemberDetail {width:600px;}
+	.popMemberDetail .popupBox td:last-child{width:auto;}
+		.popMemberDetail table th, .popMemberDetail table td{text-align:center; white-space:nowrap;}
+
+.popEcontrant {width:800px;}
+	.popEcontrant .popContentBox{height:600px !important; text-align:left;overflow-y:auto;}
+	.popEcontrant .popupBox table {border-top:0;}
+	.popEcontrant .popupBox td {border-bottom:0;}
+	.popEcontrant .popupBox table.viewTable {border-top:1px solid #dcdcdc;}
+	.popEcontrant .popupBox .viewTable td {border-bottom:1px solid #dcdcdc;}
+	.popEcontrant td {text-align:left;}
+		.popEcontrant .popupBox table input[type="checkbox"] {display:block;}
+		.popEcontrant .popupBox p {text-align:left;}

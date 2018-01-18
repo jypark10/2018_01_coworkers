@@ -1,0 +1,191 @@
+<? include '../../include/top_admin.php' ?> <!-- top -->
+</head>
+<body>
+	<div class="pageWrap sub adminBoardWrap"> <!-- pageWrap sub 뒤의 클래스명을 확인해주세요(폴더명관련) -->
+		<? include '../../include/header.php' ?> <!-- header -->
+		<div class="wrap">
+			<div class="contentwrap">
+				<? include '../../include/lnb_admin.php' ?> <!-- 관리자lnb -->
+				
+				<!-- content s-->
+				<div class="contentArea programListBox"><!-- contentArea 뒤의 클래스명을 확인해주세요(파일명관련) -->
+					<div class="contentHeader">
+						<div class="pageLocation">
+							<h2>게시판 관리</h2>
+							<ul class="breadcrumb">
+								<li class="breadcrumb_home"><a href="#none" onclick="goHome('admin');">HOME</a><em>></em></li>
+								<li><span>게시판관리</span><em>></em></li><li>프로그램관리</li>
+							</ul>
+						</div>
+						<div class="cateTitle"><h3>프로그램 관리</h3></div>
+					</div>
+					<div class="contentBody">
+						<h4 class="pageTitle">프로그램</h4>
+						<div class="listSearch">
+							<div class="searchText">
+								<input type="text"/>
+								<button type="button"><img src="../../images/common/i_search.png" alt="검색" /></button>
+							</div>
+						</div>
+						<div class="tableScrollX">
+							<table class="listTable">
+								<thead>
+									<tr>
+										<th>
+											<input type="checkbox" id="listCheck_all" class="checkbox chck_all" />
+											<label for="listCheck_all" class="listCheck"></label>
+										</th>
+										<th>NO</th>
+										<th>이름</th>
+										<th>제목</th>
+										<th>일자</th>
+										<th>신청가능여부</th>
+										<th>조회</th>
+										<th>신청</th>
+										<th>신청가능</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><input type="checkbox" id="listCheck_01" class="checkbox"><label for="listCheck_01" class="listCheck"></label></td>
+										<td>999</td>
+										<td>관리자</td>
+										<td class="tdSubject"><a href="program_view.html">[교육] 리더십 강화 교육<span class="new"></span></a></td>
+										<td>2017.05.08 13:12:11</td>
+										<td>신청가능</td>
+										<td>100</td>
+										<td>20</td>
+										<td>10</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" id="listCheck_02" class="checkbox"><label for="listCheck_02" class="listCheck"></label></td>
+										<td>999</td>
+										<td>관리자</td>
+										<td class="tdSubject"><a href="program_view.html">[교육] 리더십 강화 교육<span class="new"></span></a></td>
+										<td>2017.05.08 13:12:11</td>
+										<td>신청가능</td>
+										<td>100</td>
+										<td>20</td>
+										<td>10</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" id="listCheck_03" class="checkbox"><label for="listCheck_03" class="listCheck"></label></td>
+										<td>999</td>
+										<td>관리자</td>
+										<td class="tdSubject"><a href="program_view.html">[교육] 리더십 강화 교육<span class="new"></span></a></td>
+										<td>2017.05.08 13:12:11</td>
+										<td>신청가능</td>
+										<td>100</td>
+										<td>20</td>
+										<td>10</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" id="listCheck_04" class="checkbox"><label for="listCheck_04" class="listCheck"></label></td>
+										<td>999</td>
+										<td>관리자</td>
+										<td class="tdSubject"><a href="program_view.html">[교육] 리더십 강화 교육<span class="new"></span></a></td>
+										<td>2017.05.08 13:12:11</td>
+										<td>신청가능</td>
+										<td>100</td>
+										<td>20</td>
+										<td>10</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" id="listCheck_05" class="checkbox"><label for="listCheck_05" class="listCheck"></label></td>
+										<td>999</td>
+										<td>관리자</td>
+										<td class="tdSubject"><a href="program_view.html">[교육] 리더십 강화 교육</a></td>
+										<td>2017.05.08 13:12:11</td>
+										<td>신청가능</td>
+										<td>100</td>
+										<td>20</td>
+										<td>10</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" id="listCheck_06" class="checkbox"><label for="listCheck_06" class="listCheck"></label></td>
+										<td>999</td>
+										<td>관리자</td>
+										<td class="tdSubject"><a href="program_view.html">[교육] 리더십 강화 교육</a></td>
+										<td>2017.05.08 13:12:11</td>
+										<td>신청가능</td>
+										<td>100</td>
+										<td>20</td>
+										<td>10</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" id="listCheck_07" class="checkbox"><label for="listCheck_07" class="listCheck"></label></td>
+										<td>999</td>
+										<td>관리자</td>
+										<td class="tdSubject"><a href="program_view.html">[교육] 리더십 강화 교육</a></td>
+										<td>2017.05.08 13:12:11</td>
+										<td>신청가능</td>
+										<td>100</td>
+										<td>20</td>
+										<td>10</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" id="listCheck_08" class="checkbox"><label for="listCheck_08" class="listCheck"></label></td>
+										<td>999</td>
+										<td>관리자</td>
+										<td class="tdSubject"><a href="program_view.html">[교육] 리더십 강화 교육</a></td>
+										<td>2017.05.08 13:12:11</td>
+										<td>신청가능</td>
+										<td>100</td>
+										<td>20</td>
+										<td>10</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" id="listCheck_09" class="checkbox"><label for="listCheck_09" class="listCheck"></label></td>
+										<td>999</td>
+										<td>관리자</td>
+										<td class="tdSubject"><a href="program_view.html">[교육] 리더십 강화 교육</a></td>
+										<td>2017.05.08 13:12:11</td>
+										<td>신청가능</td>
+										<td>100</td>
+										<td>20</td>
+										<td>10</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" id="listCheck_10" class="checkbox"><label for="listCheck_10" class="listCheck"></label></td>
+										<td>999</td>
+										<td>관리자</td>
+										<td class="tdSubject"><a href="program_view.html">[교육] 리더십 강화 교육</a></td>
+										<td>2017.05.08 13:12:11</td>
+										<td>신청가능</td>
+										<td>100</td>
+										<td>20</td>
+										<td>10</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="Btn2Box">
+							<a href="program_write.html" class="btn2">등록</a>
+							<a href="program_edit.html" class="btn2">수정</a>
+							<a href="#none" class="btn2">삭제</a>
+						</div>
+						<div class="pagination">
+							<a class="prev02" href="#none"><span class="tBlind">맨처음페이지</span></a>
+							<a class="prev" href="#none"><span class="tBlind">이전페이지</span></a>
+							<!-- 활성화 페이지의 경우 active 클래스 부여 -->
+							<a href="#none" class="active" >1</a>
+							<a href="#none">2</a>
+							<a href="#none">3</a>
+							<a href="#none">4</a>
+							<a href="#none">5</a>
+							<a href="#none" class="next"><span class="tBlind">다음페이지</span></a>
+							<a href="#none"class="next02"><span class="tBlind">맨끝페이지</span></a>
+						</div>
+					</div>
+				</div>
+				<!-- content e-->
+
+			</div>
+		</div>
+		<? include '../../include/footer.php' ?> <!-- footer -->
+	</div>
+	<script>
+		currentLnb(3,1); //현재페이지 lnb인식
+	</script>
+</body>
+</html>
